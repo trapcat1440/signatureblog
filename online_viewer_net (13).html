@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog with Transparent Logo Header</title>
+        <style>
+            /* Make the header fixed at the top */
+            header {
+                position: fixed;      /* Sticks the logo at the top */
+                top: 0;
+                left: 0;
+                width: 100%;
+                text-align: center;   /* Center the logo */
+                padding: 10px 0;
+                background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+                backdrop-filter: blur(5px); /* Optional: blur content behind header */
+                z-index: 1000;        /* Make sure header is on top */
+            }
+
+            /* Style the logo */
+            header img {
+                height: 80px;
+                width: auto;
+            }
+
+            /* Push the main content down so it’s not hidden behind the fixed header */
+            main {
+                padding-top: 120px; /* Slightly more than header height */
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="https://i.imghippo.com/files/pAm5784YCA.png" alt="Blog Logo" />
+        </header>
+
+        <main>
+            <h1>Welcome to the Blog!</h1>
+            <p>Your content goes here...</p>
+        </main>
+    </body>
+</html>
