@@ -1,49 +1,193 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Blog with Transparent Logo Header</title>
-        <style>
-            /* Make the header fixed at the top */
-            header {
-                position: fixed;      /* Sticks the logo at the top */
-                top: 0;
-                left: 0;
-                width: 100%;
-                text-align: center;   /* Center the logo */
-                padding: 10px 0;
-                background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
-                backdrop-filter: blur(5px); /* Optional: blur content behind header */
-                z-index: 1000;        /* Make sure header is on top */
-            }
+<head>
+    <title>Signature & Letter SS Blog</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background-color: #e0e0e0; color: #000; }
 
-            /* Style the logo */
-            header img {
-                height: 80px;
-                width: auto;
-            }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+        }
+        header img { height: 60px; margin-right: 15px; }
+        header h1 { font-size: 24px; }
 
-            /* Push the main content down so it’s not hidden behind the fixed header */
-            main {
-                padding-top: 120px; /* Slightly more than header height */
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <img src="https://i.imghippo.com/files/pAm5784YCA.png" alt="Blog Logo" />
-        </header>
+        nav {
+            background-color: #336699;
+            padding: 10px 20px;
+        }
+        nav a {
+            color: white; text-decoration: none; margin-right: 15px; font-weight: bold;
+        }
+        nav a:hover { text-decoration: underline; }
 
-        <main>
-            <h1>Welcome to the Blog!</h1>
-            <p>Signature & letter SS is a blog site about apparel brands , entertainment since fashion and royalties about fashion and clothing.</p>
-            
-            
-            <a href="https://amzn.to/4dPdHho" target="_blank">
-            <img src="https://i.imghippo.com/files/xJ2090rpU.png" 
-         alt="Signature_letter_SS_badges-removebg-preview" 
-         width="100" />
-</a>
-        </main>
-    </body>
+        main {
+            display: flex;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        /* Left Column */
+        .left-column { width: 70%; padding-right: 20px; }
+
+        .post {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        .post h2 { font-size: 18px; color: #003366; margin-bottom: 5px; }
+        .post .genre {
+            font-size: 14px;
+            color: #336699;
+            margin-bottom: 10px;
+        }
+        .post .genre a { text-decoration: none; color: #336699; }
+        .post .genre a:hover { text-decoration: underline; }
+
+        /* Emoji container */
+        .emoji-container span {
+            font-size: 24px;
+            cursor: pointer;
+            margin-right: 10px;
+            user-select: none;
+            transition: transform 0.2s;
+        }
+        .emoji-container span:hover { transform: scale(1.2); }
+        .emoji-count { font-size: 14px; margin-left: 3px; vertical-align: super; }
+
+        /* Right Column */
+        .right-column { width: 30%; }
+
+        .sidebar-box {
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+        }
+        .sidebar-box h3 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #003366;
+            text-align: center;
+        }
+        .shop-thumbnails { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; }
+        .shop-thumbnails a img {
+            width: 48px; height: auto; border: 1px solid #ccc;
+            transition: transform 0.2s;
+        }
+        .shop-thumbnails a img:hover {
+            transform: scale(1.2); border-color: #336699;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://i.imghippo.com/files/pAm5784YCA.png" alt="Blog Logo">
+    <h1>Signature & Letter SS</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#nothin">Nothin New</a>
+    <a href="#fashion">Fashion</a>
+    <a href="#hollywood">Hollywood</a>
+    <a href="#email">Email</a>
+</nav>
+
+<main>
+    <!-- Left Column -->
+    <div class="left-column">
+
+        <div class="post" id="home" data-id="post1">
+            <h2>Welcome to Signature & Letter SS!</h2>
+            <div class="genre"><a href="#nothin">Nothin New</a></div>
+            <p>Your go-to blog for apparel brands, fashion trends, and entertainment news. Stay stylish!</p>
+            <div class="emoji-container">
+                <span data-emoji="🙂">🙂 <span class="emoji-count">0</span></span>
+                <span data-emoji="😂">😂 <span class="emoji-count">0</span></span>
+                <span data-emoji="😍">😍 <span class="emoji-count">0</span></span>
+            </div>
+        </div>
+
+        <div class="post" id="fashion" data-id="post2">
+            <h2>Fashion Trends 2026</h2>
+            <div class="genre"><a href="#fashion">Fashion</a></div>
+            <p>Discover the latest streetwear and high-fashion trends shaping the clothing industry this year.</p>
+            <div class="emoji-container">
+                <span data-emoji="🙂">🙂 <span class="emoji-count">0</span></span>
+                <span data-emoji="😂">😂 <span class="emoji-count">0</span></span>
+                <span data-emoji="😍">😍 <span class="emoji-count">0</span></span>
+            </div>
+        </div>
+
+        <div class="post" id="hollywood" data-id="post3">
+            <h2>Entertainment Buzz</h2>
+            <div class="genre"><a href="#hollywood">Hollywood</a></div>
+            <p>From music to movies, get your dose of entertainment updates curated for style enthusiasts.</p>
+            <div class="emoji-container">
+                <span data-emoji="🙂">🙂 <span class="emoji-count">0</span></span>
+                <span data-emoji="😂">😂 <span class="emoji-count">0</span></span>
+                <span data-emoji="😍">😍 <span class="emoji-count">0</span></span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Right Column: Shop Links -->
+    <div class="right-column">
+        <div class="sidebar-box">
+            <h3>Store Links</h3>
+            <div class="shop-thumbnails">
+                <a href="https://amzn.to/4dPdHho" target="_blank">
+                    <img src="https://i.imghippo.com/files/xJ2090rpU.png" alt="Shop Item 1">
+                </a>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    &copy; 2026 Signature & Letter SS | All Rights Reserved
+</footer>
+
+<script>
+    // Emoji count persistence
+    document.querySelectorAll('.post').forEach(post => {
+        const postId = post.dataset.id;
+        const emojiSpans = post.querySelectorAll('.emoji-container span');
+
+        emojiSpans.forEach(span => {
+            const emoji = span.dataset.emoji;
+            const savedCount = localStorage.getItem(postId + '-' + emoji);
+            if(savedCount) span.querySelector('.emoji-count').textContent = savedCount;
+
+            span.addEventListener('click', () => {
+                let count = parseInt(span.querySelector('.emoji-count').textContent) || 0;
+                count++;
+                span.querySelector('.emoji-count').textContent = count;
+                localStorage.setItem(postId + '-' + emoji, count);
+            });
+        });
+    });
+</script>
+
+</body>
 </html>
