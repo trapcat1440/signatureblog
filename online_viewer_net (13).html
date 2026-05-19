@@ -9,7 +9,7 @@
         header {
             background-color: #003366;
             color: white;
-            padding: 15px 20px;
+            padding: 15px 30px;
             display: flex;
             align-items: center;
         }
@@ -17,7 +17,7 @@
         header h1 { font-size: 24px; }
 
         nav {
-            background-color: #336699;
+            background-color: #336677;
             padding: 10px 20px;
         }
         nav a {
@@ -33,13 +33,16 @@
         }
 
         /* Left Column */
-        .left-column { width: 70%; padding-right: 20px; }
+        .left-column { width: 100%; padding-right: 100px; }
 
+        /* Pill-shaped posts */
         .post {
             background-color: #fff;
             padding: 10px;
             margin-bottom: 20px;
             border: 1px solid #ccc;
+            border-radius: 70px;
+            overflow: hidden;
         }
 
         /* Clickable post image styling */
@@ -50,9 +53,9 @@
         }
         .post-link img {
             width: 100%;
-            height: 400px; /* adjust height as needed */
-            object-fit: cover; /* fills the box and crops edges if necessary */
-            border-radius: 5px;
+            height: 200px; /* adjust height as needed */
+            object-fit: cover;
+            border-radius: 50px; /* match pill shape */
         }
         .post h2 {
             margin-top: 10px;
@@ -155,8 +158,8 @@
         <!-- Example Post 2 -->
         <div class="post" data-id="post2">
             <a class="post-link" href="https://clublss.com/nothingnew.html" target="_blank">
-                <img src="https://i.imghippo.com/files/xJ2090rpU.png" alt="Fashion Trends">
-                <h2>Fashion Trends 2026</h2>
+                <img src="https://i.imghippo.com/files/UeAH4183Kg.png" alt="Fashion Trends">
+                <h2>Fashion For your soul..</h2>
             </a>
             <div class="genre"><a href="https://clublss.com/nothingnew.html" target="_blank">Fashion</a></div>
             <div class="emoji-container">
@@ -169,8 +172,8 @@
         <!-- Example Post 3 -->
         <div class="post" data-id="post3">
             <a class="post-link" href="https://clublss.com/nothingnew.html" target="_blank">
-                <img src="https://i.imghippo.com/files/pAm5784YCA.png" alt="Entertainment Buzz">
-                <h2>Entertainment Buzz</h2>
+                <img src="https://i.imghippo.com/files/gvSG2243er.png" alt="Entertainment Buzz">
+                <h2>Rich life ONLY</h2>
             </a>
             <div class="genre"><a href="https://clublss.com/nothingnew.html" target="_blank">Hollywood</a></div>
             <div class="emoji-container">
@@ -223,4 +226,3 @@
 
 </body>
 </html>
-
