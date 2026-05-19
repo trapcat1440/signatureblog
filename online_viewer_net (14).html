@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signature & Letter SS Blog - Nothin New</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background-color: #e0e0e0; color: #000; }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+        }
+        header img { height: 60px; margin-right: 15px; }
+        header h1 { font-size: 24px; }
+
+        nav {
+            background-color: #336699;
+            padding: 10px 20px;
+        }
+        nav a {
+            color: white; text-decoration: none; margin-right: 15px; font-weight: bold;
+        }
+        nav a:hover { text-decoration: underline; }
+
+        main {
+            display: flex;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        /* Left Column */
+        .left-column { width: 70%; padding-right: 20px; }
+
+        .post {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        .post h2 { font-size: 18px; color: #003366; margin-bottom: 5px; }
+        .post .genre {
+            font-size: 14px;
+            color: #336699;
+            margin-bottom: 10px;
+        }
+        .post .genre a { text-decoration: none; color: #336699; }
+        .post .genre a:hover { text-decoration: underline; }
+
+        /* Emoji container */
+        .emoji-container span {
+            font-size: 24px;
+            cursor: pointer;
+            margin-right: 10px;
+            user-select: none;
+            transition: transform 0.2s;
+        }
+        .emoji-container span:hover { transform: scale(1.2); }
+        .emoji-count { font-size: 14px; margin-left: 3px; vertical-align: super; }
+
+        /* Right Column */
+        .right-column { width: 30%; }
+
+        .sidebar-box {
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+        }
+        .sidebar-box h3 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #003366;
+            text-align: center;
+        }
+        .shop-thumbnails { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; }
+        .shop-thumbnails a img {
+            width: 48px; height: auto; border: 1px solid #ccc;
+            transition: transform 0.2s;
+        }
+        .shop-thumbnails a img:hover {
+            transform: scale(1.2); border-color: #336699;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://i.imghippo.com/files/pAm5784YCA.png" alt="Blog Logo">
+    <h1>Signature & Letter SS</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="#nothin">Nothin New</a>
+    <a href="index.html#fashion">Fashion</a>
+    <a href="index.html#hollywood">Hollywood</a>
+    <a href="index.html#email">Email</a>
+</nav>
+
+<main>
+    <!-- Left Column -->
+    <div class="left-column">
+
+        <div class="post" id="nothin" data-id="nothin1">
+            <h2>Nothing Exciting Today</h2>
+            <div class="genre"><a href="#nothin">Nothin New</a></div>
+            <p>Sometimes the world is quiet, and all you can do is sit back and enjoy the calm.</p>
+            <div class="emoji-container">
+                <span data-emoji="🙂">🙂 <span class="emoji-count">0</span></span>
+                <span data-emoji="😂">😂 <span class="emoji-count">0</span></span>
+                <span data-emoji="😍">😍 <span class="emoji-count">0</span></span>
+            </div>
+        </div>
+
+        <div class="post" data-id="nothin2">
+            <h2>Slow News Day</h2>
+            <div class="genre"><a href="#nothin">Nothin New</a></div>
+            <p>When nothing new happens, we still keep you entertained with a fresh perspective.</p>
+            <div class="emoji-container">
+                <span data-emoji="🙂">🙂 <span class="emoji-count">0</span></span>
+                <span data-emoji="😂">😂 <span class="emoji-count">0</span></span>
+                <span data-emoji="😍">😍 <span class="emoji-count">0</span></span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Right Column: Shop Links -->
+    <div class="right-column">
+        <div class="sidebar-box">
+            <h3>Store Links</h3>
+            <div class="shop-thumbnails">
+                <a href="https://amzn.to/4dPdHho" target="_blank">
+                    <img src="https://i.imghippo.com/files/xJ2090rpU.png" alt="Shop Item 1">
+                </a>
+                <a href="https://amzn.to/4dPdHho" target="_blank">
+                    <img src="https://i.imghippo.com/files/xJ2090rpU.png" alt="Shop Item 2">
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 Signature & Letter SS | All Rights Reserved
+</footer>
+
+<script>
+    // Emoji count persistence
+    document.querySelectorAll('.post').forEach(post => {
+        const postId = post.dataset.id;
+        const emojiSpans = post.querySelectorAll('.emoji-container span');
+
+        emojiSpans.forEach(span => {
+            const emoji = span.dataset.emoji;
+            const savedCount = localStorage.getItem(postId + '-' + emoji);
+            if(savedCount) span.querySelector('.emoji-count').textContent = savedCount;
+
+            span.addEventListener('click', () => {
+                let count = parseInt(span.querySelector('.emoji-count').textContent) || 0;
+                count++;
+                span.querySelector('.emoji-count').textContent = count;
+                localStorage.setItem(postId + '-' + emoji, count);
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
