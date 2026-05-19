@@ -9,7 +9,7 @@
         header {
             background-color: #003366;
             color: white;
-            padding: 15px 20px;
+            padding: 15px 30px;
             display: flex;
             align-items: center;
         }
@@ -17,7 +17,7 @@
         header h1 { font-size: 24px; }
 
         nav {
-            background-color: #336699;
+            background-color: #336677;
             padding: 10px 20px;
         }
         nav a {
@@ -33,24 +33,50 @@
         }
 
         /* Left Column */
-        .left-column { width: 70%; padding-right: 20px; }
+        .left-column { width: 100%; padding-right: 100px; }
 
+        /* Pill-shaped posts */
         .post {
             background-color: #fff;
             padding: 10px;
             margin-bottom: 20px;
             border: 1px solid #ccc;
+            border-radius: 70px;
+            overflow: hidden;
         }
-        .post h2 { font-size: 18px; color: #003366; margin-bottom: 5px; }
+
+        /* Clickable post image styling */
+        .post-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        .post-link img {
+            width: 100%;
+            height: 200px; /* adjust height as needed */
+            object-fit: cover;
+            border-radius: 50px; /* match pill shape */
+        }
+        .post h2 {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 18px;
+        }
+
         .post .genre {
             font-size: 14px;
             color: #336699;
             margin-bottom: 10px;
+            text-align: center;
         }
         .post .genre a { text-decoration: none; color: #336699; }
         .post .genre a:hover { text-decoration: underline; }
 
         /* Emoji container */
+        .emoji-container {
+            text-align: center;
+            margin-top: 5px;
+        }
         .emoji-container span {
             font-size: 24px;
             cursor: pointer;
@@ -115,10 +141,13 @@
     <!-- Left Column -->
     <div class="left-column">
 
-        <div class="post" id="home" data-id="post1">
-            <h2>Welcome to Signature & Letter SS!</h2>
-            <div class="genre"><a href="#nothin">Nothin New</a></div>
-            <p>Your go-to blog for apparel brands, fashion trends, and entertainment news. Stay stylish!</p>
+        <!-- Example Post 1 -->
+        <div class="post" data-id="post1">
+            <a class="post-link" href="https://clublss.com/nothingnew.html" target="_blank">
+                <img src="https://i.imghippo.com/files/JswL2911hE.png" alt="Nothin New">
+                <h2>Change the world = weird clothing name</h2>
+            </a>
+            <div class="genre"><a href="https://clublss.com/nothingnew.html" target="_blank">Nothin New</a></div>
             <div class="emoji-container">
                 <span data-emoji="🙂">🙂 <span class="emoji-count">0</span></span>
                 <span data-emoji="😂">😂 <span class="emoji-count">0</span></span>
@@ -126,10 +155,13 @@
             </div>
         </div>
 
-        <div class="post" id="fashion" data-id="post2">
-            <h2>Fashion Trends 2026</h2>
-            <div class="genre"><a href="#fashion">Fashion</a></div>
-            <p>Discover the latest streetwear and high-fashion trends shaping the clothing industry this year.</p>
+        <!-- Example Post 2 -->
+        <div class="post" data-id="post2">
+            <a class="post-link" href="https://clublss.com/nothingnew.html" target="_blank">
+                <img src="https://i.imghippo.com/files/UeAH4183Kg.png" alt="Fashion Trends">
+                <h2>Fashion For your soul..</h2>
+            </a>
+            <div class="genre"><a href="https://clublss.com/nothingnew.html" target="_blank">Fashion</a></div>
             <div class="emoji-container">
                 <span data-emoji="🙂">🙂 <span class="emoji-count">0</span></span>
                 <span data-emoji="😂">😂 <span class="emoji-count">0</span></span>
@@ -137,10 +169,13 @@
             </div>
         </div>
 
-        <div class="post" id="hollywood" data-id="post3">
-            <h2>Entertainment Buzz</h2>
-            <div class="genre"><a href="#hollywood">Hollywood</a></div>
-            <p>From music to movies, get your dose of entertainment updates curated for style enthusiasts.</p>
+        <!-- Example Post 3 -->
+        <div class="post" data-id="post3">
+            <a class="post-link" href="https://clublss.com/nothingnew.html" target="_blank">
+                <img src="https://i.imghippo.com/files/gvSG2243er.png" alt="Entertainment Buzz">
+                <h2>Rich life ONLY</h2>
+            </a>
+            <div class="genre"><a href="https://clublss.com/nothingnew.html" target="_blank">Hollywood</a></div>
             <div class="emoji-container">
                 <span data-emoji="🙂">🙂 <span class="emoji-count">0</span></span>
                 <span data-emoji="😂">😂 <span class="emoji-count">0</span></span>
