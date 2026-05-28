@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Singature Blog MarketPlace</title>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #d7d7d7;
+        margin: 0;
+        color: #111;
+    }
+
+    header {
+        background: red;
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .home-btn {
+        color: white;
+        text-decoration: underline;
+        font-size: 14px;
+    }
+
+    .moving-text {
+        background: #ffffcc;
+        border-bottom: 1px solid #999;
+        padding: 6px;
+        font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .moving-text span {
+        display: inline-block;
+        padding-left: 100%;
+        animation: scroll 18s linear infinite;
+    }
+
+    @keyframes scroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(-100%); }
+    }
+
+    main {
+        width: 95%;
+        max-width: 1000px;
+        margin: 20px auto;
+    }
+
+    .listing {
+        background: white;
+        border: 1px solid #999;
+        margin-bottom: 10px;
+        display: flex;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .listing img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border: 1px solid #ccc;
+        background: white;
+    }
+
+    .details {
+        flex: 1;
+    }
+
+    .title {
+        font-size: 16px;
+        color: #0033cc;
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 13px;
+        color: #333;
+        margin-bottom: 8px;
+    }
+
+    .meta {
+        font-size: 12px;
+        color: #666;
+    }
+
+    .employee {
+        margin-top: 8px;
+        font-size: 12px;
+    }
+
+    .employee strong {
+        color: #000;
+    }
+
+    .rating {
+        font-size: 12px;
+        color: #ff9900;
+        margin-top: 5px;
+    }
+
+    .buy {
+        margin-top: 10px;
+        display: inline-block;
+        font-size: 13px;
+        color: #0033cc;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 12px;
+        padding: 20px;
+        color: #333;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <div>Signature & Letter SS Blog</div>
+    <a class="home-btn" href="https://clublss.com/">Home</a>
+</header>
+
+<div class="moving-text">
+    <span>🔥 Welcome to Vintage Listings • Auctions • Deals • Used & New Items • Buy Smart 🔥</span>
+</div>
+
+<main>
+
+    <div class="listing">
+        <img src="https://m.media-amazon.com/images/I/71oK9ZuvT4L._AC_SL1500_.jpg" alt="">
+        <div class="details">
+            <div class="title">Nuwave Duet Air Fryer</div>
+            <div class="description">Pressure cooker and grill combo air fryer.</div>
+            <div class="meta">Condition: New | Shipping Available</div>
+            <div class="employee"><strong>Employee Reviewer:</strong> Kyle (Blog Creator)</div>
+            <div class="rating">★★★★☆ (positive feedback)</div>
+            <div class="buy">View Item</div>
+        </div>
+    </div>
+
+    <div class="listing">
+        <img src="https://m.media-amazon.com/images/I/913d37i5+yL._AC_SL1500_.jpg" alt="">
+        <div class="details">
+            <div class="title">Travelers Club 6 Piece Luggage Set</div>
+            <div class="description">Heavy duty traveling gear with multiple suitcase sizes included.</div>
+            <div class="meta">Condition: New | Shipping Available</div>
+            <div class="employee"><strong>Employee Reviewer:</strong> Vanessa (Blog Reviewer)</div>
+            <div class="rating">★★★★☆ (positive feedback)</div>
+            <div class="buy">View Item</div>
+        </div>
+    </div>
+
+    <div class="listing">
+        <img src="https://m.media-amazon.com/images/I/71p-47sRv9L._AC_SL1500_.jpg" alt="">
+        <div class="details">
+            <div class="title">Pokemon Cards Bundle</div>
+            <div class="description">Affordable collector pack for fans and traders.</div>
+            <div class="meta">Condition: Used / Like New | Limited Stock</div>
+            <div class="employee"><strong>Employee Reviewer:</strong> Jake</div>
+            <div class="buy">View Item</div>
+        </div>
+    </div>
+
+    <div class="listing">
+        <img src="https://m.media-amazon.com/images/I/21d6MWY1LCL._SX342_SY445_QL70_FMwebp_.jpg" alt="">
+        <div class="details">
+            <div class="title">PlayStation 5 Console</div>
+            <div class="description">Next-gen gaming system with ultra realistic graphics.</div>
+            <div class="meta">Condition: New | Fast Shipping</div>
+            <div class="employee"><strong>Employee Reviewer:</strong> Gabriel</div>
+            <div class="rating">★★★★★ (top rated)</div>
+            <div class="buy">View Item</div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    © 2026 Signature & Letter SS Blog Market
+</footer>
+
+</body>
+</html>
