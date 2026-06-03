@@ -1,1 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signature & Letter SS Blog</title>
 
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0e0e0;
+            color: #000;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header img { height: 60px; }
+        header h1 { font-size: 22px; }
+
+        nav {
+            background-color: #336677;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            display: flex;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .left-column {
+            width: 70%;
+            padding-right: 20px;
+        }
+
+        .right-column {
+            width: 30%;
+        }
+
+        /* POSTS */
+        .post {
+            background: white;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .post img {
+            width: 100%;
+            border-radius: 15px;
+            max-height: 250px;
+            object-fit: cover;
+        }
+
+        .post h2 {
+            margin-top: 10px;
+            text-align: center;
+            color: #003366;
+        }
+
+        .genre {
+            text-align: center;
+            font-size: 13px;
+            color: #336699;
+            margin-bottom: 10px;
+        }
+
+        .emoji-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .emoji-container span {
+            font-size: 22px;
+            margin: 0 8px;
+            cursor: pointer;
+        }
+
+        /* SIDEBAR */
+        .sidebar-box {
+            background: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .shop-thumbnails img {
+            width: 48px;
+            margin: 3px;
+        }
+
+        /* ADMIN PANEL */
+        .admin-box {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background: #003366;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</head>
+
+<body>
+
+<header>
+    <img src="https://i.imghippo.com/files/pAm5784YCA.png">
+    <h1>Signature & Letter SS Blog</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+    <a href="nothingnew.html">Nothin New</a>
+    <a href="fashion.html">Fashion Flashy</a>
+    <a href="Hollywood.html">Hollywood</a>
+    <a href="storesignatureblog.html">Goods & Catalog</a>
+    <a herf="#">Admin Log Service</a>
+    <a href="Certificates.html">Recognitions</a>
+</nav>
+
+<main>
+
+<!-- LEFT -->
+<div class="left-column">
+
+    <!-- ADMIN CREATE POST -->
+    <div class="admin-box" id="adminBox">
+        <h3>Create Post (Admin)</h3>
+
+        <input id="title" placeholder="Title">
+        
+        <select id="genre">
+            <option>Fashion Flashy</option>
+            <option>Hollywood</option>
+            <option>Nothin New</option>
+        </select>
+
+        <input id="image" placeholder="Image URL">
+        <textarea id="content" placeholder="Content"></textarea>
+
+        <button onclick="createPost()">Publish</button>
+    </div>
+
+    <!-- POSTS -->
+    <div id="posts"></div>
+
+</div>
+
+<!-- RIGHT -->
+    <div class="right-column">
+        <div class="sidebar-box">
+            <h3>Store Links</h3>
+            <div class="shop-thumbnails">
+                <a href="https://amzn.to/4v7NPD7" target="_blank">
+                    <img src="https://i.imghippo.com/files/xJ2090rpU.png" alt="Shop Item 1">
+                        <a href="https://www.jdoqocy.com/click-101756007-17235977" target="_blank">
+                    <img src="https://www.lduhtrp.net/image-101756007-17235977" alt="Shop Item2">
+                                            <a href="https://www.jdoqocy.com/click-101756007-15640633" target="_blank">
+                    <img src="https://www.tqlkg.com/image-101756007-15640633" alt="Shop Item3">
+                        <a href="https://www.jdoqocy.com/3481y1A719PRQRXVWQQXPRWZURUUW?url=https%3A%2F%2Fwww.fragranceshop.com%2Fproduct%2Fcoach-for-men-for-men%2F%3Fattribute_pa_size%3Deau-de-toilette-spray-6-7-oz%26wmc-currency%3DUSD&cjsku=FS89158ga" target="_blank">
+                    <img src="https://www.fragranceshop.com/wp-content/uploads/2024/06/fs89158.jpg" alt="Shop Item4">
+                         <a href="https://www.dpbolvw.net/click-101756007-17099898?url=https%3A%2F%2Fwww.tiktok.com%2Fview%2Fproduct%2F1731163826635641138%3Fchain_key%3D%257B%2522t%2522%253A1%252C%2522k%2522%253A%2522000000000000000007559377315366766350%2522%252C%2522sc%2522%253A%2522OPEN_API%2522%257D%26scene%3Dpdp%26utm_source%3Dopen_api%26trackParams%3D%257B%2522enter_from_info%2522%253A%2522product_share_outside%2522%252C%2522source_page_type%2522%253A%2522product_share%2522%252C%2522enable_shop_tab_popup%2522%253A1%257D%26share_app_id%3D1233%26div_media_source%3Daffiliate%26landing_page_name%3Dproduct_detail%26landpage_form%3Dhalf%26page_name%3Dproduct_detail%26sticky_diversion_config%3D%257B%2522merge_action%2522%253A%2522merge%2522%252C%2522data%2522%253A%257B%2522channel%2522%253A%255B%2522benefit_hub%2522%255D%257D%252C%2522is_sticky%2522%253A1%257D%26touch_point_product_id%3D1731163826635641138&cjsku=1731163826635641138" target="_blank">
+                    <img src="https://p19-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/5aa064c6412e4aa092f087f68cbd1b41~tplv-fhlh96nyum-origin-webp.webp?dr=12180&from=3377431861&idc=useast5&ps=933b5bde&shcp=a706da35&shp=c94f8535&t=555f072d" alt="Shop Item5">
+                    <a href="https://www.jdoqocy.com/click-101756007-15554632" target="_blank">
+                    <img src="https://www.tqlkg.com/image-101756007-15554632" alt="Shop Item6">
+                         <a href="https://www.jdoqocy.com/click-101756007-12221983" target="_blank">
+                    <img src="https://www.lduhtrp.net/image-101756007-12221983" alt="Shop Item7"> 
+                    <a href="https://www.dpbolvw.net/click-101756007-15554402" target="_blank">
+                    <img src="https://www.ftjcfx.com/image-101756007-15554402" alt="Shop Item8">
+                    <a href="https://www.dpbolvw.net/click-101756007-15219896" target="_blank">
+                    <img src="https://www.awltovhc.com/image-101756007-15219896" alt="Shop Item9"> 
+                    <a href="https://amzn.to/4wGxyXz" target="_blank">
+                    <img src="https://i.imghippo.com/files/xJ2090rpU.png" alt="Shop Item 10">
+                        <a href="https://www.tkqlhce.com/click-101756007-17289282" target=" target="_blank">
+                    <img src="https://www.awltovhc.com/image-101756007-17289282" alt="Shop Item 11">
+                             <a href="https://www.kqzyfj.com/click-101756007-17016716" target=" target="_blank">
+                    <img src="https://www.lduhtrp.net/image-101756007-17292140" alt="Shop Item 12">
+                                  <a href="https://www.kqzyfj.com/click-101756007-14037866" target=" target="_blank">
+                    <img src="https://www.lduhtrp.net/image-101756007-13822205" alt="Shop Item 13">
+               
+                             
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+<script>
+const supabaseUrl = "https://wpsfafalszzibjbuladc.supabase.co";
+const supabaseKey = "YOUR_ANON_KEY";
+
+const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+/* LOAD POSTS */
+async function loadPosts() {
+    const { data } = await supabaseClient
+        .from("posts")
+        .select("*")
+        .order("created_at", { ascending: false });
+
+    const container = document.getElementById("posts");
+    container.innerHTML = "";
+
+    data.forEach(post => {
+        container.innerHTML += `
+            <div class="post">
+                <img src="${post.image_url || ''}" />
+                <h2>${post.title}</h2>
+                <div class="genre">${post.genre}</div>
+                <p>${post.content}</p>
+
+                <div class="emoji-container">
+                    <span>🙂</span>
+                    <span>😂</span>
+                    <span>😍</span>
+                </div>
+            </div>
+        `;
+    });
+}
+
+/* CREATE POST */
+async function createPost() {
+    const title = document.getElementById("title").value;
+    const genre = document.getElementById("genre").value;
+    const image = document.getElementById("image").value;
+    const content = document.getElementById("content").value;
+
+    if (!title || !content) return alert("Fill all fields");
+
+    const { error } = await supabaseClient
+        .from("posts")
+        .insert([{
+            title,
+            genre,
+            image_url: image,
+            content
+        }]);
+
+    if (error) {
+        console.log(error);
+        return;
+    }
+
+    loadPosts();
+}
+
+/* INIT */
+loadPosts();
+</script>
+
+</body>
+</html>
