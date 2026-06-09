@@ -1,7 +1,7 @@
 # Signature & Letter SS Blog.com
 ---
 
-# Finding out the plots and stories inside hollywood are hidden but Signature & Letter ss blog comes in clutch with the better headlines.
+## Finding out the plots and stories inside hollywood are hidden but Signature & Letter ss blog comes in clutch with the better headlines.
 
 ---
 # Hollywood 
