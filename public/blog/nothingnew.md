@@ -1,19 +1,10 @@
 # Signature & Letter SS Blog - Nothin New
 
-## Navigation
-- Home  
-- Nothin New  
-- Fashion Flashy  
-- Hollywood  
-- Goods & Catalog  
-- Recognitions  
-
+ # The formula to blog
 ---
 
 # 📰 Blog Posts
-
----
-
+--
 ## Cut Loose
 **Genre:** Nothing New
 
