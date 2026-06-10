@@ -5,6 +5,21 @@
 
 # 📰 Blog Posts
 --
+## Acting goes first 🫅
+https://globalrecognitionawards.org/blog/top-8-us-business-awards/#elementor-toc__heading-anchor-1
+**Genre:** Nothing New
+
+With the rise of social media followers the comparison between individuals and sole proprietors is beginning to become difficult , so in order to find valueful leaders and inspirers a couple of appointments are made. Statistic show that the average instagram user will pass there first 1,000 followers within 2 years of having a active account. Now , 1,000 is not too impressive , so instead activity reach needs an extra leg , that is where the GRA comes in. The top 8 business awards range from ; the steview awards ( an award given to high recognized employees in any workplace) , there is also the forbes best employee , which is the same award for only employees in the top 500 companies in the world. None of these awards are transferable , they are only there to help build safety around a brand or corporation.
+
+## 3 Ways to imagine better 👌
+**Genre:** Nothin New
+
+https://www.rush.edu/news/9-simple-ways-improve-your-health
+
+Asking people for advice nowadays can seem needy and weak , and this is really sucky. The way to remove this problem is to start with these three methods that work better than asking . Guessing , guessing is a effective way to give yourself a 50/50 chance and avoid missing out on anything , Go really fast is key to staying on trend . If you want to eat do it fast , speak , speak fast. Also reading this blog fast could help. Lastly , drinking a beer really fast helps.
+
+
+--
 ## Cut Loose
 **Genre:** Nothing New
 
