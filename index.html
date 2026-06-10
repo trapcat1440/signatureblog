@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
      <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 
@@ -166,16 +167,18 @@ ml('account', '2362560');
 </nav>
 
 <main>
-    <!-- Left Column -->
-        <model-viewer
-    src="lettera.glb"
-    camera-controls
-    auto-rotate
-    style="position:fixed; inset:0; z-index:-1;">
+
+<model-viewer
+  id="model2"
+  class="floatModel"
+  src="lettersignature.glb"
+  auto-rotate
+  rotation-per-second="1deg"
+  camera-orbit="0deg 75deg 2.5m"
+  shadow-intensity="0"
+  exposure="1">
 </model-viewer>
-<script type="module"
-src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-</script>
+    <!-- Left Column -->
     <div class="left-column">
 
         <!-- Example Post 1 -->
@@ -189,16 +192,6 @@ src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
                 
             </div>
         </div>
-            <model-viewer
-    src="letterblogg.glb"
-    camera-controls
-    auto-rotate
-    style="position:fixed; inset:0; z-index:-1;">
-</model-viewer>
-<script type="module"
-src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-</script>
-
         <!-- Example Post 2 -->
         <div class="post" data-id="fashion1">
             <a class="post-link" href="https://clublss.com" target="_blank">
