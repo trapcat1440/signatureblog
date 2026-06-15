@@ -155,7 +155,7 @@ ml('account', '2362560');
     <link rel="icon" href="https://i.imghippo.com/files/Ngr2023LA.png" type="image/png">
 </head>
 <body>
-
+<div class="clock-bg" id="bgClock">08:26:00</div>
 <header>
 <a href="https://patreon.com/SignatureLetterSSblog" target="_blank" rel="noopener noreferrer">
     <img
@@ -183,6 +183,34 @@ ml('account', '2362560');
 <h1 class="scroll-title">Signature & Letter SS Blog.com</h1>
 
 <style>
+.clock-bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20vw;
+  font-weight: bold;
+  color: rgba(255, 0, 0, 0.6);
+  user-select: none;
+  z-index: 0;
+  pointer-events: none;
+  white-space: nowrap;
+
+  text-shadow:
+    0 0 10px rgba(255, 0, 0, 0.8),
+    0 0 30px rgba(255, 0, 0, 0.6),
+    0 0 60px rgba(255, 0, 0, 0.4);
+
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.25; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.02); }
+  100% { opacity: 0.25; transform: translate(-50%, -50%) scale(1); }
+}
+}
+}
 .scroll-title {
     white-space: nowrap;
     overflow: hidden;
@@ -289,7 +317,7 @@ ml('account', '2362560');
     <!-- Right Column: Shop Links -->
     <div class="right-column">
         <div class="sidebar-box">
-            
+        
             <div class="shop-thumbnails">
                 <a href="https://www.dpbolvw.net/click-101756007-13093495" target="_blank">
                     <img src="https://www.awltovhc.com/image-101756007-13093495"
@@ -337,6 +365,7 @@ ml('account', '2362560');
         </div>
     </div>
 </main>
+
 <body>
 <footer>
      <!-- TrustBox widget - Review Collector -->
@@ -369,5 +398,18 @@ ml('account', '2362560');
     });
 </script>
 <script src="//code.tidio.co/sckfoqqdlmsxqvqscvlw2grvgwnunkyl.js" async></script>
+<script>
+function updateClock() {
+  const now = new Date();
+  const h = String(now.getHours()).padStart(2, '0');
+  const m = String(now.getMinutes()).padStart(2, '0');
+  const s = String(now.getSeconds()).padStart(2, '0');
+
+  document.getElementById("bgClock").textContent = `${h}:${m}:${s}`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
 </body>
 </html>
