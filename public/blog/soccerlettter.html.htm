@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIFA World Cup 2026 Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* =======================
+   FIFA 2026 THEME
+======================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
+
+body{
+    background:
+        radial-gradient(circle at top left,#9f00ff 0%,transparent 35%),
+        radial-gradient(circle at top right,#00c2ff 0%,transparent 35%),
+        linear-gradient(135deg,#070b1a,#0a1a33,#050814);
+    color:white;
+    min-height:100vh;
+}
+
+/* HERO */
+.hero{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:3rem;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.hero p{
+    color:#b9c8ff;
+    margin-top:10px;
+}
+
+.countdown{
+    margin-top:25px;
+    font-size:1.3rem;
+    font-weight:600;
+    color:#ffd700;
+}
+
+/* SECTION */
+.section{
+    max-width:1100px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+.section h2{
+    margin-bottom:20px;
+    font-size:1.8rem;
+    letter-spacing:1px;
+}
+
+/* GLASS CARD */
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* LIVE MATCH */
+.match{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.team{
+    width:35%;
+    font-weight:700;
+}
+
+.score{
+    font-size:2rem;
+    font-weight:800;
+    color:#ffd700;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+
+.city, .stadium{
+    padding:15px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    color:#aaa;
+    margin-top:50px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .hero h1{font-size:2rem;}
+    .match{flex-direction:column;gap:10px;text-align:center;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>FIFA WORLD CUP 2026</h1>
+    <p>USA • CANADA • MEXICO</p>
+    <div class="countdown" id="countdown"></div>
+</div>
+
+<!-- LIVE SCORES -->
+<div class="section">
+    <h2>⚽ Live Scores</h2>
+    <div id="scores"></div>
+</div>
+
+<!-- FIXTURES -->
+<div class="section">
+    <h2>📅 Fixtures</h2>
+    <div id="fixtures"></div>
+</div>
+
+<!-- STANDINGS -->
+<div class="section">
+    <h2>📊 Standings</h2>
+    <div id="standings"></div>
+</div>
+
+<!-- HOST CITIES -->
+<div class="section">
+    <h2>🌍 Host Cities</h2>
+    <div class="grid">
+        <div class="city">New York</div>
+        <div class="city">Los Angeles</div>
+        <div class="city">Dallas</div>
+        <div class="city">Toronto</div>
+        <div class="city">Mexico City</div>
+        <div class="city">Miami</div>
+    </div>
+</div>
+
+<!-- STADIUMS -->
+<div class="section">
+    <h2>🏟️ Stadiums</h2>
+    <div class="grid">
+        <div class="stadium">SoFi Stadium</div>
+        <div class="stadium">MetLife Stadium</div>
+        <div class="stadium">AT&T Stadium</div>
+        <div class="stadium">Estadio Azteca</div>
+    </div>
+</div>
+
+<footer>
+    FIFA World Cup 2026 Dashboard • 
+    <api-sports-widget data-type="leagues"></api-sports-widget>
+
+<!-- Configuration -->
+<api-sports-widget data-type="config"
+  data-key="6f89f4e72802eb2473908b8ee427f928"
+  data-sport="football"
+  data-lang="en"
+  data-theme="white"
+  data-show-errors="true"
+></api-sports-widget>
+</footer>
+
+<script>
+
+/* =======================
+   CONFIG
+======================= */
+
+const CONFIG = {
+    apiKey: "6f89f4e72802eb2473908b8ee427f928",
+    apiUrl: "https://v3.football.api-sports.io"
+};
+
+/* =======================
+   COUNTDOWN
+======================= */
+
+const targetDate = new Date("June 11, 2026 00:00:00").getTime();
+
+setInterval(() => {
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+
+    const days = Math.floor(diff / (1000*60*60*24));
+
+    document.getElementById("countdown").innerText =
+        `${days} DAYS UNTIL KICKOFF`;
+}, 1000);
+
+/* =======================
+   LIVE SCORES
+======================= */
+
+async function loadScores(){
+
+    try{
+        const res = await fetch(
+            `${CONFIG.apiUrl}/fixtures?live=all`,
+            {
+                headers:{
+                    "x-apisports-key": CONFIG.apiKey
+                }
+            }
+        );
+
+        const data = await res.json();
+
+        document.getElementById("scores").innerHTML =
+            data.response.slice(0,5).map(match => `
+                <div class="card match">
+                    <div class="team">${match.teams.home.name}</div>
+                    <div class="score">
+                        ${match.goals.home ?? 0} - ${match.goals.away ?? 0}
+                    </div>
+                    <div class="team" style="text-align:right">
+                        ${match.teams.away.name}
+                    </div>
+                </div>
+            `).join("");
+
+    }catch(err){
+        console.log("Scores error", err);
+    }
+}
+
+/* =======================
+   FIXTURES
+======================= */
+
+async function loadFixtures(){
+
+    try{
+        const res = await fetch(
+            `${CONFIG.apiUrl}/fixtures?league=1&season=2026`,
+            {
+                headers:{
+                    "x-apisports-key": CONFIG.apiKey
+                }
+            }
+        );
+
+        const data = await res.json();
+
+        document.getElementById("fixtures").innerHTML =
+            data.response.slice(0,5).map(match => `
+                <div class="card">
+                    ${match.teams.home.name} vs ${match.teams.away.name}
+                </div>
+            `).join("");
+
+    }catch(err){
+        console.log(err);
+    }
+}
+
+/* =======================
+   STANDINGS (PLACEHOLDER)
+======================= */
+
+function loadStandings(){
+    document.getElementById("standings").innerHTML = `
+        <div class="card">Group A standings coming soon...</div>
+    `;
+}
+
+/* =======================
+   INIT
+======================= */
+
+loadScores();
+loadFixtures();
+loadStandings();
+
+setInterval(loadScores, 60000);
+
+</script>
+
+</body>
+</html>
