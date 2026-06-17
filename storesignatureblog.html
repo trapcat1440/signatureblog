@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head>
-      <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-     <!-- TrustBox script -->
-<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<html lang="en">
 
-        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<head>
     <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-    <!-- MailerLite Universal -->
+
+<!-- End TrustBox script -->
+<!-- MailerLite Universal -->
 <script>
 (function(w,d,e,u,f,l,n){
     w[f]=w[f]||function(){
@@ -25,568 +22,987 @@
 ml('account', '2362560');
 </script>
 <!-- End MailerLite Universal -->
-    <title>Signature & Letter SS Blog-Hollywood</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background-color: #e0e0e0; color: #000; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header {
-            background-color: red;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-        }
-        header img { height: 60px; margin-right: 15px; }
-        header h1 { font-size: 24px; }
+<title>Signature Blog Marketplace</title>
 
-        nav {
-            background-color: #336699;
-            padding: 10px 20px;
-        }
-        nav a {
-            color: white; text-decoration: none; margin-right: 15px; font-weight: bold;
-        }
-        nav a:hover { text-decoration: underline; }
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #d7d7d7;
+        margin: 0;
+        color: #111;
+    }
 
-        main {
-            display: flex;
-            padding: 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
+    header {
+        background: black;
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        /* Left Column */
-        .left-column { width: 70%; padding-right: 20px; }
+    .home-btn {
+        color: white;
+        text-decoration: underline;
+        font-size: 14px;
+    }
 
-        .post {
-            background-color: #fff;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-        }
-        .post h2 { font-size: 18px; color: #003366; margin-bottom: 5px; }
-        .post .genre {
-            font-size: 14px;
-            color: #336699;
-            margin-bottom: 10px;
-        }
-        .post .genre a { text-decoration: none; color: #336699; }
-        .post .genre a:hover { text-decoration: underline; }
+    .moving-text {
+        background: #ffffcc;
+        border-bottom: 1px solid #999;
+        padding: 6px;
+        font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
 
-        /* Emoji container */
-        .emoji-container span {
-            font-size: 24px;
-            cursor: pointer;
-            margin-right: 10px;
-            user-select: none;
-            transition: transform 0.2s;
-        }
-        .emoji-container span:hover { transform: scale(1.2); }
-        .emoji-count { font-size: 14px; margin-left: 3px; vertical-align: super; }
+    .moving-text span {
+        display: inline-block;
+        padding-left: 100%;
+        animation: scroll 18s linear infinite;
+    }
 
-        /* Right Column */
-        .right-column { width: 30%; }
+    @keyframes scroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(-100%); }
+    }
 
-        .sidebar-box {
-            background-color: white;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            font-size: 12px;
-        }
-        .sidebar-box h3 {
-            font-size: 14px;
-            margin-bottom: 8px;
-            color: #003366;
-            text-align: center;
-        }
-        .shop-thumbnails { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; }
-        .shop-thumbnails a img {
-            width: 48px; height: auto; border: 1px solid #ccc;
-            transition: transform 0.2s;
-        }
-        .shop-thumbnails a img:hover {
-            transform: scale(1.2); border-color: #336699;
-        }
+    main {
+        width: 95%;
+        max-width: 1000px;
+        margin: 20px auto;
+    }
 
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-            font-size: 12px;
-        }
-    </style>
-    <link rel="icon" href="https://i.imghippo.com/files/Ngr2023LA.png" type="image/png">
+    .listing {
+        background: white;
+        border: 1px solid #999;
+        margin-bottom: 10px;
+        display: flex;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .listing img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border: 1px solid #ccc;
+        background: white;
+    }
+
+    .details {
+        flex: 1;
+    }
+
+    .title {
+        font-size: 16px;
+        color: #0033cc;
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-decoration: underline;
+    }
+
+    .description {
+        font-size: 13px;
+        color: #333;
+        margin-bottom: 8px;
+    }
+
+    .meta {
+        font-size: 12px;
+        color: #666;
+    }
+
+    .employee {
+        margin-top: 8px;
+        font-size: 12px;
+    }
+
+    .employee strong {
+        color: #000;
+    }
+
+    .rating {
+        font-size: 12px;
+        color: #ff9900;
+        margin-top: 5px;
+    }
+
+    .buy {
+        margin-top: 10px;
+        display: inline-block;
+        font-size: 13px;
+        color: #0033cc;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 12px;
+        padding: 20px;
+        color: #333;
+    }
+</style>
+<link rel="icon" href="https://i.imghippo.com/files/Ngr2023LA.png" type="image/png">
+
 </head>
+
 <body>
 
 <header>
+    <div>Signature & Letter SS Blog</div>
+    <a class="home-btn" href="https://clublss.com/">Home</a>
+</header>
+<header>
+      <a href="https://www.amazon.com/joinyoungadult/">Enjoy Membership Perks !</a>
+    <img src="https://m.media-amazon.com/images/I/61yV4NjoB0L.png" width="100"
+   <a href="https://www.amazon.com/joinyoungadult/"></a>
     
-    <a href="https://patreon.com/SignatureLetterSSblog" target="_blank" rel="noopener noreferrer">
-    <img
-        src="https://c5.patreon.com/external/logo/become_a_patron_button.png"
-        alt="SignatureLetterSSblog/Patreon"
-        style="height:40px; width:auto; border:none;"
-        <img src="https://i.imghippo.com/files/pFBK3119CPE.png" alt="Screenshot 2026-06-15 155543"width="" />
-    <img src="https://i.imghippo.com/files/pFBK3119CPE.png" alt="Screenshot 2026-06-15 155543" />
-    <img src="https://i.imghippo.com/files/pAm5784YCA.png"width="140 alt="Blog Logo">
-<img src="https://i.imghippo.com/files/RHim2429oU.png" alt="cooltext510396968116108" />
-    <model-viewer
-  id="model2"
-  class="floatModel"
-  src="lettersignature.glb"
-  auto-rotate
-  rotation-per-second="1deg"
-  camera-orbit="0deg 75deg 2.5m"
-  shadow-intensity="0"
-  exposure="1">
-</model-viewer>
+</header>
 
-    
-   
-   
-    </header>
-
-<nav>
-    <a href="index.html">BACK</a>
-    <a href="hollywood.html">Hollywood stuff</a>
-     <a href="https://mdxpress-lyart.vercel.app/">Blog v.3
-    <h2> 
-    <img src="https://i.imghippo.com/files/dV6699xLg.png" alt="Gemini_Generated_Image_i395gbi395gbi395 (1)"width=700px />
-<div id="widget-gf24mqin3j4e" class="scoreaxis-widget" style="width: auto;height: auto;font-size: 14px;background-color: #ffffff;color: #141416;border: 1px solid;border-color: #ecf1f7;overflow: auto;"><script src="https://widgets.scoreaxis.com/api/football/live-match/672376da10cdfa1b19049864?widgetId=gf24mqin3j4e&lang=en&lineupsBlock=1&eventsBlock=1&statsBlock=1&links=1&font=heebo&fontSize=14&rowDensity=100&widgetWidth=auto&widgetHeight=auto&bodyColor=%23ffffff&textColor=%23141416&linkColor=%23141416&borderColor=%23ecf1f7&tabColor=%23f3f8fd" async></script><div class="widget-main-link" style="padding: 6px 12px;font-weight: 500;">Live data by <a href="https://www.scoreaxis.com/" style="color: inherit;">Scoreaxis</a></div></div>
-<div id="widget-gf24mqin3j4e" class="scoreaxis-widget" style="width: auto;height: auto;font-size: 14px;background-color: #ffffff;color: #141416;border: 1px solid;border-color: #ecf1f7;overflow: auto;"><script src="https://widgets.scoreaxis.com/api/football/live-match/672376da10cdfa1b19049864?widgetId=gf24mqin3j4e&lang=en&lineupsBlock=1&eventsBlock=1&statsBlock=1&links=1&font=heebo&fontSize=14&rowDensity=100&widgetWidth=auto&widgetHeight=auto&bodyColor=%23ffffff&textColor=%23141416&linkColor=%23141416&borderColor=%23ecf1f7&tabColor=%23f3f8fd" async></script><div class="widget-main-link" style="padding: 6px 12px;font-weight: 500;">Live data by <a href="https://www.scoreaxis.com/" style="color: inherit;">Scoreaxis</a></div></div>
-    </h2>
-</nav>
+<div class="moving-text">
+    <span>🔥 Welcome to our blog marketplace • Save 60% on every item • FIFA MERCHANDISE • Deals are here save 30%  🔥</span>
+</div>
 
 <main>
+
+    <!-- ITEM 1 -->
+    <div class="listing">
+        <a href="https://amzn.to/3SMaLKe"></a>
+        <img src="https://m.media-amazon.com/images/I/31HMbdu5d9L._UX250_FMwebp_QL85_.jpg">
+        </a>
+        <div class="details">
+            <div class="title">
+                Digital Album Iceman by Drake
+                
+            </div>
+            <div class="details">
+                Digital album Iceman by Drake
+                
+                
+                
+            </div>
+             <div class="employee"><strong>Employee:</strong> Doug W.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://amzn.to/4uQ59No" target="_blank">View Item</a>
+            </div>
+            </div>
+        </div>
+            
+        </div>
+            
+            
+        </div>
+        
+        
+        
+    </div>
+    <div class="listing">
+        <a href="https://amzn.to/4evnqIO"></a>
+        <img src="https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C81MYnzjKZzL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_SX679_.png">
+        </a>
+        <div class="details">
+            <div class="title">
+                FIFA World CUP 26 Event Colors T-Shirt
+                </div>
+                <div class="description">FIFA World CUP 26 Event color t shirt</div>
+                
+                
+                
+                
+            
+            <div class="employee"><strong>Employee:</strong> Axel W.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://amzn.to/4uQ59No" target="_blank">View Item</a>
+            </div>
+            </div>
+        </div>
+            
+        </div>
+            
+        </div>
+        
+    </div>
     
-    <model-viewer
-  id="model2"
-  class="floatModel"
-  src="lettersignature.glb"
-  auto-rotate
-  rotation-per-second="1deg"
-  camera-orbit="0deg 75deg 2.5m"
-  shadow-intensity="0"
-  exposure="1">
-</model-viewer>
-
-
- <div class="right-column">
-        <div class="sidebar-box">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="listing">
+        <a href="https://amzn.to/3QO89en"></a>
+           <img src="https://m.media-amazon.com/images/I/41Lg1DEYHAL._UX250_FMwebp_QL85_.jpg">
+           </a>
+           <div class="details">
+               <div class="title">
+                   
+                Album
+                    you seem pretty sad for a girl so in love
+                   </div>
+                   <div class="details">
+                        Album
+                    you seem pretty sad for a girl so in love
+                   </div>
+                       
+                   
+                       <div class="employee"><strong>Employee:</strong> Destiny W.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://amzn.to/4uQ59No" target="_blank">View Item</a>
+            </div>
+            </div>
+        </div>
+            
+        </div>
+                   
+                   
+               </div>
+           </div>
+    
+    
+    <div class="listing">
+        <a href="https://amzn.to/4eiy1YY"></a>
+        <img src="https://m.media-amazon.com/images/I/41me99xAxfL._UX250_FMwebp_QL85_.jpg">
+        </a>
+        <div class="details">
+            <div class="title">
+Album
+BROWN
+Chris Brown</div>
+        <div class="description">
+            
+Album
+BROWN
+Chris Brown
+        </div>
+                <div class="employee"><strong>Employee:</strong> Chris W.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://amzn.to/4uQ59No" target="_blank">View Item</a>
+            </div>
+            </div>
+        </div>
+            
+        </div>
+        </div>
+                
+        
+        
+        
+        
+    </div>
+    
+    
+    
+    
+    
+    <div class="listing">
+        <a href="https://amzn.to/4a6S3Da"></a>
+        <img src="https://m.media-amazon.com/images/I/71sqyIFPaDL._AC_SL1500_.jpg">
+        </a>
+        <div class="details">
+            <div class="title">
+                Rain Drum for Outside Garden, 6 Inches 8 Notes Steel Tongue Chakra Drums, Waterproof Meditation Rain Chime, Musical Instruments for Adult Gift with Bag, Music Book, Drum Mallets (Green)</div>
+                <div class="description">Rain Drum for Outside Garden, 6 Inches 8 Notes Steel Tongue Chakra Drums, Waterproof Meditation Rain Chime, Musical Instruments for Adult Gift with Bag, Music Book, Drum Mallets (Green)</div>
+                </a>
+                
+                                                  <div class="employee"><strong>Employee:</strong> Roy W.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://amzn.to/4uQ59No" target="_blank">View Item</a>
+            </div>
+            </div>
+        </div>
+            
+        </div>
+                
+            </div>
+        </div>
+                
+                
+                
+            </div>
+            
+            
+            
+            
+        </div>
+        
+        
+        
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="listing">
+        <a href="https://amzn.to/4erZW7p"></a>
+        <img src="https://m.media-amazon.com/images/I/7159cdbvxnL._SL1500_.jpg">
+        </a>
+        <div class="details">
+            
+            <div class="title">
+                Scream 7 (Amazon Exclusive with Handmade by Robots Ghostface) [4K UHD +Blu-Ray]</div>
+                
+                <div class="description"> Scream 7 (Amazon Exclusive with Handmade by Robots Ghostface) [4K UHD +Blu-Ray]</div>
+                
+                                                  <div class="employee"><strong>Employee:</strong> Rick W.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://amzn.to/4uQ59No" target="_blank">View Item</a>
+            </div>
+            </div>
+        </div>
+            
+        </div>
+                
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+    </div>
+    <div class="listing">
+        <a href="https://amzn.to/4uQ59No"></a>
+        <img src="https://i5.walmartimages.com/seo/Pedigree-Complete-Nutrition-Grilled-Steak-Vegetable-Dry-Dog-Food-For-Adult-Dog-18-Lb-Bag_c23e3fc9-892e-48cd-87fb-4c0a92e84430.4a7050e47d46acda03106b2b1e7a320c.jpeg">
+        </a>
+        <div class="details">
+            <div class="title">Pedigree Adult Dry Dog Food, Complete Nutrition, Grilled Steak & Vegetable Flavor, 18 lb. Bag</div>
+            <div class="description">Pedigree Adult Dry Dog Food, Complete Nutrition, Grilled Steak & Vegetable Flavor, 18 lb. Bag</div>
+            
+                                  <div class="employee"><strong>Employee:</strong> Rick W.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://amzn.to/4uQ59No" target="_blank">View Item</a>
+            </div>
+            </div>
+        </div>
+            
+        </div>
         
             
-            <div class="shop-thumbnails">
-                <a href="https://www.dpbolvw.net/click-101756007-13093495" target="_blank">
-                    <img src="https://www.awltovhc.com/image-101756007-13093495"
-                alt="cashmere botique/signatureblog">
-                </a>
-                 <a href="https://www.dpbolvw.net/click-101756007-15706338?url=https%3A%2F%2Fwww.botanicchoice.com%2FNatural-Remedies%2FEssential-Oils%2FSlim-Eze-Essential-Oil-Blend-1-oz.axd%3Fsrc%3DAFFILIATEEG&cjsku=1930" target="_top">
-                     <img src="https://www.botanicchoice.com/images/marketplace-images/703308110524/703308110524-1.jpg" alt="botanic choice / signatureblog">
-                 </a>
-                 <a href="https://www.dpbolvw.net/click-101756007-16941446?url=https%3A%2F%2Fwww.fragranceshop.com%2Fproduct%2Fburberry-brit-for-men%2F%3Fattribute_pa_size%3Deau-de-toilette-spray-1-7-oz%26wmc-currency%3DUSD&cjsku=FS361ga" target="_top">
-                     <img src="https://www.fragranceshop.com/wp-content/uploads/2024/06/brit_men_3.jpg" alt="burberyy.signatureblog">
-                 </a>
-                 <a href=""https://www.jdoqocy.com/click-101756007-17013501?url=https%3A%2F%2Flightingnewyork.com%2Fproduct%2Flighting%2Faccessories%2Flight-bulbs%2Fsatco-hi-pro-light-bulbs-s38975%2F1968960.html%3Fvip%3D93WWQ3YP%26utm_source%3Dcj%26utm_medium%3Daffiliate%26utm_campaign%3DSatco%26utm_content%3DLighting-Accessories-Light-Bulbs%26utm_term%3D1705813&cjsku=1968960" target="_top"> 
-                 <img src="https://media.lightingnewyork.com/vendors/sat/zoom/s38975.jpg" alt="newyorklightbulbs/signatureblog">
-                 <a href="https://www.tkqlhce.com/click-101756007-11906824" target="_top">
-                 <img src="https://www.lduhtrp.net/image-101756007-11906824" width="250" height="250 alt="corvelgames/signatureblog">
-                     
-                 </a>
-                 
-                     
-                 </a>
-                 <a href=""https://www.dpbolvw.net/click-101756007-15273243" target="_top">
-                    <img src="https://www.awltovhc.com/image-101756007-15273243" width="350" height="200"alt=nordvpn/signatureblog">
-                     
-                     
-                 </a>
-                <a href="https://www.dpbolvw.net/click-101756007-13482906?url=https%3A%2F%2Fwww.peets.com%2Fproducts%2Fpeets-1966-mug-black%3Fvariant%3D39423029018668%26country%3DUS&cjsku=1000141" target="_top">
-                    <img src="https://www.ftjcfx.com/image-101756007-13482906?imgurl=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0319%2F0764%2F3436%2Fproducts%2F1966GraphicMug12oz_Front_1266x1492_WEB.png%3Fv%3D1623800562" alt="peet's/signatureblog">
-                    <a href="https://www.tkqlhce.com/click-101756007-15019509" target="_top">
-                        <img src="https://www.tqlkg.com/image-101756007-15019509" width="120" height="60" alt="rexingauto/signatureblog">
-                        <a href="https://www.dpbolvw.net/click-101756007-12221949" target="_top">
-                            <img src="https://www.ftjcfx.com/image-101756007-12221949" width="88" height="31" alt="rusellstover/signatureblog">
-                            <a href="https://www.kqzyfj.com/click-101756007-11017007" target="_top">
-                                <img src="https://www.tqlkg.com/image-101756007-11017007" width="88" height="31 alt="soccergarage/signatureblog">
-                                
-                                
-                            </a>
-                        </a>
-                    </a>
+        </div>
+            
+            
+            
+            
+            
+            
+            
+        </div>
+        
+        
+        
+        
+        
+    </div>
+    
+    <div class="listing">
+        <a href="https://amzn.to/4vvba21"></a>
+        <img src="
+        https://m.media-amazon.com/images/I/61CEwh+UVuL.jpg">
+        </a>
+        <div class="details">
+            
+            <div class="title">2026 Panini FIFA World Cup Sticker Box – 25 Sticker Packs – Includes Amazon Parallel Inserts – Official Tournament Collection</div>
+            <div class="description">2026 Panini FIFA World Cup Sticker Box – 25 Sticker Packs – Includes Amazon Parallel Inserts – Official Tournament Collection</div>
+            
+                                  <div class="employee"><strong>Employee:</strong> Rick W.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://amzn.to/4vvba21" target="_blank">View Item</a>
+            </div>
+            </div>
+        </div>
+            
+        </div>
+        
+            
+        </div>
+            
+            
+        </div>
+        
+        
+        
+        
+        
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="listing">
+        <a href="https://amzn.to/4oa5Gr4">
+            
+        </a>
+        <img src="https://www.iheartkroger.com/wp-content/uploads/2024/04/mottsfruitsnacks.jpg">
+        </a>
+        <div class="details">
+            
+            <div class="title">Mott's Assorted Fruit Snacks Family Pack, Gluten Free Gummies, Made with Fruit & Veggie Juice, Good Source of Vitamin C, Gelatin Free, 40 Count Individual Pouches, 32 oz
+</div>
+            <div class="description">Mott's Assorted Fruit Snacks Family Pack, Gluten Free Gummies, Made with Fruit Juice
+</div>
+                                  <div class="employee"><strong>Employee:</strong> Rick W.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://amzn.to/4oa5Gr4" target="_blank">View Item</a>
+            </div>
+            </div>
+        </div>
+            
+        </div>
+        
+            
+        </div>
+        
+        
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="listing">
+        <a href="https://amzn.to/4eks6Co"
+        </a>
+        <img src="https://i.imghippo.com/files/qnB1728BNU.jpg">
+        </a>
+         <div class="details">
+            <div class="title">Cuisinart 17-Stainless Steel Cookware set , Chef</div>
+            <div class="description">Cuisinart 17-Piece Stainless Steel Cookware Set, Chef's Classic Steel Collection with Pure Aluminum Core for Quick and Even Heat, Cool Grip Handles, Dishwasher Safe, 77-17N</div>
+                                       <div class="employee"><strong>Employee:</strong> Rick W.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://amzn.to/4eks6Co" target="_blank">View Item</a>
+            </div>
+            </div>
+        </div>
+            
+        </div>
+        
+        
+        
+        
+        
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="listing">
+        <a href="https://amzn.to/3QfL9Vm"
+        >
+        </a>
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEA8PDxISDw8PEBAPDw8PEA8PDQ8PFRYWFxURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGhAQFy0dHR0tKy0tLS0tLS0tLS0tKy0tLS0tLS0tLSstKy0tLS0rLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAK8BHwMBEQACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAgMFBgcEAQj/xABPEAABAwECAxILBgQFBQEAAAABAAIDBAUREiFUBgcTFBYiMTVBUVJhcZGhsbLRCBdyc3SBk5TC0uEjMkJTYsEVZIKiQ2ODw/AlMzSEkiT/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQMEAgUG/8QALREAAgIBAwIGAgMAAgMAAAAAAAECEQMEEiETMQUiMkFRgWFxFCMzBlI0QpH/2gAMAwEAAhEDEQA/ANxQAgIzNLbcVBSzVc33IW4Vw2XO2GtHGTcEB8z5oc9S1auRzm1DqaInWwwHAa0bl7tknj6kBC6s7Ty6q9vJ3oA1ZWpl1V7eXvQBqztPLqr28vegPNWdp5dVe3l70B7qztTLqr28vegDVlamXVXt5e9Aeas7Uy6q9vL3oA1Z2pl1V7eXvQHurO1Muqvby96ABmytTLqr28vegA5srUy6q9vL3oDzVnamXVXt5e9Ae6s7Ty6q9vL3oAGbK08uq/VPL3oA1ZWpl1V7eXvQHmrO1Muqvby96ANWdqZdVe3l70B7qytTLqr28vegA5srUy6q9vL3oDzVnaeXVXvEvegDVnamXVXt5e9Ae6s7Uy6q9vL3oA1ZWpl1V7eXvQBqztTLqr28vegPNWdqZdVe3l70AasrTy6q9vL3oD3VlamXVXt5e9AAzaWpl1V7eTvQFqzG571oUszBVyOq6YkCRslxlY3hMds3jeKA+lqSpZLGyWM4TJGtexw2C1wvBQDqAEAIAQGY+EJKRZIaNh9TEDxgBx/ZAUXOAgjw7Qmc1uHEyna2QgYTGv0UvuO5fgN5lfgjbJSs0mptSaYkROMcexhfjdx8S9aGCEFclbNUcaXc59KSbJlkJ38N1/Wrd8fhHdIfgr54TrnOlj3Q468DiKrlhxz7KmcygmT0NRhtDmuJaReDeVhcdrpozNNOiDtC2pHOLICQ0YjJskn9PEtmLTRS3T/+F8MS9yOMEzsbpZCfLctK2LtFF1L4HoK+phN+G6Rm615JxcR3FxLBjye1M5lCMix0daJWB7HG44iL8bTugrz543B00ZpQcXRXs0Wah8bjBTa6QYnyHG1h3gN0rdpdEprfPsX4sKauRVpp6qQ3vnlJ4nuA5gvSjixRVKKNaUV7HRRWvWU5BbK6Ro2Y5XFzSOK/GFxk0uHJ3jT+SJY4T7ovNi2w2qjw2ktc3FIwnGx37jjXi59O8MtrMGTE4OiDzYZtBRnQYtfUXXm8nBjB2L988S1aLQPP5nwiYY1W6RnFbmsrZSS6eTka4taOQBfQY/DsUFxFHXWS7IdsvNlWQuBEz3Dda9xe0+oqMvhuGa5iQ8qfdGo5ls07K1huOBMwAvjvOxwm8XUvm9Xo5aeXPKfucSilyuw5mhzQClaGi98zxrGXm4DhO4lGm0rzP4SOsWLdy+xTKm0qyY3vne0H8LHFjR6gvXhp8MO0UboxjHshNPWVcRwo6iXyXPL2nlBUzwYZqnFHTjGSpouOZ3NEaj7OTWTtF9wJwXjfb3LydVpOl5lzExZsG3ldjvta1RTsvJLnuxMZeb3HuVOHA8jpdimENzK3JU1U+N8rmA/gYS1oHqW+OLFDsjUoJHkbJmY2TSA+W7vXUlCXeKJ2ombKtp7nCKY3POJjxiDjvEbhWPNplFbodijJirlHfaVpCBhe8k47mtB1z3bwWfHi3ukiuMdxXX1lVPjdI6Np2GRktxcZ2St0cWOHtZoUEgZTSNxiWQHfEju9dPa+6R1SJKjtaRhDZ3YTDiEuwWn9XFxrPlwRfMF9FU8a7oxbPupWR2pexoZotPFJJggAOkLntLjxkNC8nKqkZmbxnVSl1jWcTjIgDfUCQOpVkFrQAgBACAy3wh9q4/So+y5AZ3nNykMtCMf4jqMHyRo5I6l6Hh8bk38Iuwrk1unjAAW6T5NLHSuSBmZt4XUWSczawxwzsH6cD+s3FdSxqU4shwtpiKSIADErJs6OohVgalbeF1Fg5KOu0uajcGguePLbsdanLi6m39hw3UVumx647LsZ4yvTr2LqOglRRI2XKUgdFiWjpaow/wADo5BJx4LS8Hnb0rPq8PUxflNHGSO6JQK6ofNI+R+N73Fzjvk4yvZ0+OOOKivYx6iXmr4GTEVoszbkI0MqbI3E/mRrzBUwPGIaI1ruNjjc4cxXneIYlkxSX4L8L3Wix1tTo9RNKd17ms4mNNw6lhw49mOMUehGNJJHuEFZR0Ic5dUAiqTE9krdmNwd6t0cy4yY98XFhq1RN1tRo9TI7Zaw4DOIDZ6b1hxQ6eNL5M0FSO1jcS4bOwepRJwVYxXjZGMHeK7j8AVaNWaieK/YZFGbv1vGE49SqxY9kX+yqEaJKBtwXMmdDjlCAzI0EEHYIuXSBieetU4dZEDjdFSsicfJklwf7S1eTrY7cr/PJkyqpH0BnS7TWf5n4ishWW9ACAEAIDLfCH2rj9Kj7LkBmuc4dfV/+v8A7q9Pw7/3+i/B3Zr8cmJbHE00eukUbRQ26RdKIoja51wPG5n7q+HdHSOmnlxLiUSaHjKudpFDTpV0ok0Q1rvxO443haMS5R1HghIqm4ALfsJQp1WmwkZdVrrpgbqpr2uP6JOljlDjwLIylorxfv41b1aPE1GS5s6HUPEnWM/UGXUKnrEdQVHS4Nzt4g9K5lk3KjTpsnno7oKnvXGw9pM6dNJsJG31SlQA1LVa13IU2ENlhsiW8OO+4lefmiVImmyrPtOqEPmUqJNHNM+8FdJEUclnu+0cd5sY/sak0ce5PMlxKhxJo8fMiiKEaKpoijD883bB/kN6yvK1/wDr9IyZvUfRGdJtNZ/mfiKwlRb0AIAQAgMt8IjauP0qPsuQGW508uC+q49B/wBxet4Wr3/Rowd2axFPiXoOHJro9dOigKGjOutoo4bUmxN8tvU5dwjyEe09TiXbgdDzqhcqBI06pU7ARlqz4v6XdSuxx5OZcIqoq16UYHMWePq130zqxo1anYcuR1wzYTXDfaRzghZ8io53lloKDWjFuLx8moqTPn807mzrNn8Sr/k/kp3DLrP4lP8AKG4Yq6G6N53hercOouaRfppf2Iqzp7ruQdS9mCs99SDTas6Z3uG3VS62DcJ0ziK5lHg5lLgttjT4j5RXl5Y2xAmBOqNhbQ0+oXSiRQy6oXSgQc9FUAOJ3wzshROFnKJMVgVXTZ0IfWp02BIrVPSZFGR54r8Kucd+NvW5eF4kqzV+EYc3rPo3Ol2ms/zPxFYCot6AEAIAQGW+ERtXH6VH2XIDIc7iTBfP/pfGvb8HV7/ovwdzToqnEvVcDakevqUUCaGTUrrYDjtao1g8tvU5TGHJx7jNPWYlc8ZaPOrFHTJGnVinpkHDX1N/M7qKlRpleV0ipmfGV6kI8FMJCXTld7TpyEiQrhlLmStlvvIG+QOlZM74Od/JqtBS60cgXxWfM97PGnHlnZpVUdc42jbqUJ12Npy2jS/ZSeSVq0eZvNEtwxqaMjqZOoL7XEesp8jBmWpIuUxp0xXVBzBkxVeRcMrnLgt1nT3YQ/UvMlGzTi7EpppcdMuGn1anYBl9ViK6UCGcsdQRgnfa3qChRtspizrFYp6ZaNvrF0sYGhWKemQUTNub6kHfiaely+T8V/8AIf6R5+b1s+k86Xaaz/M/EV5pWW9ACAEAIDLfCI2rj9Kj7LkBiuYiTBdL/p/Eve8EVuf0X4PUX+OrxL3XA3oH1aKBI1ptdbDljFpVF7OQtPQ5cqPKKm6ZHQ1eJa9hamOOrU6Z1Y06sU9M5sQ6ov5ndRVWSNUU5n5SCuJJW+HYyxkKwCpsOZ60KqRW5EzmfbfPA0/iljbzuAWHUusbYT5Nbs51wwTst1p5QvidXCp38mLLHbJokL1jKxLkBy1ovbgcLF6t3oW3QxfU3fBbgjczEJTfdyDqX3ePg13yc7mlaos7UxpzSrBuCIY1xk9JxKRYIqi5zuVYoxs34XwdWm11sL7GX1abBY0+qxFTsOW+DviZhU0Mg/C3Bd1g9fMsalWVplEHyMGRaUi5MbdIV1QsXTtLiuZtJBlWzeNuqWjehYPXhOv6V8b4pznv8GDJ6j6QzpdprP8AM/EV5xWW9ACAEAIDLfCI2rj9Kj7LkBheZd9zpP6PiX0PgC82T6LcPqLa2qX0uw3p8Hj6pTsJsbFUjgQ2LqZb43er4lVKNNFE3yRDJ1tUeDqMgdOV1tJchszFRRG8epZLyfJKz512KssvKOQU1+Nd76PPWQedSpvHUGzTrlyI3khYLbqulH8xD2gsmq/yl+jqEuTY56Ik4bMTt0H7ru4r5WaU1TLckFPuN/aDZY71DCHQsMtNK+DK9PNdlYsNefwkeVretI6Zt8hYJvvwK0vcHE43XHHuAbwW+CUeEaoQUFSMIhbhBvIF9jHgplLkfFMrFIjeJdSrreRvG3UtyiUrVEbjyaS57uVcYkeniZ4ahX7DRuG3TlNpG4bMxUUcOXBeMzsV9NCbr2ujucNwi8rw88v7GUKVHlVYbiSY9cN43Bw9W76lZj1SXEi+M0znZYUxONpaN92tHOVc9VBe53uRKU1nCIYtc/fGw3k3ysuTPv8A0VTyeyM4zxY8GraP8hnaevnPEneb6Rll3PovOk2ms/zPxFYDkt6AEAIAQGW+ERtXH6VH2XIDBLCdcX/0/uvo/wDjy80/osx9ycE6+sUTbF8Hjpip2hyEiYqGjncdrH3xv5B+6zZVyiicuSKvWuPYKR4XLohyPL0Odx1UAvLvJKy6j2OMkvKy00VDrRiWKWbk8redDqHiXPXG8ZdQKeshvFWfSYNVSH+Yh7QXGae7DL9F2CVzNHte1ywmOLG4YnO2Q07w414WDCpcy7Fmo1Sxvau5Xqq0JnYyTzlejDHjXsY3q5v3GI7YqIzrXH1m8cy6lhxy7omOrnH3LNY9sioY5rgGytaTcNh43SO5eZmw9OSrsbsGoWVfkyixqTCY08QX0k8lcGXJPzMlhQcSr6yON4h1DxJ1iN5z1NHc08i6jltkxnyVqtP2juVbMJ7WNjF61Fm4SSoOXISSuWct8Gt5jqTCoaV2/Ge05fLaqdZZFafBM6Q4ln6hNh/D+JT1RYaQTqizHM9yLAr2D+WjP90i8rWO8n0cM37Ol2ms/wAz8RWQgt6AEAIAQGW+EPtXH6VH2XIDArF/xP6f3X0n/HfXP6OoumSgcvrkaNwFyEOQjCUEbiSozfFLxBv7rLm9SK5uyPK1rsQux5cpJABCGyTsyDXcqxauXBROXDNEoaLWjkXzk9RyeRZ0Oo1z1xY06jTrg5Z4MCSB4GNsrHDlBv8A2WnHk3wkvwX4JbZWWGOkvGPGd0nZJ3SvN/kGSVyk2/cTJQcS7WpFM4Kig4l0tSKOaJrontkGyw38o3R6xePWp6qm9vyW4JOGRMjsz1FrAN7Et+qzVI7yvzMmtJrJ1ysbfRp1wcVoUn2b/JKuw5rmiYvlGeVrL3u5V9DhfB7sZUMaEVps63jboylnLmhBaVDohyNxzCR/9OpPNntOXxusf98v2F2J7Q1msBoaWA0MJYMLz6xdaTPRYu3IsGo9ZDN1zpNprP8ANfEVQQW9ACAEAIDLfCI2rj9Kj7LkBgdhjFL/AEfEvo/+O+uf0L5JLBK+vRapCXAqSHIQVFHNlgzMUZmFQ0YyIC8Dkc2/oJ5l5+ryKEot/JK5IieMtJB3Ct0JJoJja6JHIm3lQ2cSZbLAs0uY+W7EwxgHjc9ou5r+ZePr8yXlKpRqDZodNT4hyL5B5uTzNo+adR1SNo0adT1htOC0qXHFdsmRgHKTct+jy3u/RbhhcqJ+laCAV5OSTjJo46dOjpMIVfUOtiOSopwpWVkOBEVFLhHBGy7F3n1C8+patNNuaJxY900jkzO0/wBk07+Nehr8n9jOckfMya0uvP6pztG3U6dUbTjtGl+zf5J6lo0+X+xEqPJlr6e97+Ur7HFKkelKVMXpRW9Q53jb6TiU7zlzGXUineOobFmLxUFKN5h7Tl8nqv8AaX7NMPSiawlmo6C9TQPL0oGF59u2TPRYu3IsGo9ZDN0zpdprP8z8RVBBb0AIAQAgMt8IfauP0qPsuQGFZmWYWijyPiX0PgDqU/o4k6J4Uy+qUzneJfTLreHMZNMm8jeW7O0jwat4P5Du01eR4u7xr9l0HZL5qMxGG4y0wvvxmPdHJvrPovEtq2zLUlL9lNlzNztNxjffyFewtZjfuT0pEvYuYyeRwLm6Gzdc7FzLNqPEscFw7ZHTS9RfJrPjgp2xMGIPjvO644QxlfOzzSyTcpfDK8juLJOmjxBeFJ8nnbR4xrmxtGzGlkbTgtNn/a4poz/cF6fh75f6LcKqaJZ0Vxwm7uMjj3wuc2BT/ZpyYlLldz0yb+LlWGWCa9jK8cl7DMl52Aphp5v2JWKUvY8ZThoc443YJA3gF6OHEocI1YsSgRuZ6L7GPyR1LjXy/sZinHzMl9CWDcyNoh0SjcyNpyV8X2b/ACStGmf9iJUeTMqamvLvKK+y6lFmeVSOzSSdUo3jT6LiU9YjeNGi4lPWI3l7zNS4NLC3eDh/c5ePnheRs9XF6ESemQqemd0eaaCdMUGmVPTYoxTPlfhWgw/ysXbkXl6tVkOX3N4zpNprP8z8RWYgt6AEAIAQGW+ERtXH6VH2XIDFcxEeE6bkZ8S93wSVOf0VZnSLgKRfRdUy7xL6NSspG8ZNGp6pG8nMxMWBVnjhd2mrB4hLdi+zbp3aZoeGvCouPC9CbEl6miDltA3tA/W3rU1wyJLyskqZmILx5Lkx0PFi5omhBYm0ijgtWPEw7z2npC9DQ8TLMS8yO5smJaqNTDRE2g8MinaBqeTWu5CpiuQu4xYkd0bRxBYdXzNmKUeWSmAsVDaILFNDac1az7N/klX6dVNBR5M/sunvwvKd1r6LNl2uijUvzkrpRU9czWNPpFPXIsbNInXFjtHUYEQvNwZhXneGEVoq0n8nt42o4k2Q1bmjkJIj1jdy77x9a1Y9ImrkUy1DfY54s0E4P33HiJvHSrXpIfBX1pfJO0FsiUXHWv4vuu7iseTA4P8ABpxZlLhmZ56cmFWsP8vH2nrwPEVWb6R3PufQedJtNZ/mviKwHJb0AIAQAgMt8IjauP0qPsuQGQZ20eFJOP0s+Jev4XLbv+jPqPSaKKRer1jz9wl9IizEbhk0a66w3HVYUWBVA/5T+01V557sZ6Ojdplr0RedtNZ4ZFO0HmiJQGpnX4I/UFEl5WJLysnKZuILypIzUPYK5oUJLVNCjgtZusv3iOta9JxM7xrzIabLiW7aXgZU2gSZVO0DcsutPIV1GPJK7nfZTNYOReXn5kzM1ySGCs9EUJLUoUc9W3WO5CrcSqSCXJTLEp8TvKd1rfrMlZKMeoX9jJnQFj6pRQh9OnWIobNOjzEbSo27KWjQxuueT/8ARA/5xr6XR+am/ZG6c+Ix+EQmhFenuRXYl0RU2hY7TktN4Vc0mqClyVXPClw6qN26adl/LhPXyHiirPX4RvUtyTPo3Ok2ms/zPxFecSW9ACAEAIDLfCI2rj9Kj7LkBledNHhTVHkx9blv0ctqn9GbVek1RtMtHWPOoHUydYiho0ynrChpkWBM0/oeOlq04574M9HQ+5I6Mo2m4SZk2gSZlO0C4n3uYP1LjJHyMVwWembiC8lopoeIXNChBCmhRH22LoXHjHWFp03+iOoLzIhhOvS2loGdNpAkzptAl02I8ilIldyyWa3WDkXkZV5mUtHcAqiKEkJQoZqRrHchVmP1IlIq9iRYj5RU+IS/tMWZedkxoaw7ivaJdEm4bRGhrncNpRbYp75XeU7tFfXaPJtgvoZnUjnFHxLX1ireIfR8SnrDeN6UU9UKRQc3Tbqlo3oWdpy+Z8Ud57/CPSw+hH0lnS7TWf5n4ivOLS3oAQAgBAZb4RG1cfpUfZcgM1zmGXzVXEyLrer8UqjL6M+oXlNebCud5h2gYU6g2iNBTqDaR9qNwXMPE4dS9TQPdGRv0S7nIZ1v2mwSZ02gQZ02g67PkvkZyqvNHyMn2LpTjEF4zRVQ9cuQJISgRlvj7B/9PWFo0y/sR1FclU0ZevtO6EmdNpAkzqdoPWS3qHE6j3LvZv3AvFy+oqa5O25VEHjgpoUMzjWu5CuoLlAr9jR4lxr/APUyZF52S+AsVHO0S5iURQ2WIkKKrPTYUjz+t/WV70cuxJfhFGpXnFiiXX8kzCH0XEi1IG9Iqf5I5Mkzx2YNaRvRM63LzdZLdkv8Hr6f/NH0XnSbTWf5r4ishcW9ACAEAIDLfCH2rj9Kj7LkBnmcgPtKzyYOuRXQXkl9FWZeU2JrFnZko9LFFihBYhFEPmhFwad69e14X2Zt0i7leMy9naaxJmTaBBmU7QSViPvkbxY1nzqosn2NBp9gLwZdygdKgCSpBGZoP+w4b9y0aX/RHUO5QnTL3FEsEmZTtAkzKdoHKWS9wG+VzKPBK7mi2X9xq8DN6mVS7ncqTkSUTA1UG5jvJK7h6kSRFktxDkHUudYv7DPkXmZKBqyUc0JcxKFCHNUqIogIYry4/rd1rXqJbZfSKNRHznUIVn6hn2iXQp1CNogQI8pOwxDPXZdaLh/lR9blOV3X6PSwqoI+g86Taaz/ADXxFVFpb0AIAQAgMt8IfauP0qPsuQGf5yLf/PdwTS8x0buC1adboyRzJXFmwxOvCySVMxiyuQJKAi7UpzKyS7ZaBg8ZBvPQva0P9aV+5t0ypX8lNeLivcRpEFSDy5AWHM1SE4b9wNuHlFYdVNcRIboutFJe0LxskaZSzpvVZB4pBG2oA/Bj37y7kuu61owceY6jw7M9rISx7mnEQSF72OSkrRcc5KsAlASdhUpklZvA3nkCz6ie2DHYvlnPuvbvE824vEzLmylkhes5yeFSgctoOuYQNl2tHKVbiVy/RKI+mOA8t3DcRyJqY2lIqyLkk2lYjgChIzUPwWk8Ssxx3SSISvgicDAcAfxAH17v/ONXauN8nOojTs6WLzzMBCChDiBeVMU26FGGZ7sd1exx2ZKZjz63yXdAC051UkvhI9CMaSRvudLtNZ/mviKpOi3oAQAgBAZb4Q+1cfpUfZcgKNnEjbHd/wDF/wB5bNJ3Z1E1EMcz7t7m726FblwRnyuGUzw3yhYnO8eYrP8AxZFPSl8AS525gjfOz6lbi00Yu5Mshh92LY24XALXaNKIS1rDwiXxDGcZZscy1YtSo8SZYpX3IF9nSA3Fjx/SVrWaPyiTuoLCkeQXAsbulwuPqCqyaqKXDsNpFpp4BG0MaLgOc8ZWCU9zts4bsW0uab2479lvcq5KMu5DR0srhuhwPGCqXhZy4nr6w/hB9eIKVi+WNpzXG8k4ydkq9UuDojrXskTDCGJ45ncqvxZ9n6OkysT2VKw3FjuYkc4W+OeEvc6F0ljTPP3CBvuBAUT1EIruC1WbZ4hbcMbj9513QF52XLvfJy3Z1Fpvwm4nDmI3iq3TVM5OhlcR95pHqvCoeH4ZzQs1u8CfUo6PyxtGHFzjhO3NgbgV0VFKkT2G5ocK7ccNgqbT4ZDSfc9jqHtxOaeUAkFZZaf/AKspeNrsOiqv2AT6lwsDI2SGnXuN7tzYH7laceOMOxbGFCZosIXHlB3QVY1FqmdSipKmcuvZstJG+0EhYp6T/qzFLTyXbk9ExP4XcxVX8SZx0p/AoQud94XN4O6eXiWrDp4w5fc0YsG13IxbPr2xj9Ei7cio1PrL33N1zpdprP8ANfEVnILegBACAEBmPhBR4VmRjY//AFR49z7rkB876QPCHSlgNIHhDpU2wGkTwh0pbAaQPCHSlsBpA8IdKWwGkDwh0pbB6KF3DHSlg80geEOlLAaQPCHSlsBpA8IdKWwGkDwh0pbAaQPCHSlgNIHhDpS2A/h54Q6UtgBQHhDpSwBoDwh0qLAaQPCHSptgNIHhDpS2A0geEOlRYDSB4Q6UsBpA8IdKWA/h54Q6VNgP4eeEOlQA0geEOlTYDSB4Q6UtgNIHhDpS2A0geEOlLYDSB4Q6VFgP4eeEOlTbAaQPCHSoB9UZ04usaz/M/EUBbkAIDhitJrml2CQA5zdy+8G5AINrt4LuhAVrN/QNtSidSh2gvw45GSOaHtaWuvIIBF94vHrQGYeJ+bLY/d3fOgDxQS5bH7u750AeKCXLY/d3fOgDxQS5bH7u/wCdAHigly2P3d/zoA8UE2Wx+7v+dAHifly2P3d3zoA8UEuWx+7v+dAHigmy2P3d/wA6APE/Nlsfu7/nQB4n5ctj93f86AaqM6SdoaRVxuvcGu+wcMFpv1338eO7nQHcM5GpyyP2D/mQHviQqssj93f8yAPEhVZZH7vJ8yAPEjVZZH7u/wCZAHiQqssj93f8yARNnK1LGlxrI7mi8/YP+ZAclPnRTua1zqtjCReWmBxLeI69AOeKCbLY/d3/ADoA8UEuWx+7u+dAHigmy2P3d/zoA8UEuWx+7v8AnQB4oJctj93d86APFBNlsfu7/nQB4oJstj93f86APFBNlsfu7vnQB4n5stj93d86APFBNlsfu7vnQB4oJstj93f86A2HM06OjpKakGE8U8LIsLWjCLRjddxm9ASgtVvBPQgFyWgA6NuCftCQNjFcCcfMgI+WxZde2OUBjnOcAW4xeb7r0sEfUZnagC8TX74AF/LjCA5P4RP+aeZqkg6IcztS7HouCNy+7HzIBzUxUfnjm+iiwGpio/PHN9EsBqYqPzxzfRLAamKj88c30SwGpio/PHN9EsBqYqMoHN9EsHmpeoygc30SwGpeoygc30SwGpeoygc30SwGpeoygc30SxQamKjKBzfRLB7qYqco6PolgNTFTlHR9EsBqYqco6Polg81MVOUdH0Swe6mKnKOj6JYDUxU5QOb6JYDUxUZQOb6JYPNS9RlA5volgNS9RlA5volig1L1GUDm+iWKDUvUZQOb6JYo91L1GUDm+iWKDUvUfnjm+iWKDUxUfnjm+iWKDUxUfnjm+iWA1MVH545volgNTFR+eOb6JYGZ8z9SzZlvG+MG7kx41IGm2PPuSnmagO6DM7UYiZrjvEC8cwUAkaWyZA9jpZA8R4VzQLryQRjPrQk/9k=">
+        </a>
+        <div class="details">
+            <div class="title">APPLE authentic MacBook A18 Chip 2026</div>
+            <div class="description">Apple product macbook with a18 chip 2026 </div>
+                                                <div class="employee"><strong>Employee:</strong> Bill W.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://amzn.to/3QfL9Vm" target="_blank">View Item</a>
+            </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="listing">
+            <a href="https://amzn.to/4dL7Jy5"
+            >
+        </a>
+        <img src="https://i5.walmartimages.com/asr/cfe28bb7-bdca-4c12-8c9d-4d9719404d99.294dda61df0d1dfb09618b2850e5cf28.jpeg">
+        </a>
+    
+        <div class="details">
+                    
+                    <div class="title">Degree Men UltraClear Antipespirant Deodorant 2.7 0.z</div>
+                    <div class="description">Degree Men UltraClear Antipespirant Deodorant 2.7 0.z </div>
+                                    <div class="employee"><strong>Employee:</strong> Bill W.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://amzn.to/49BkTva" target="_blank">View Item</a>
+            </div>
+            </div>
+                    
+                    
+                </div>
+            </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            <div class="listing">
+                <a href="https://www.tkqlhce.com/click-101756007-13680647?url=https%3A%2F%2Fwww.catholiccompany.com%2Fst-michael-insulated-tumbler-i133886%3Fsku%3D9720061%26amp%3Butm_source%3Dcj%26amp%3Butm_medium%3Daffiliate&cjsku=9720061"
+                >
                     
                 </a>
-               </div>
-                             
+                <img src="http://static.trinityroad.com/prod/500/9720061.jpg">
+                
+            
                 </a>
+                <div class="details">
+                    
+                    <div class="title">Trinity Road Christian Church Website S.t Micheal Tubmler 12. z</div>
+                    <div class="description">St. Michael , Tumbler Gift Set </div>
+                                    <div class="employee"><strong>Employee:</strong> Amy D.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.tkqlhce.com/click-101756007-13680647?url=https%3A%2F%2Fwww.catholiccompany.com%2Fst-michael-insulated-tumbler-i133886%3Fsku%3D9720061%26amp%3Butm_source%3Dcj%26amp%3Butm_medium%3Daffiliate&cjsku=9720061" target="_blank">View Item</a>
+            </div>
+            </div>
+                    
+                    
+                </div>
+            </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <div class="listing">
+            <a href="https://www.kqzyfj.com/click-101756007-17099898?url=https%3A%2F%2Fwww.tiktok.com%2Fview%2Fproduct%2F1729469823856513248%3Fchain_key%3D%257B%2522t%2522%253A1%252C%2522k%2522%253A%2522000000000000000007528530745545525006%2522%252C%2522sc%2522%253A%2522OPEN_API%2522%257D%26scene%3Dpdp%26utm_source%3Dopen_api%26trackParams%3D%257B%2522enter_from_info%2522%253A%2522product_share_outside%2522%252C%2522source_page_type%2522%253A%2522product_share%2522%252C%2522enable_shop_tab_popup%2522%253A1%257D%26share_app_id%3D1233&cjsku=1729469823856513248"
+            >
+                <img src="https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/8339fe7efb2d402c99b146275b7f379e~tplv-fhlh96nyum-origin-jpeg.jpeg?dr=12178&from=520841845&idc=useast5&ps=933b5bde&shcp=b3125ac7&shp=1f0b6a75&t=555f072d" width ="300" heigh="250" alt="">
+                
+            </a>
+            <div class="details">
+                
+                
+            <div class="title"> (US AVAILABLE) AKEYDIY Heat Press Machine  Swing Away Heat Press,Tumbler Press Machine"</div>
+             <div class="description">Heat press machine swing awat heat press , tumbler press machine </div>
+                <div class="meta">Condition : New | Shipping Available</div>
+                <div class="employee"><strong>Employee:</strong> JaeShawn D.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.kqzyfj.com/click-101756007-17099898?url=https%3A%2F%2Fwww.tiktok.com%2Fview%2Fproduct%2F1729469823856513248%3Fchain_key%3D%257B%2522t%2522%253A1%252C%2522k%2522%253A%2522000000000000000007528530745545525006%2522%252C%2522sc%2522%253A%2522OPEN_API%2522%257D%26scene%3Dpdp%26utm_source%3Dopen_api%26trackParams%3D%257B%2522enter_from_info%2522%253A%2522product_share_outside%2522%252C%2522source_page_type%2522%253A%2522product_share%2522%252C%2522enable_shop_tab_popup%2522%253A1%257D%26share_app_id%3D1233&cjsku=1729469823856513248" target="_blank">View Item</a>
+            </div>
+            </div>
+            
+            
+        </div>
+            
+            
+            
+        </div>
+     
+     
+            <div class="listing">
+            <a href="https://www.tkqlhce.com/click-101756007-13695453?url=https%3A%2F%2Fwww.power-systems.com%2Fshop%2Fproduct%2F6233&cjsku=53506"
+            >
+                <img src="https://www.ftjcfx.com/image-101756007-10811565" width="300" height="250" alt="">
+            </a>
+            <div class="details">
+                <div class="title">Rubber Hex Dumbell Pairs 50 LBS-Power Systems</div>
+                <div class="description">Rubber Hex Dumbell Pairs 50 LBS-Power Systems</div>
+                <div class="meta">Condition : New | Shipping Available</div>
+                <div class="employee"><strong>Employee:</strong> Ina D.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.tkqlhce.com/click-101756007-13695453?url=https%3A%2F%2Fwww.power-systems.com%2Fshop%2Fproduct%2F6233&cjsku=53506" target="_blank">View Item</a>
+            </div>
+            </div>
+            
+            
+        </div>
+     
+     
+     
+     
+     
+     
+     
+     
+
+            <div class="listing">
+            <a href="https://www.tkqlhce.com/click-101756007-15706338?url=https%3A%2F%2Fwww.botanicchoice.com%2FEssential-Fatty-Acids%2FSuper-Fish-Oil-90-softgels.axd%3Fsrc%3DAFFILIATEEG&cjsku=1637"
+            >
+                <img src="https://www.botanicchoice.com/images/marketplace-images/703308930023/703308930023-1.jpg" alt="">
+            </a>
+            <div class="details">
+                <div class="title">Botanic Choice Super Choice Fish Oil - 90 Soft gels</div>
+                <div class="description">Super Fish Oil - 90 Softgels (Product Feed)</div>
+                <div class="meta">Condition : New | Shipping Available</div>
+                <div class="employee"><strong>Employee:</strong> Simon D.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.tkqlhce.com/click-101756007-15706338?url=https%3A%2F%2Fwww.botanicchoice.com%2FEssential-Fatty-Acids%2FSuper-Fish-Oil-90-softgels.axd%3Fsrc%3DAFFILIATEEG&cjsku=1637" target="_blank">View Item</a>
+            </div>
+            </div>
+            
+            
+        </div>
+    
+    
+    
+    
+        <div class="listing">
+            <a href="https://www.tkqlhce.com/click-101756007-17013501?url=https%3A%2F%2Flightingnewyork.com%2Fproduct%2Ffurniture-and-decor%2Fhome-decor%2Fwall-mirrors%2Felegant-lighting-naomi-wall-mirrors-mr7f3642vb%2F3004823.html%3Fvip%3D93WWQ3YP%26utm_source%3Dcj%26utm_medium%3Daffiliate%26utm_campaign%3DElegant-Lighting%26utm_content%3DHome-Decor-Wall-Mirrors%26utm_term%3D4389629&cjsku=3004823"
+            >
+                <img src="https://media.lightingnewyork.com/vendors/elg/zoom/mr7f3642vb_0.jpg" alt="">
+            </a>
+            <div class="details">
+                <div class="title">Lightning NewYork Naomi 42 X 36 inch Vintage Bronze Mirror</div>
+                <div class="description">Elegant Lighting MR7F3642VB Naomi 42 X 36 inch Vintage Bronze Mirror (Product Feed)</div>
+                <div class="meta">Condition : New | Shipping Available</div>
+                <div class="employee"><strong>Employee:</strong> Sebastian D.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.tkqlhce.com/click-101756007-17013501?url=https%3A%2F%2Flightingnewyork.com%2Fproduct%2Ffurniture-and-decor%2Fhome-decor%2Fwall-mirrors%2Felegant-lighting-naomi-wall-mirrors-mr7f3642vb%2F3004823.html%3Fvip%3D93WWQ3YP%26utm_source%3Dcj%26utm_medium%3Daffiliate%26utm_campaign%3DElegant-Lighting%26utm_content%3DHome-Decor-Wall-Mirrors%26utm_term%3D4389629&cjsku=3004823" target="_blank">View Item</a>
+            </div>
+            </div>
+            
+            
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    <div class="listing">
+        <a href="https://www.anrdoezrs.net/click-101756007-17013501?url=https%3A%2F%2Flightingnewyork.com%2Fproduct%2Ffurniture-and-decor%2Ffurniture%2Fvanities%2Felegant-lighting-americana-vanities-vf15060nw%2F2379957.html%3Fvip%3D93WWQ3YP%26utm_source%3Dcj%26utm_medium%3Daffiliate%26utm_campaign%3DElegant-Lighting%26utm_content%3DFurniture-Vanities%26utm_term%3D4175308&cjsku=2379957"
+        >
+            <img src="https://media.lightingnewyork.com/vendors/elg/zoom/vf15060nw.jpg" alt="">
+        </a>
+        <div class="details">
+            <div class="title">Lighting NewYork Americana 60x21 Natural Wood Vanity Sink Set</div>
+            <div class="description">Elegant Lighting VF15060NW Americana 60 X 21.5 X 35 inch Natural Wood Vanity Sink Set (Product Feed)</div>
+             <div class="meta">Condition : New | Shipping Available</div>
+                <div class="employee"><strong>Employee:</strong> Riley A.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.anrdoezrs.net/click-101756007-17013501?url=https%3A%2F%2Flightingnewyork.com%2Fproduct%2Ffurniture-and-decor%2Ffurniture%2Fvanities%2Felegant-lighting-americana-vanities-vf15060nw%2F2379957.html%3Fvip%3D93WWQ3YP%26utm_source%3Dcj%26utm_medium%3Daffiliate%26utm_campaign%3DElegant-Lighting%26utm_content%3DFurniture-Vanities%26utm_term%3D4175308&cjsku=2379957" target="_blank">View Item</a>
             </div>
         </div>
     </div>
-        <!-- Left Column -->
-    <div class="left-column">
-        <div class="post" id="Hollywood" data-id="hollywood1">
-        <head>
-<meta charset="UTF-8">
-<title>Puzzle Game</title>
-
-<style>
-body {
-    background: #eef2f7;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* HEADER */
-header {
-    background: #007bff;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 28px;
-}
-
-/* WRAPPER */
-.game-wrap {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-}
-
-/* GAME HEADER */
-.game-header {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.game-header p {
-    color: #666;
-}
-
-/* PUZZLE BOX */
-.puzzle {
-    position: relative;
-    width: 800px;
-    height: 500px;
-    overflow: hidden;
-    border-radius: 12px;
-    background: white;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-}
-
-/* IMAGES */
-.puzzle img {
-    position: absolute;
-    transition: all 1.5s ease;
-}
-
-/* START POSITIONS */
-#img1 { top: 10px; left: 20px; }
-#img2 { top: 200px; left: 30px; }
-#img3 { top: 100px; left: 400px; }
-#img4 { top: 250px; left: 200px; }
-
-/* SOLVED POSITIONS */
-.puzzle.solved #img1 { top: 20px; left: 250px; }
-.puzzle.solved #img2 { top: 20px; left: 600px; }
-.puzzle.solved #img3 { top: 250px; left: 250px; }
-.puzzle.solved #img4 { top: 250px; left: 600px; }
-
-/* BUTTON */
-.btn {
-    margin-top: 15px;
-    padding: 10px 15px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-/* ANSWER BOX */
-.answer-box {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.5s ease;
-    background: #f5f5f5;
-    padding: 0 15px;
-    margin-top: 10px;
-    border-radius: 8px;
-}
-
-.answer-box.show {
-    max-height: 200px;
-    opacity: 1;
-    padding: 15px;
-}
-
-/* FOOTER */
-footer {
-    margin-top: 60px;
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-
-<div id="widget-gf24mqin3j4e" class="scoreaxis-widget" style="width: auto;height: auto;font-size: 14px;background-color: #ffffff;color: #141416;border: 1px solid;border-color: #ecf1f7;overflow: auto;"><script src="https://widgets.scoreaxis.com/api/football/live-match/672376da10cdfa1b19049864?widgetId=gf24mqin3j4e&lang=en&lineupsBlock=1&eventsBlock=1&statsBlock=1&links=1&font=heebo&fontSize=14&rowDensity=100&widgetWidth=auto&widgetHeight=auto&bodyColor=%23ffffff&textColor=%23141416&linkColor=%23141416&borderColor=%23ecf1f7&tabColor=%23f3f8fd" async></script><div class="widget-main-link" style="padding: 6px 12px;font-weight: 500;">Live data by <a href="https://www.scoreaxis.com/" style="color: inherit;">Scoreaxis</a></div></div>
-        Signature Blog & FIFA 
-    </p>
-</header>
-
-<div class="game-wrap">
-
-
-
-
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Three points for the Three Lions 🏴󠁧󠁢󠁥󠁮󠁧󠁿<a href="https://x.com/hashtag/FIFAWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#FIFAWorldCup</a></p>&mdash; FIFA World Cup (@FIFAWorldCup) <a href="https://x.com/FIFAWorldCup/status/2067366807204180013?ref_src=twsrc%5Etfw">June 17, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">World Cup 2026: ⚽️<br>YEESSS ENGLAND 🏴󠁧󠁢󠁥󠁮󠁧󠁿 vs. CROATIA 🇭🇷 <br>10 pm in Germany. <br>Let’s get the match underway. <br>Come on England. 💪🏻🔥 <a href="https://t.co/Oztg28t0KS">pic.twitter.com/Oztg28t0KS</a></p>&mdash; Lian (@_Lian_1234) <a href="https://x.com/_Lian_1234/status/2067337674143289532?ref_src=twsrc%5Etfw">June 17, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">It&#39;s ok, Let&#39;s leave alone the Hat-Tricks. Now show us your World Cup final <a href="https://t.co/4hfdQlofok">pic.twitter.com/4hfdQlofok</a></p>&mdash; OLUWAPELUMII (@Pelumiii10) <a href="https://x.com/Pelumiii10/status/2067337679641956724?ref_src=twsrc%5Etfw">June 17, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">England vs Croatia - the first heavyweight clash of the World Cup<br><br>The tournament has already delivered plenty of surprises and exciting matches...<br><br>But now we&#39;re about to witness a battle between two very strong national teams.<br><br>Place your bets on 1win and drop your predictions… <a href="https://t.co/mxMlda7DjQ">pic.twitter.com/mxMlda7DjQ</a></p>&mdash; 1win (@1winPro) <a href="https://x.com/1winPro/status/2067337695224057944?ref_src=twsrc%5Etfw">June 17, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-
-
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">WE‘RE HERE!!!! Second game of the World Cup. Watching the last dance of the GOAT.🐐🇵🇹 <a href="https://t.co/mmhwMjyEMU">pic.twitter.com/mmhwMjyEMU</a></p>&mdash; Freddy🇩🇪 (@FreddyLA7) <a href="https://x.com/FreddyLA7/status/2067281030889783525?ref_src=twsrc%5Etfw">June 17, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-<div id="widget-oifvmqii0yhk" class="scoreaxis-widget" style="width: auto;height: auto;font-size: 14px;background-color: #ffffff;color: #141416;border: 1px solid;border-color: #ecf1f7;overflow: auto;"><script src="https://widgets.scoreaxis.com/api/football/live-match/672376daa5865608a3041d6e?widgetId=oifvmqii0yhk&lang=en&lineupsBlock=1&eventsBlock=1&statsBlock=1&links=1&font=heebo&fontSize=14&rowDensity=100&widgetWidth=auto&widgetHeight=auto&bodyColor=%23ffffff&textColor=%23141416&linkColor=%23141416&borderColor=%23ecf1f7&tabColor=%23f3f8fd" async></script><div class="widget-main-link" style="padding: 6px 12px;font-weight: 500;">Live data by <a href="https://www.scoreaxis.com/" style="color: inherit;">Scoreaxis</a></div></div>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Messi (38y) breaks Cristiano Ronaldo&#39;s (33y) record for the oldest player to score a hat trick at the World Cup 🤯 <a href="https://t.co/Y2R0O1ZnOS">pic.twitter.com/Y2R0O1ZnOS</a></p>&mdash; ESPN FC (@ESPNFC) <a href="https://x.com/ESPNFC/status/2067078251508297783?ref_src=twsrc%5Etfw">June 17, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-
-
-
-
-<blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Messi x3 🎩<a href="https://x.com/hashtag/FIFAWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#FIFAWorldCup</a> <a href="https://t.co/KWNuCSaCIs">pic.twitter.com/KWNuCSaCIs</a></p>&mdash; FIFA World Cup (@FIFAWorldCup) <a href="https://x.com/FIFAWorldCup/status/2067076977098448948?ref_src=twsrc%5Etfw">June 17, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">First ever World Cup hat-trick for Leo Messi.<br><br>He’s turning 39 next week. 🌎🇦🇷 <a href="https://t.co/2UoyviDAJ7">pic.twitter.com/2UoyviDAJ7</a></p>&mdash; Fabrizio Romano (@FabrizioRomano) <a href="https://x.com/FabrizioRomano/status/2067080410954191043?ref_src=twsrc%5Etfw">June 17, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-<div id="widget-oifvmqii0yhk" class="scoreaxis-widget" style="width: auto;height: auto;font-size: 14px;background-color: #ffffff;color: #141416;border: 1px solid;border-color: #ecf1f7;overflow: auto;"><script src="https://widgets.scoreaxis.com/api/football/live-match/672376daa5865608a3041d6e?widgetId=oifvmqii0yhk&lang=en&lineupsBlock=1&eventsBlock=1&statsBlock=1&links=1&font=heebo&fontSize=14&rowDensity=100&widgetWidth=auto&widgetHeight=auto&bodyColor=%23ffffff&textColor=%23141416&linkColor=%23141416&borderColor=%23ecf1f7&tabColor=%23f3f8fd" async></script><div class="widget-main-link" style="padding: 6px 12px;font-weight: 500;">Live data by <a href="https://www.scoreaxis.com/" style="color: inherit;">Scoreaxis</a></div></div>
-
-
-
-
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">WHAT A GOAL!!! Messi ⚽️ 76&#39;<br><br>🇦🇷 Argentina 3-0 Algeria 🇩🇿<a href="https://t.co/5nYoEzg1AS">pic.twitter.com/5nYoEzg1AS</a></p>&mdash; World Cup 2026 (@WorldCupMedia) <a href="https://x.com/WorldCupMedia/status/2067078223503282414?ref_src=twsrc%5Etfw">June 17, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">RAD x World Cup 😍 <a href="https://t.co/1EujP7Vn92">pic.twitter.com/1EujP7Vn92</a></p>&mdash; Rachel DeMita Pics (@RADeMitaPics) <a href="https://x.com/RADeMitaPics/status/2067036393008762976?ref_src=twsrc%5Etfw">June 17, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">￼🇮🇶1-4🇳🇴<br><br>Haaland&#39;s brace sends Norway to the top of Group I! 🤖🇳🇴<br><br>Get your World Cup Pass now and watch ALL the matches on our YouTube channel: <a href="https://t.co/y0zWArSepR">https://t.co/y0zWArSepR</a> <a href="https://t.co/AqttcMGjWM">pic.twitter.com/AqttcMGjWM</a></p>&mdash; SportyTV (@SportyTV) <a href="https://x.com/SportyTV/status/2067036434964295798?ref_src=twsrc%5Etfw">June 17, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-
-
-
-
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">With one World Cup tie, Cape Verde&#39;s 40-year old goalie has surpassed Victor Wembanyama, Patrick Mahomes, Travis Kelce, and pretty much every athlete in American sports in Instagram followers <a href="https://t.co/KSmTbOQGF4">pic.twitter.com/KSmTbOQGF4</a></p>&mdash; Barstool Sports (@barstoolsports) <a href="https://x.com/barstoolsports/status/2066985429165908147?ref_src=twsrc%5Etfw">June 16, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">France start off strong! 💪<a href="https://x.com/hashtag/FIFAWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#FIFAWorldCup</a></p>&mdash; FIFA World Cup (@FIFAWorldCup) <a href="https://x.com/FIFAWorldCup/status/2066992209153425746?ref_src=twsrc%5Etfw">June 16, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">14 goals in the World Cup! ⚽🔥 <br>The 3rd highest in World Cup history. Absolutely unstoppable! 🇫🇷🐐 <a href="https://x.com/hashtag/Mbappe?src=hash&amp;ref_src=twsrc%5Etfw">#Mbappe</a> <a href="https://x.com/hashtag/WorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#WorldCup</a> <a href="https://x.com/hashtag/Football?src=hash&amp;ref_src=twsrc%5Etfw">#Football</a> <a href="https://t.co/zr93Fcm6oX">pic.twitter.com/zr93Fcm6oX</a></p>&mdash; AniNyx (@AniNyxX) <a href="https://x.com/AniNyxX/status/2067003330434670720?ref_src=twsrc%5Etfw">June 16, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-<blockquote class="twitter-tweet"><p lang="qme" dir="ltr"><a href="https://x.com/hashtag/worldcup?src=hash&amp;ref_src=twsrc%5Etfw">#worldcup</a> <a href="https://x.com/hashtag/polymarket?src=hash&amp;ref_src=twsrc%5Etfw">#polymarket</a> <a href="https://t.co/ZMmlKikyqY">pic.twitter.com/ZMmlKikyqY</a></p>&mdash; 🦅 (@montes1993_) <a href="https://x.com/montes1993_/status/2067003631463739703?ref_src=twsrc%5Etfw">June 16, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Just me, football and good vibes ⚽✨<a href="https://x.com/hashtag/FIFA?src=hash&amp;ref_src=twsrc%5Etfw">#FIFA</a> <a href="https://x.com/hashtag/WorldCup2026?src=hash&amp;ref_src=twsrc%5Etfw">#WorldCup2026</a> <a href="https://t.co/Viul28tIXv">pic.twitter.com/Viul28tIXv</a></p>&mdash; Kira Love (@KiraLove_e) <a href="https://x.com/KiraLove_e/status/2066293313724915716?ref_src=twsrc%5Etfw">June 14, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">FIFA Wold Cup Host⚽️🏟️🎤 <a href="https://x.com/hashtag/FIFA?src=hash&amp;ref_src=twsrc%5Etfw">#FIFA</a> <a href="https://x.com/hashtag/WorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#WorldCup</a> <a href="https://x.com/hashtag/FIFAWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#FIFAWorldCup</a> <a href="https://t.co/ZmcLyKkPSX">pic.twitter.com/ZmcLyKkPSX</a></p>&mdash; Kennedy Smith (@Kennedy_smith11) <a href="https://x.com/Kennedy_smith11/status/2066606974561571082?ref_src=twsrc%5Etfw">June 15, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thankful for this family day <a href="https://x.com/MetLifeStadium?ref_src=twsrc%5Etfw">@MetLifeStadium</a> experience at <a href="https://x.com/hashtag/FIFA?src=hash&amp;ref_src=twsrc%5Etfw">#FIFA</a> <a href="https://x.com/hashtag/foxsports?src=hash&amp;ref_src=twsrc%5Etfw">#foxsports</a> <a href="https://x.com/foxone?ref_src=twsrc%5Etfw">@foxone</a> <a href="https://t.co/lsDk0U2bFq">pic.twitter.com/lsDk0U2bFq</a></p>&mdash; HARRISFAULKNER (@HARRISFAULKNER) <a href="https://x.com/HARRISFAULKNER/status/2066949720388297120?ref_src=twsrc%5Etfw">June 16, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Keep your eyes on me. ⚽️⚽️⚽️ <a href="https://x.com/hashtag/FIFA?src=hash&amp;ref_src=twsrc%5Etfw">#FIFA</a> <a href="https://t.co/hErbp5pdBe">pic.twitter.com/hErbp5pdBe</a></p>&mdash; Micheal Olise (@MichealOlise_) <a href="https://x.com/MichealOlise_/status/2066831345029173451?ref_src=twsrc%5Etfw">June 16, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The cost of parking at Lincoln Financial Field for the <a href="https://x.com/hashtag/WorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#WorldCup</a> <a href="https://t.co/I6pZTvccnq">pic.twitter.com/I6pZTvccnq</a></p>&mdash; Vani Hanamirian (@vani_hanamirian) <a href="https://x.com/vani_hanamirian/status/2066281775987347788?ref_src=twsrc%5Etfw">June 14, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🇫🇷 France vs 🇸🇳 Senegal<br>Score prediction? ⚽️<br><br>$60 USDT 1x <br>Predict the correct score for this game down below! <br><br>To Qualify :<br>Comment your prediction<br>Follow <a href="https://x.com/gomarket?ref_src=twsrc%5Etfw">@gomarket</a> &amp; RT <br>Turn on notifications 🔔<br><br>Who’s taking it? 👀<a href="https://x.com/hashtag/FifaWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#FifaWorldCup</a> <a href="https://x.com/hashtag/Worldcup?src=hash&amp;ref_src=twsrc%5Etfw">#Worldcup</a> <a href="https://x.com/hashtag/France?src=hash&amp;ref_src=twsrc%5Etfw">#France</a> <a href="https://x.com/hashtag/Senegal?src=hash&amp;ref_src=twsrc%5Etfw">#Senegal</a> <a href="https://t.co/AOI7r7yyjj">pic.twitter.com/AOI7r7yyjj</a></p>&mdash; GoMarket | Predictions (@gomarket) <a href="https://x.com/gomarket/status/2066926120147018020?ref_src=twsrc%5Etfw">June 16, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-                    
-
-                    
-
-                    <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">メキシコ着きました！<a href="https://x.com/hashtag/worldcup?src=hash&amp;ref_src=twsrc%5Etfw">#worldcup</a> <a href="https://x.com/hashtag/mexico?src=hash&amp;ref_src=twsrc%5Etfw">#mexico</a> <a href="https://t.co/NItcg0jzzK">pic.twitter.com/NItcg0jzzK</a></p>&mdash; シンガポール🇸🇬の公認会計士成瀬友泰/ワールドカップ公認会計士 (@SBS94375802) <a href="https://x.com/SBS94375802/status/2064844345489199481?ref_src=twsrc%5Etfw">June 10, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-
-                <blockquote class="twitter-tweet"><p lang="es" dir="ltr">GO KOREA😻⚽🇰🇷🔥<br>Vamos Corea!! <a href="https://x.com/hashtag/worldcup?src=hash&amp;ref_src=twsrc%5Etfw">#worldcup</a> <a href="https://x.com/hashtag/fifa?src=hash&amp;ref_src=twsrc%5Etfw">#fifa</a> <a href="https://x.com/hashtag/Mexico?src=hash&amp;ref_src=twsrc%5Etfw">#Mexico</a> <a href="https://t.co/XQUejFkEUt">pic.twitter.com/XQUejFkEUt</a></p>&mdash; 이노냥 ino Cat (@inocat_cos) <a href="https://x.com/inocat_cos/status/2066675301648933121?ref_src=twsrc%5Etfw">June 16, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Let’s Go Japan!!!<br>I’m Blackanese and cheering on all my Japanese brothers at the <a href="https://x.com/hashtag/WorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#WorldCup</a> 🇺🇸🇯🇵 <a href="https://t.co/rb6u95IiXz">pic.twitter.com/rb6u95IiXz</a></p>&mdash; Robert Griffin III (@RGIII) <a href="https://x.com/RGIII/status/2066249525413515416?ref_src=twsrc%5Etfw">June 14, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-                
-
-
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">They’ll sell you chicharrón right at your seat! I love Mexicans! <a href="https://x.com/hashtag/fifa?src=hash&amp;ref_src=twsrc%5Etfw">#fifa</a> <a href="https://x.com/hashtag/worldcup?src=hash&amp;ref_src=twsrc%5Etfw">#worldcup</a> <a href="https://x.com/hashtag/sweden?src=hash&amp;ref_src=twsrc%5Etfw">#sweden</a> <a href="https://x.com/hashtag/tunisia?src=hash&amp;ref_src=twsrc%5Etfw">#tunisia</a> <a href="https://t.co/xL617m9gW5">pic.twitter.com/xL617m9gW5</a></p>&mdash; tay (@taytayjimjim) <a href="https://x.com/taytayjimjim/status/2066348602939560283?ref_src=twsrc%5Etfw">June 15, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-<div id="widget-gf24mqin3j4e" class="scoreaxis-widget" style="width: auto;height: auto;font-size: 14px;background-color: #ffffff;color: #141416;border: 1px solid;border-color: #ecf1f7;overflow: auto;"><script src="https://widgets.scoreaxis.com/api/football/live-match/672376da10cdfa1b19049864?widgetId=gf24mqin3j4e&lang=en&lineupsBlock=1&eventsBlock=1&statsBlock=1&links=1&font=heebo&fontSize=14&rowDensity=100&widgetWidth=auto&widgetHeight=auto&bodyColor=%23ffffff&textColor=%23141416&linkColor=%23141416&borderColor=%23ecf1f7&tabColor=%23f3f8fd" async></script><div class="widget-main-link" style="padding: 6px 12px;font-weight: 500;">Live data by <a href="https://www.scoreaxis.com/" style="color: inherit;">Scoreaxis</a></div></div>
-                
-                
-                
-                
-                
-                
-                
-                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">SAUDI ARABIA OPEN THE SCORING VS. URUGUAY!<br><br>They sure love a World Cup opener 🇸🇦 <a href="https://t.co/rkuRtP3Lm6">pic.twitter.com/rkuRtP3Lm6</a></p>&mdash; ESPN FC (@ESPNFC) <a href="https://x.com/ESPNFC/status/2066654007733498365?ref_src=twsrc%5Etfw">June 15, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-                
-                
-                
-                
-                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I built <a href="https://t.co/c5Afx5vSWR">https://t.co/c5Afx5vSWR</a> as an all-in-one World Cup companion — match info, live scores, player ratings, player cards, team stats, and a way to find where each country’s supporters are watching in your city. Would love any feedback. <a href="https://t.co/I0RYPz372g">pic.twitter.com/I0RYPz372g</a></p>&mdash; 🦖 (@sammyb238) <a href="https://x.com/sammyb238/status/2066662321838055726?ref_src=twsrc%5Etfw">June 15, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-                
-                
-                
-                
-                
-                <img src="https://i.imghippo.com/files/VXi6142BNg.png" alt="Screenshot 2026-06-15 161145" />
-                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Rüdiger locked in till 2027....Our boy Hamza Abdelkarim out here rewriting Egypt’s World Cup history at 18 as their youngest ever player💪💪💪🙌 <a href="https://t.co/rTwTHdvpND">pic.twitter.com/rTwTHdvpND</a></p>&mdash; Uzenvic (@IamUzenvic) <a href="https://x.com/IamUzenvic/status/2066644950976970776?ref_src=twsrc%5Etfw">June 15, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-                
-                
-                
-                
-                    <div class class="sidebar-box">
-                    <img src="https://i.imghippo.com/files/liO6523hj.png" alt="Screenshot 2026-06-15 161007" />
-                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Absolutely incredible day. Thank you Atlanta, thank you Spain, &amp; thank you Cape Verde 🍻🎉 This has been one of the most surreal days of my life, not only experiencing but covering a World Cup match.<br><br>Hope yall enjoy the content, I couldn’t be more grateful to be putting it out <a href="https://t.co/1VnjfV5o07">pic.twitter.com/1VnjfV5o07</a></p>&mdash; Tyler Pilgrim (@ATLPilgrim) <a href="https://x.com/ATLPilgrim/status/2066659219676287207?ref_src=twsrc%5Etfw">June 15, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-                    
-                    
-                        <img src="https://i.imghippo.com/files/utrm9154LTc.png" alt="Screenshot 2026-06-15 151749" />
-                        
-                        
-                        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This really what the World Cup is all about man 🥲 <a href="https://t.co/r4eBMxrPng">https://t.co/r4eBMxrPng</a></p>&mdash; Dilly (@CFC_Dillly) <a href="https://x.com/CFC_Dillly/status/2066644917820985433?ref_src=twsrc%5Etfw">June 15, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-                        
-                       
-                        
-                        
-                        <img src="https://i.imghippo.com/files/rlZt8658iEQ.png" alt="Screenshot 2026-06-15 151542" />
-                        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">He literally wore nyc jersey to a World Cup game you autistic dipshit</p>&mdash; B (@Dr_b43) <a href="https://x.com/Dr_b43/status/2066644937978872070?ref_src=twsrc%5Etfw">June 15, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-                        <img src="https://i.imghippo.com/files/Iu8970qdg.png" alt="Screenshot 2026-06-15 150225" width="200" />
-                        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A clip has gone viral from Turkey from a watch party where the place was showing a video game rather than the actual game. 😅🇹🇷 <a href="https://t.co/8rokAXIkn0">pic.twitter.com/8rokAXIkn0</a></p>&mdash; World Cup HQ (@WorldCup26HQ) <a href="https://x.com/WorldCup26HQ/status/2066068769571516721?ref_src=twsrc%5Etfw">June 14, 2026</a></blockquote> <script async src="https://platform.x.com
-                        <img src="https://i.imghippo.com/files/aJI4721UE.png" alt="Screenshot 2026-06-15 151037" />
-                        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A giant inflatable World Cup soccer ball broke free and rolled through the streets of San Salvador during heavy rain and strong winds ⚽ <a href="https://t.co/nHy8GQySVt">pic.twitter.com/nHy8GQySVt</a></p>&mdash; AccuWeather (@accuweather) <a href="https://x.com/accuweather/status/2066536504214823239?ref_src=twsrc%5Etfw">June 15, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-                        
-                        
-
-
-</body>
-        
-        
-        
-</script>
     
     
     
+    
+    
+    
+    
+    
+    <div class="listing">
+        <a href="https://www.kqzyfj.com/click-101756007-16941446?url=https%3A%2F%2Fwww.fragranceshop.com%2Fproduct%2Fmont-blanc-emblem-for-men%2F%3Fattribute_pa_size%3Deau-de-toilette-spray-3-4-oz%26wmc-currency%3DUSD&cjsku=FS36371ga"
+        >
+            <img src="https://www.fragranceshop.com/wp-content/uploads/2024/06/FS36371.jpg" alt="">
+        </a>
+        <div class="details">
+            <div class="title">Mont Blanc Emblem Cologne for Men </div>
+            <div class="description">Mont Blanc Emblem Cologne for Men - Eau de Toilette Spray 3.4 oz (Product Feed)</div>
+             <div class="meta">Condition : New | Shipping Available</div>
+                <div class="employee"><strong>Employee:</strong> Bill F.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.kqzyfj.com/click-101756007-16941446?url=https%3A%2F%2Fwww.fragranceshop.com%2Fproduct%2Fmont-blanc-emblem-for-men%2F%3Fattribute_pa_size%3Deau-de-toilette-spray-3-4-oz%26wmc-currency%3DUSD&cjsku=FS36371ga" target="_blank">View Item</a>
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        
+        
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="listing">
+        <a href="https://www.tkqlhce.com/click-101756007-16941446?url=https%3A%2F%2Fwww.fragranceshop.com%2Fproduct%2Fcreed-fleurs-de-gardenia-for-women%2F%3Fattribute_pa_size%3Deau-de-parfum-splash-8-4-oz%26wmc-currency%3DUSD&cjsku=FS89751ga"
+        >
+            <img src="https://www.fragranceshop.com/wp-content/uploads/2024/06/fs89751.jpg"alt="">
+        </a>
+        <div class="details">
+            <div class="title">Creed Fleurs De Gardenia Perfume for Women</div>
+            <div class="description">Creed Fleurs De Gardenia Perfume for Women - Eau de Parfum Splash 8.4 oz (Product Feed)</div>
+             <div class="meta">Condition : New | Shipping Available</div>
+                <div class="employee"><strong>Employee:</strong> Sara O.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.tkqlhce.com/click-101756007-16941446?url=https%3A%2F%2Fwww.fragranceshop.com%2Fproduct%2Fcreed-fleurs-de-gardenia-for-women%2F%3Fattribute_pa_size%3Deau-de-parfum-splash-8-4-oz%26wmc-currency%3DUSD&cjsku=FS89751ga" target="_blank">View Item</a>
+            </div>
+            
+            
+            
+            
+        </div>
+        
+        
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="listing">
+        <a href="https://www.jdoqocy.com/click-101756007-13703981?url=http%3A%2F%2Fwww.diecastmodelswholesale.com%2F2021-porsche-911-turbo-s-with-sportdesign-package-20-viola-purple-metallic-with-silver-stripes-limited-edition-to-504-pieces-worldwide-1-18-diecast-model-car-by-minichamps%2F%3Fsite%3Dgoogle_base&cjsku=155069174"
+        >
+            <img src="http://www.diecastmodelswholesale.com/product_images/z/401/155069174-BOX__87149.jpg" alt="">
+        </a>
+        <div class="details">
+            <div class="title">Diecast 2021 Porsche 911 with sport design package racing stripes</div>
+            <div class="description">2021 Porsche 911 Turbo S with SportDesign Package 20 Viola Purple Metallic with Silver Stripes Limited Edition to 504 pieces Worldwide 1/18 Diecast M (Product Feed)</div>
+             <div class="meta">Condition : New | Shipping Available</div>
+                <div class="employee"><strong>Employee:</strong> Jerry L.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.jdoqocy.com/click-101756007-13703981?url=http%3A%2F%2Fwww.diecastmodelswholesale.com%2F2021-porsche-911-turbo-s-with-sportdesign-package-20-viola-purple-metallic-with-silver-stripes-limited-edition-to-504-pieces-worldwide-1-18-diecast-model-car-by-minichamps%2F%3Fsite%3Dgoogle_base&cjsku=155069174" target="_blank">View Item</a>
+            </div>
+            
+        </div>
+        
+        
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    <div class="listing">
+        <a href="https://www.jdoqocy.com/click-101756007-13703981?url=http%3A%2F%2Fwww.diecastmodelswholesale.com%2Fkomatsu-hd605-off-highway-dump-truck-the-experts-line-1-50-diecast-model-by-universal-hobbies%2F%3Fsite%3Dgoogle_base&cjsku=UH8009"
+        >
+            <img src="http://www.diecastmodelswholesale.com/product_images/e/004/UH8009_-_6__16677.jpg"alt="">
+        </a>
+        <div class="details">
+            <div class="title">Diecast Komatsu High Dump Truck Collectible</div>
+            <div class="description">Komatsu HD605 Off-Highway Dump Truck "The Experts Line" 1/50 Diecast Model by Universal Hobbies (Product)</div>
+            <div class="meta">Condition : New | Shipping Available</div>
+                <div class="employee"><strong>Employee:</strong> Troy I.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.jdoqocy.com/click-101756007-13703981?url=http%3A%2F%2Fwww.diecastmodelswholesale.com%2Fkomatsu-hd605-off-highway-dump-truck-the-experts-line-1-50-diecast-model-by-universal-hobbies%2F%3Fsite%3Dgoogle_base&cjsku=UH8009" target="_blank">View Item</a>
+            </div>
+        </div>
+        
+        
+    </div>
+    
+    <div class="listing">
+        <a href="https://www.tkqlhce.com/click-101756007-11276674"
+        >
+            <img src="https://www.tqlkg.com/image-101756007-11272760" alt="">
+        </a>
+        <div class="details">
+            <div class="title">Handmade Artisan Jewelry by SilverRushStyle</div>
+            <div class="description"> Emerald,crystal jewerly & free gift with purchase over $200.</div>
+             <div class="meta">Condition : New | Shipping Available</div>
+                <div class="employee"><strong>Employee:</strong> Annie T(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.tkqlhce.com/click-101756007-11276674" target="_blank">View Item</a>
+            </div>
+            
+        </div>
+    
+        
+    </div>
+    
+    <div class="listing">
+        <a href="https://www.jdoqocy.com/click-101756007-12371079" target="_blank">
+            <img src="https://www.ftjcfx.com/image-101756007-12371079"alt=""> 
+        </a>
+        <div class="details">
+            <div class="title">Rusell Stover Chocolates , get 20% off"</div>
+                <div class="description">Sign up for email with rusell stover chocolates and get 20% off your first order.</div>
+                <div class="meta">Condition : New | Shipping Available</div>
+                <div class="employee"><strong>Employee:</strong> Adam B(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.jdoqocy.com/click-101756007-12371079" target="_blank">View Item</a>
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        
+    </div>
+    
+    
+    
+    
+    <div class="listing">
+        <a href="https://www.dpbolvw.net/c7103biroiq5767DBC66D57D6FFEFE?url=https%3A%2F%2Fwww.tiktok.com%2Fview%2Fproduct%2F1729385617918890603" target="_blank">
+            <img src="https://p16-oec-general-useast5.ttcdn-us.com/tos-useast5-i-omjb5zjo8w-tx/b86f55cb7ab94e51881411f010bcf229~tplv-fhlh96nyum-origin-webp.webp" alt="">
+        </a>
+        <div class="details">
+            <div class="title">Buldak Noodle Spicy Type</div>
+            <div class="description">Buldak 5 Pack Korean Spicy Food Noodles</div>
+            <div class="meta">Condition: New | Shipping Available</div>
+            <div class="employee"><strong>Employee:</strong> Carla P (Blogger)</div>
+            <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.dpbolvw.net/c7103biroiq5767DBC66D57D6FFEFE?url=https%3A%2F%2Fwww.tiktok.com%2Fview%2Fproduct%2F1729385617918890603" target="_blank">View Item</a>
+        </div>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="listing">
+        <a href="https://amzn.to/4tYSIxp" target="_blank">
+            <img src="https://m.media-amazon.com/images/I/81cQvmU9+BL._SL1500_.jpg" alt="">
+        </a>
+        <div class="details">
+            <div class="title">Gerber Brand Baby Food Pouches 12+ Months</div>
+            <div class="description">Assorted fruit pouches Gerber brand for 12 month toddler.</div>
+            <div class="meta">Condition: New | Shipping Available</div>
+            <div class="employee"><strong>Employee Reviewer:</strong> Justin C (Blog Writer)</div>
+            <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://amzn.to/4tYSIxp" target="_blank">View Item</a>
+        </div>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="listing">
+        <a href="https://amzn.to/4dRsiaS" target="_blank">
+            <img src="https://m.media-amazon.com/images/I/71oK9ZuvT4L._AC_SL1500_.jpg" alt="">
+        </a>
+        <div class="details">
+            <div class="title">Nuwave Duet Air Fryer</div>
+            <div class="description">Pressure cooker and grill combo air fryer.</div>
+            <div class="meta">Condition: New | Shipping Available</div>
+            <div class="employee"><strong>Employee Reviewer:</strong> Kyle (Blog Creator)</div>
+            <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://amzn.to/4dRsiaS" target="_blank">View Item</a>
+        </div>
+    </div>
+
+    <!-- ITEM 4 -->
+    <div class="listing">
+        <a href="https://amzn.to/4fx2VxN" target="_blank">
+            <img src="https://m.media-amazon.com/images/I/913d37i5+yL._AC_SL1500_.jpg" alt="">
+        </a>
+        <div class="details">
+            <div class="title">Travelers Club 6 Piece Luggage Set</div>
+            <div class="description">Heavy duty traveling gear with multiple suitcase sizes included.</div>
+            <div class="meta">Condition: New | Shipping Available</div>
+            <div class="employee"><strong>Employee Reviewer:</strong> Vanessa (Blog Reviewer)</div>
+            <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://amzn.to/4fx2VxN" target="_blank">View Item</a>
+        </div>
+    </div>
+
+    <!-- ITEM 5 -->
+    <div class="listing">
+        <a href="https://amzn.to/3RE2Myq" target="_blank">
+            <img src="https://m.media-amazon.com/images/I/71p-47sRv9L._AC_SL1500_.jpg" alt="">
+        </a>
+        <div class="details">
+            <div class="title">Pokemon Cards Bundle</div>
+            <div class="description">Affordable collector pack for fans and traders.</div>
+            <div class="meta">Condition: Used / Like New | Limited Stock</div>
+            <div class="employee"><strong>Employee Reviewer:</strong> Jake</div>
+            <div class="rating">★★★★☆ (trusted feedback)</div>
+            <a class="buy" href="https://amzn.to/3RE2Myq" target="_blank">View Item</a>
+        </div>
+    </div>
+
+    <!-- ITEM 6 -->
+    <div class="listing">
+        <a href="https://amzn.to/49vruqR" target="_blank">
+            <img src="https://m.media-amazon.com/images/I/21d6MWY1LCL._SX342_SY445_QL70_FMwebp_.jpg" alt="">
+        </a>
+        <div class="details">
+            <div class="title">PlayStation 5 Console</div>
+            <div class="description">Next-gen gaming system with ultra realistic graphics.</div>
+            <div class="meta">Condition: New | Fast Shipping</div>
+            <div class="employee"><strong>Employee Reviewer:</strong> Gabriel</div>
+            <div class="rating">★★★★★ (top rated)</div>
+            <a class="buy" href="https://amzn.to/49vruqR" target="_blank">View Item</a>
+        </div>
+    </div>
+
 </main>
 
 <footer>
-
-
-    &copy; 2026 Signature & Letter SS | All Rights Reserved
+     <!-- TrustBox widget - Review Collector -->
+<div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a0fa7f7bcabb859c867b935" data-style-height="52px" data-style-width="100%" data-token="1d0ebbf3-e5a6-4521-93e2-ff0e7b06737e">
+  <a href="https://www.trustpilot.com/review/clublss.com" target="_blank" rel="noopener">Trustpilot</a>
+</div>
+<!-- End TrustBox widget -->
+    © 2026 Signature & Letter SS Blog Market
 </footer>
-
-<script>
-    // Emoji count persistence
-    document.querySelectorAll('.post').forEach(post => {
-        const postId = post.dataset.id;
-        const emojiSpans = post.querySelectorAll('.emoji-container span');
-
-        emojiSpans.forEach(span => {
-            const emoji = span.dataset.emoji;
-            const savedCount = localStorage.getItem(postId + '-' + emoji);
-            if(savedCount) span.querySelector('.emoji-count').textContent = savedCount;
-
-            span.addEventListener('click', () => {
-                let count = parseInt(span.querySelector('.emoji-count').textContent) || 0;
-                count++;
-                span.querySelector('.emoji-count').textContent = count;
-                localStorage.setItem(postId + '-' + emoji, count);
-            });
-        });
-    });
-</script>
 
 </body>
 </html>
