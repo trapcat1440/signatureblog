@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
       <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
      <!-- TrustBox script -->
@@ -49,44 +50,34 @@ ml('account', '2362560');
         }
         nav a:hover { text-decoration: underline; }
 
-        main {
-            display: flex;
-            padding: 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
+       main{
+    display:flex;
+    gap:20px;
+    padding:20px;
+    max-width:1200px;
+    margin:auto;
+}
 
-        /* Left Column */
-        .left-column { width: 70%; padding-right: 20px; }
+.left-column{
+    flex:3;
+}
 
-        .post {
-            background-color: #fff;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-        }
-        .post h2 { font-size: 18px; color: #003366; margin-bottom: 5px; }
-        .post .genre {
-            font-size: 14px;
-            color: #336699;
-            margin-bottom: 10px;
-        }
-        .post .genre a { text-decoration: none; color: #336699; }
-        .post .genre a:hover { text-decoration: underline; }
+.right-column{
+    flex:1;
+}
 
-        /* Emoji container */
-        .emoji-container span {
-            font-size: 24px;
-            cursor: pointer;
-            margin-right: 10px;
-            user-select: none;
-            transition: transform 0.2s;
-        }
-        .emoji-container span:hover { transform: scale(1.2); }
-        .emoji-count { font-size: 14px; margin-left: 3px; vertical-align: super; }
+@media (max-width:768px){
 
-        /* Right Column */
-        .right-column { width: 30%; }
+main{
+    flex-direction:column;
+}
+
+.left-column,
+.right-column{
+    width:100%;
+}
+
+}
 
         .sidebar-box {
             background-color: white;
@@ -118,6 +109,12 @@ ml('account', '2362560');
             margin-top: 40px;
             font-size: 12px;
         }
+        .twitter-tweet{
+
+margin:auto !important;
+max-width:100% !important;
+
+}
     </style>
     <link rel="icon" href="https://i.imghippo.com/files/Ngr2023LA.png" type="image/png">
 </head>
@@ -486,9 +483,14 @@ footer {
 </main>
 
 <footer>
+         <!-- TrustBox widget - Review Collector -->
+<div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a0fa7f7bcabb859c867b935" data-style-height="52px" data-style-width="100%" data-token="1d0ebbf3-e5a6-4521-93e2-ff0e7b06737e">
+  <a href="https://www.trustpilot.com/review/clublss.com" target="_blank" rel="noopener">Trustpilot</a>
+</div>
 
 
     &copy; 2026 Signature & Letter SS | All Rights Reserved
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAADiY2TFoFLwzr-GU"></div>
 </footer>
 
 <script>
