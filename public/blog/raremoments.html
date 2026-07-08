@@ -119,14 +119,27 @@ ml('account', '2362560');
 <body>
 
 <header>
+   <header>
     <img src="https://i.imghippo.com/files/pAm5784YCA.png" alt="Blog Logo">
     <h1>Signature & Letter SS | </h1>
     <p>Rare Moments (Part of Hollywood)</p>
 
-    <!-- Translate Button -->
     <div class="translate-widget">
-        <button onclick="translatePage()">🌐 Translate</button>
+        <select onchange="translatePage(this.value)">
+            <option value="">🌐 Translate</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="it">Italiano</option>
+            <option value="pt">Português</option>
+            <option value="ja">日本語</option>
+        </select>
     </div>
+</header>
+</div>
+
+    <!-- Translate Button -->
+   
 </header>
 
 <nav>
@@ -354,39 +367,27 @@ marginheight="0">
     });
 </script>
 <script>
-function translatePage() {
-    var lang = prompt(
-        "Choose language code:\n\nSpanish = es\nFrench = fr\nGerman = de\nItalian = it\nPortuguese = pt\nJapanese = ja\nChinese = zh-CN\nArabic = ar\nHindi = hi",
-        "es"
-    );
+function translatePage(language) {
+    if (language === "") return;
 
-    if (lang) {
-        window.location.href =
-        "https://translate.google.com/translate?sl=en&tl="
-        + lang
-        + "&u="
-        + encodeURIComponent(window.location.href);
-    }
+    var url = "https://translate.google.com/translate"
+        + "?sl=en"
+        + "&tl=" + language
+        + "&u=" + encodeURIComponent(window.location.href);
+
+    window.location.href = url;
 }
 </script>
 
 <style>
-.translate-widget {
-    margin-left: 20px;
-}
-
-.translate-widget button {
+.translate-widget select {
+    margin-left: 15px;
+    padding: 8px;
     background: #003366;
     color: white;
     border: 1px solid #336699;
-    padding: 8px 12px;
     border-radius: 5px;
-    cursor: pointer;
     font-weight: bold;
-}
-
-.translate-widget button:hover {
-    background: #336699;
 }
 </style>
 </body>
