@@ -1,551 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
       <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
      <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 
-        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <!-- TrustBox script -->
-<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-    <!-- MailerLite Universal -->
-<script>
-(function(w,d,e,u,f,l,n){
-    w[f]=w[f]||function(){
-        (w[f].q=w[f].q||[]).push(arguments);
-    },
-    l=d.createElement(e),
-    l.async=1,
-    l.src=u,
-    n=d.getElementsByTagName(e)[0],
-    n.parentNode.insertBefore(l,n);
-})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+<!-- End TrustBox script -->
+<!-- MailerLite Universal -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-ml('account', '2362560');
-</script>
-<!-- End MailerLite Universal -->
-    <title>Signature & Letter SS Blog-Hollywood</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background-color: #e0e0e0; color: #000; }
+<title>clublss.com</title>
 
-        header {
-            background-color: red;
-            color: white;
-            padding: 15px 10px;
-            display: flex;
-            align-items: center;
-        }
-        header img { height: 60px; margin-right: 15px; }
-        header h1 { font-size: 24px; }
-
-        nav {
-            background-color: #336699;
-            padding: 10px 20px;
-        }
-        nav a {
-            color: white; text-decoration: none; margin-right: 15px; font-weight: bold;
-        }
-        nav a:hover { text-decoration: underline; }
-
-       main{
-    display:flex;
-    gap:20px;
-    padding:20px;
-    max-width:1200px;
-    margin:auto;
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.left-column{
-    flex:3;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:black;
+    color:white;
 }
 
-.right-column{
-    flex:1;
+/* Header */
+header{
+    background:#1565c0;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,.3);
 }
 
-@media (max-width:768px){
+header h1{
+    font-size:32px;
+}
 
+/* Navigation */
+nav{
+    background:red;
+    text-align:center;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* Main Content */
 main{
-    flex-direction:column;
+    max-width:1000px;
+    margin:30px auto;
+    padding:20px;
 }
 
-.left-column,
-.right-column{
+/* Video Section */
+.video-box{
+    background:#1565c0;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:30px;
+}
+
+.video-box h2{
+    margin-bottom:15px;
+}
+
+.video-container{
+    position:relative;
+    padding-bottom:56.25%;
+    height:0;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.video-container iframe{
+    position:absolute;
     width:100%;
+    height:100%;
+    border:none;
 }
 
+/* Article */
+.content{
+    background:white;
+    padding:25px;
+    border-radius:10px;
 }
 
-        .sidebar-box {
-            background-color: white;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            font-size: 12px;
-        }
-        .sidebar-box h3 {
-            font-size: 14px;
-            margin-bottom: 8px;
-            color: #003366;
-            text-align: center;
-        }
-        .shop-thumbnails { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; }
-        .shop-thumbnails a img {
-            width: 48px; height: auto; border: 1px solid #ccc;
-            transition: transform 0.2s;
-        }
-        .shop-thumbnails a img:hover {
-            transform: scale(1.2); border-color: #336699;
-        }
-
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-            font-size: 12px;
-        }
-        .twitter-tweet{
-
-margin:auto !important;
-max-width:100% !important;
-
+.content h2{
+    margin-bottom:15px;
 }
-    </style>
-    <link rel="icon" href="https://i.imghippo.com/files/Ngr2023LA.png" type="image/png">
+
+.content p{
+    line-height:1.7;
+}
+
+/* Footer */
+footer{
+    background:#0b3c91;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
+ <link rel="icon" href="https://i.imghippo.com/files/Ngr2023LA.png" type="image/png">
 </head>
 <body>
 
 <header>
-<a href="https://clublss.com/">
-<img src="https://i.imghippo.com/files/RHim2429oU.png" alt="cooltext510396968116108" /></a>
-    <model-viewer
-  id="model2"
-  class="floatModel"
-  src="lettersignature.glb"
-  auto-rotate
-  rotation-per-second="1deg"
-  camera-orbit="0deg 75deg 2.5m"
-  shadow-intensity="0"
-  exposure="1">
-</model-viewer>
-
-
-    
-   
-   
-    </header>
+    <a href="https://clublss.com/">
+    <img src="https://i.imghippo.com/files/pAm5784YCA.png"width="150">
+    </a>
+</header>
 
 <nav>
-    <a href="index.html">BACK</a>
-    <a href="hollywood.html">Hollywood stuff</a>
-     <a href="https://mdxpress-lyart.vercel.app/">Blog v.3
-     <a href="soccerletterstore.html">FIFA Merchandise
-    <h2> 
-    <img src="https://i.imghippo.com/files/mMv7344bk.png" width="800" alt="Gemini_Generated_Image_i395gbi395gbi395 (1) />
-
-
-
-
-
-    </h2>
+     <a href="nothingnew.html">Nothin New      </a>
+    <a href="fashion.html">Fashion Flashy   </a>
+    <a href="Hollywood.html">Hollywood   </a>
+    <a href="storesignatureblog.html">Goods for YOU</a>
+    <a href="Certificates.html">Our Story</a>
+    <a href="hollywoodex.html">Prizes & Gifts</a>
 </nav>
 
 <main>
-    
-    <model-viewer
-  id="model2"
-  class="floatModel"
-  src="lettersignature.glb"
-  auto-rotate
-  rotation-per-second="1deg"
-  camera-orbit="0deg 75deg 2.5m"
-  shadow-intensity="0"
-  exposure="1">
-</model-viewer>
-
- <div class="right-column">
-        <div class="sidebar-box">
-        <a href="https://www.dpbolvw.net/click-101756007-11917145" target="_top">
-<img src="https://www.tqlkg.com/image-101756007-11921710" width="220" height="160" alt="" border="0"/></a>
-    <a href="https://www.jdoqocy.com/click-101756007-17177438" target="_top">
-<img src="https://www.lduhtrp.net/image-101756007-17177438" width="88" height="31" alt="KSP Performance" border="0"/></a>
-<a href="https://www.tkqlhce.com/click-101756007-15733888" target="_top">
-<img src="https://www.ftjcfx.com/image-101756007-15075557" width="432" height="288" alt="" border="0"/></a>
-            <a href="https://www.dpbolvw.net/click-101756007-17198179" target="_top">
-<img src="https://www.lduhtrp.net/image-101756007-17198226" width="375" height="375" alt="" border="0"/></a>
-<a href="https://www.kqzyfj.com/click-101756007-17166097" target="_top">
-<img src="https://www.ftjcfx.com/image-101756007-17021961" width="182" height="96" alt="" border="0"/></a>
-          
-               </div>
-                             
-                </a>
-            </div>
-        </div>
-    </div>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Recent Winners</title>
-
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-}
-
-.winners {
-    max-width: 500px;
-    margin: 40px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.1);
-}
-
-.winners h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.winner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-}
-
-.winner:last-child {
-    border-bottom: none;
-}
-
-.name {
-    font-weight: bold;
-}
-
-.prize {
-    color: #28a745;
-}
-
-.time {
-    color: #888;
-    font-size: 13px;
-}
-</style>
-</head>
-
-<body>
-
-<div class="winners">
-    <h2>🎉 Recent Winners</h2>
-
-    <div class="winner">
-        <div>
-            <div class="name">Sean O</div>
-            <div class="time">SWI vs ARG(W)</div>
-        </div>
-        <div class="prize">$130 Discount Code</div>
-    </div>
-
-    <div class="winner">
-        <div>
-            <div class="name">Mary L.</div>
-            
-            <div class="time">NOR vs ENG(W)</div>
-        </div>
-        <div class="prize">$250 Discount Code</div>
-    </div>
-
-    <div class="winner">
-        <div>
-             <marquee behavior="scroll" direction="left">
-    <span style="color:Navy;">Join the competition for free </span>
+    <div class="content">
+    <marquee behavior="scroll" direction="left">
+    <span style="color: red;">Featured Businesses </span>
 </marquee>
-            <div class="name">Emily T.</div>
-            <div class="time">ENG(W) vs MEX</div>
-        </div>
-        <div class="prize">$500 Discount Code</div>
+    <a href="https://www.dpbolvw.net/click-101756007-10649694" target="_top">
+<img src="https://www.awltovhc.com/image-101756007-10649694" width="88" height="71" alt="" border="0"/></a>
+<a href="https://www.anrdoezrs.net/click-101756007-15586457" target="_top">
+<img src="https://www.tqlkg.com/image-101756007-17125873" width="201" height="150" alt="" border="0"/></a>
+<a href="https://www.kqzyfj.com/click-101756007-15733888" target="_top">
+<img src="https://www.tqlkg.com/image-101756007-15075557" width="232" height="200" alt="" border="0"/></a>
+<a href="https://www.jdoqocy.com/click-101756007-11187187" target="_top">
+<img src="https://www.tqlkg.com/image-101756007-15846482" width="320" height="221" alt="Verizon Wireless Logo 300x300" border="0"/></a>
+
+</div>
+
+<div class="video-box">
+    <h2>Feature for FIFA World Cup Blog Segment (end.)</h2>
+
+    <div class="video-container">
+
+        <!-- Replace this iframe with your own video -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OAFlSyhvCXU?si=uyqJ46e-TM-3FJ8G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
     </div>
 </div>
-        <!-- Left Column -->
-    <div class="left-column">
-        <div class="post" id="Hollywood" data-id="hollywood1">
-        <head>
-<meta charset="UTF-8">
-<title>Puzzle Game</title>
 
-<style>
-body {
-    background: #eef2f7;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+<div class="content">
+    <h2>Best Moments</h2>
 
-/* HEADER */
-header {
-    background: #007bff;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
+<rssapp-imageboard id="eWnaOTBJhyyJTv8D"></rssapp-imageboard><script src="https://widget.rss.app/v1/imageboard.js" type="text/javascript" async></script>
+</div>
 
-header h1 {
-    margin: 0;
-    font-size: 28px;
-}
-
-/* WRAPPER */
-.game-wrap {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-}
-
-/* GAME HEADER */
-.game-header {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.game-header p {
-    color: #666;
-}
-
-/* PUZZLE BOX */
-.puzzle {
-    position: relative;
-    width: 800px;
-    height: 500px;
-    overflow: hidden;
-    border-radius: 12px;
-    background: white;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-}
-
-/* IMAGES */
-.puzzle img {
-    position: absolute;
-    transition: all 1.5s ease;
-}
-
-/* START POSITIONS */
-#img1 { top: 10px; left: 20px; }
-#img2 { top: 200px; left: 30px; }
-#img3 { top: 100px; left: 400px; }
-#img4 { top: 250px; left: 200px; }
-
-/* SOLVED POSITIONS */
-.puzzle.solved #img1 { top: 20px; left: 250px; }
-.puzzle.solved #img2 { top: 20px; left: 600px; }
-.puzzle.solved #img3 { top: 250px; left: 250px; }
-.puzzle.solved #img4 { top: 250px; left: 600px; }
-
-/* BUTTON */
-.btn {
-    margin-top: 15px;
-    padding: 10px 15px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-/* ANSWER BOX */
-.answer-box {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.5s ease;
-    background: #f5f5f5;
-    padding: 0 15px;
-    margin-top: 10px;
-    border-radius: 8px;
-}
-
-.answer-box.show {
-    max-height: 200px;
-    opacity: 1;
-    padding: 15px;
-}
-
-/* FOOTER */
-footer {
-    margin-top: 60px;
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-    
-<div id="widget-exo8mrm97s2c" class="scoreaxis-widget" style="width: auto;height: auto;font-size: 14px;background-color: #ffffff;color: #141416;border: 1px solid;border-color: #ecf1f7;overflow: auto;"><script src="https://widgets.scoreaxis.com/api/football/live-match/6704d00ae7711524d30db702?widgetId=exo8mrm97s2c&lang=en&lineupsBlock=1&eventsBlock=1&statsBlock=1&links=1&font=heebo&fontSize=14&rowDensity=100&widgetWidth=auto&widgetHeight=auto&bodyColor=%23ffffff&textColor=%23141416&linkColor=%23141416&borderColor=%23ecf1f7&tabColor=%23f3f8fd" async></script><div class="widget-main-link" style="padding: 6px 12px;font-weight: 500;">Live data by <a href="https://www.scoreaxis.com/" style="color: inherit;">Scoreaxis</a></div></div>
-
-
-        Signature Blog & FIFA 
-    </p>
-</header>
-
-<div class="game-wrap">
-    
-    
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJ7cTnw6v35Z8RwIPnpNPuFtKn73TCIN6Ljk-FPJExLZ6ZbQ/viewform?embedded=true" width="640" height="2516" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    
-    
-    
-    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🇦🇷 Argentina have qualified for the Final!<a href="https://x.com/hashtag/FIFAWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#FIFAWorldCup</a> <a href="https://t.co/yyI0HrX8rU">pic.twitter.com/yyI0HrX8rU</a></p>&mdash; FIFA World Cup (@FIFAWorldCup) <a href="https://x.com/FIFAWorldCup/status/2077501794482077756?ref_src=twsrc%5Etfw">July 15, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-    
-    
-    
-    
-    
-    
-    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Argentina are headed back to the <a href="https://x.com/hashtag/FIFAWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#FIFAWorldCup</a> Final 🇦🇷</p>&mdash; FIFA World Cup (@FIFAWorldCup) <a href="https://x.com/FIFAWorldCup/status/2077500450874785992?ref_src=twsrc%5Etfw">July 15, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-    
-    
-      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Going head-to-head for a place in the <a href="https://x.com/hashtag/FIFAWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#FIFAWorldCup</a> Final. 🤜🤛</p>&mdash; FIFA World Cup (@FIFAWorldCup) <a href="https://x.com/FIFAWorldCup/status/2077298371732095224?ref_src=twsrc%5Etfw">July 15, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-    
-    
-    
-    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I’m looking to resell my tickets for the 2026 FIFA World Cup 🎟️<br><br>Argentina 🇦🇷 vs England 🏴󠁧󠁢󠁥󠁮󠁧󠁿 <br><br>✅ secure ticket transfer via fifa app<br>Going Cheap!!!<a href="https://x.com/hashtag/FifaWorldCup2026?src=hash&amp;ref_src=twsrc%5Etfw">#FifaWorldCup2026</a> <a href="https://x.com/hashtag/WorldCupTickets?src=hash&amp;ref_src=twsrc%5Etfw">#WorldCupTickets</a> <a href="https://x.com/hashtag/FIFATickets?src=hash&amp;ref_src=twsrc%5Etfw">#FIFATickets</a> <a href="https://x.com/hashtag/Spain?src=hash&amp;ref_src=twsrc%5Etfw">#Spain</a>      <a href="https://x.com/hashtag/England?src=hash&amp;ref_src=twsrc%5Etfw">#England</a>      <a href="https://x.com/hashtag/Argentina?src=hash&amp;ref_src=twsrc%5Etfw">#Argentina</a> <a href="https://t.co/q3VmiXARrA">https://t.co/q3VmiXARrA</a></p>&mdash; WORLD CUP TICKETS (@billie_gur) <a href="https://x.com/billie_gur/status/2077415001912942750?ref_src=twsrc%5Etfw">July 15, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-    
-    
-    
-    
-    <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="es" dir="ltr">No he tenido cobertura.... Solo paso por aquí antes de volver a perderla para decir: jódete <a href="https://x.com/hashtag/Mbapp%C3%A9?src=hash&amp;ref_src=twsrc%5Etfw">#Mbappé</a>. <a href="https://x.com/hashtag/FranciaEspa%C3%B1a?src=hash&amp;ref_src=twsrc%5Etfw">#FranciaEspaña</a> <a href="https://x.com/hashtag/FIFAWorldCup2026?src=hash&amp;ref_src=twsrc%5Etfw">#FIFAWorldCup2026</a> <a href="https://t.co/DPIefoLoTX">pic.twitter.com/DPIefoLoTX</a></p>&mdash; 𝕱𝖗𝖆𝖓𝖈𝖎𝖘𝖈𝖔 𝕵𝖆𝖛𝖎𝖊𝖗: ⴼⵕⴰⵏ ⵣ (@franxu629) <a href="https://x.com/franxu629/status/2077419432964448388?ref_src=twsrc%5Etfw">July 15, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="it" dir="ltr">Lionel Messi on the Semi-final stage 🇦🇷🤯<a href="https://x.com/hashtag/FIFAWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#FIFAWorldCup</a> <a href="https://t.co/c2EALySuI4">pic.twitter.com/c2EALySuI4</a></p>&mdash; FIFA World Cup (@FIFAWorldCup) <a href="https://x.com/FIFAWorldCup/status/2077407398260559948?ref_src=twsrc%5Etfw">July 15, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-    
-    
-    
-    
-    
-    
-    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🇪🇸 Spain have qualified for the Final!<a href="https://x.com/hashtag/FIFAWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#FIFAWorldCup</a> <a href="https://t.co/1RUndt34uf">pic.twitter.com/1RUndt34uf</a></p>&mdash; FIFA World Cup (@FIFAWorldCup) <a href="https://x.com/FIFAWorldCup/status/2077139115301069125?ref_src=twsrc%5Etfw">July 14, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Spain are one step closer to glory 🇪🇸<a href="https://x.com/hashtag/FIFAWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#FIFAWorldCup</a></p>&mdash; FIFA World Cup (@FIFAWorldCup) <a href="https://x.com/FIFAWorldCup/status/2077138314646130765?ref_src=twsrc%5Etfw">July 14, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">France vs Spain 🏆🇫🇷🇪🇸⚽<br><br>© tinyplayrs <a href="https://t.co/eSeUyLaWRz">pic.twitter.com/eSeUyLaWRz</a></p>&mdash; Sarahh (@Sarahhuniverse) <a href="https://x.com/Sarahhuniverse/status/2076939709977362482?ref_src=twsrc%5Etfw">July 14, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-    
-    
-    
-    
-    
-    
-    
-    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Semi-final number one coming up in Dallas. 📍<a href="https://x.com/hashtag/FIFAWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#FIFAWorldCup</a></p>&mdash; FIFA World Cup (@FIFAWorldCup) <a href="https://x.com/FIFAWorldCup/status/2076936639918612563?ref_src=twsrc%5Etfw">July 14, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-    
-    
-    
-    
-    <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">The best of the best 🏆<br>See who claimed the #1 spot in each Power Rankings category after the Quarter-Final fixtures.<a href="https://x.com/aramco?ref_src=twsrc%5Etfw">@aramco</a> <a href="https://x.com/hashtag/FIFAWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#FIFAWorldCup</a> <a href="https://x.com/hashtag/FIFAPowerRankings?src=hash&amp;ref_src=twsrc%5Etfw">#FIFAPowerRankings</a></p>&mdash; FIFA World Cup (@FIFAWorldCup) <a href="https://x.com/FIFAWorldCup/status/2076748496179179936?ref_src=twsrc%5Etfw">July 13, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-    
-    
-    
-    
-    
-    
-    
-    
-    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The final four. <a href="https://x.com/hashtag/FIFAWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#FIFAWorldCup</a> <a href="https://t.co/eeHXvt8e0g">pic.twitter.com/eeHXvt8e0g</a></p>&mdash; FIFA World Cup (@FIFAWorldCup) <a href="https://x.com/FIFAWorldCup/status/2076834067752898662?ref_src=twsrc%5Etfw">July 14, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-    
-    
-    
-    
-
- 
-
- 
-    
-    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">(AD): Signature &amp; Letter SS blog (<a href="https://t.co/3BUu3VOmBn">https://t.co/3BUu3VOmBn</a>) is inviting you to take a chance in the FIFA prediction competition for a chance to win $10,000 worth of prizes! <br> <a href="https://x.com/hashtag/fifaworldcup2026?src=hash&amp;ref_src=twsrc%5Etfw">#fifaworldcup2026</a></p>&mdash; Avenue52 (@avenue52publish) <a href="https://x.com/avenue52publish/status/2071756874320654771?ref_src=twsrc%5Etfw">June 30, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-    
-    
-    
-    
-    
-    
-
-
-</body>
-        
-        
-        
-</script>
-    
-    
-    
 </main>
 
 <footer>
-         <!-- TrustBox widget - Review Collector -->
+      <!-- TrustBox widget - Review Collector -->
 <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a0fa7f7bcabb859c867b935" data-style-height="52px" data-style-width="100%" data-token="1d0ebbf3-e5a6-4521-93e2-ff0e7b06737e">
   <a href="https://www.trustpilot.com/review/clublss.com" target="_blank" rel="noopener">Trustpilot</a>
 </div>
-
-
-    &copy; 2026 Signature & Letter SS | All Rights Reserved
+<!-- End TrustBox widget -->
+    &copy;  2026 Signature & Letter SS | All Rights Reserved
     <div class="cf-turnstile" data-sitekey="0x4AAAAAADiY2TFoFLwzr-GU"></div>
 </footer>
-
-<script>
-    // Emoji count persistence
-    document.querySelectorAll('.post').forEach(post => {
-        const postId = post.dataset.id;
-        const emojiSpans = post.querySelectorAll('.emoji-container span');
-
-        emojiSpans.forEach(span => {
-            const emoji = span.dataset.emoji;
-            const savedCount = localStorage.getItem(postId + '-' + emoji);
-            if(savedCount) span.querySelector('.emoji-count').textContent = savedCount;
-
-            span.addEventListener('click', () => {
-                let count = parseInt(span.querySelector('.emoji-count').textContent) || 0;
-                count++;
-                span.querySelector('.emoji-count').textContent = count;
-                localStorage.setItem(postId + '-' + emoji, count);
-            });
-        });
-    });
-</script>
+<script src="//code.tidio.co/yodubeez6irr6duvguo8ftv1llwda4jq.js" async>
 
 </body>
 </html>
