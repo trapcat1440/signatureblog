@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<link rel="icon" type="image/png" href="https://i.imghippo.com/files/Ngr2023LA.png">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PODCAST @ Signature Blog</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+
+<style>
+.logo-marquee{
+
+    width:100%;
+
+    overflow:hidden;
+
+    padding:25px 0;
+
+    background:
+    rgba(255,255,255,.03);
+
+    backdrop-filter:blur(20px);
+
+    border-top:
+    1px solid rgba(255,255,255,.12);
+
+    border-bottom:
+    1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+    0 0 40px rgba(80,120,255,.15);
+
+}
+
+
+.track{
+
+    display:flex;
+
+    gap:120px;
+
+    width:max-content;
+
+    animation:marquee 45s linear infinite;
+
+}
+
+
+
+.track img{
+
+    width:90px;
+
+    height:auto;
+
+    flex-shrink:0;
+
+    opacity:.75;
+
+    filter:
+    drop-shadow(0 0 10px rgba(90,140,255,.6))
+    drop-shadow(0 0 25px rgba(140,80,255,.4));
+
+    transition:.4s ease;
+
+}
+
+
+
+.track img:hover{
+
+    opacity:1;
+
+    transform:scale(1.15);
+
+    filter:
+    drop-shadow(0 0 15px #5b7fff)
+    drop-shadow(0 0 40px #9333ea);
+
+}
+
+
+
+@keyframes marquee{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+font-family:"Space Grotesk",Arial,sans-serif;
+
+color:#d6d8e5;
+
+line-height:1.8;
+
+background:
+linear-gradient(
+180deg,
+#050510,
+#020207
+);
+
+min-height:100vh;
+
+overflow-x:hidden;
+
+position:relative;
+
+}
+body::before{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background:
+
+linear-gradient(
+rgba(0,255,180,.05) 1px,
+transparent 1px
+),
+
+linear-gradient(
+90deg,
+rgba(0,255,180,.05) 1px,
+transparent 1px
+);
+
+background-size:
+40px 40px;
+
+animation:gridMove 8s linear infinite;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+
+@keyframes gridMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(40px);
+
+}
+
+}
+body::after{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background:
+
+repeating-linear-gradient(
+
+0deg,
+
+rgba(255,255,255,.03),
+
+rgba(255,255,255,.03) 1px,
+
+transparent 1px,
+
+transparent 4px
+
+);
+
+pointer-events:none;
+
+opacity:.25;
+
+z-index:10;
+
+}
+
+
+
+.container{
+
+max-width:900px;
+
+margin:60px auto;
+
+padding:60px;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(25px);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:24px;
+
+box-shadow:
+0 0 80px rgba(80,120,255,.18);
+
+}
+
+
+
+h1{
+
+font-size:54px;
+
+color:white;
+
+letter-spacing:3px;
+
+position:relative;
+
+text-shadow:
+0 0 15px #00ffcc,
+0 0 35px #6366f1;
+
+margin-bottom:15px;
+
+animation:glitch 4s infinite;
+
+}
+
+
+@keyframes glitch{
+
+
+0%,90%,100%{
+
+transform:none;
+
+}
+
+
+92%{
+
+transform:translateX(-3px);
+
+text-shadow:
+3px 0 red,
+-3px 0 cyan;
+
+}
+
+
+94%{
+
+transform:translateX(3px);
+
+text-shadow:
+-3px 0 red,
+3px 0 cyan;
+
+}
+
+
+96%{
+
+transform:none;
+
+}
+
+}
+
+
+.updated{
+
+color:#999;
+
+font-size:14px;
+
+margin-bottom:40px;
+
+}
+
+
+
+h2{
+
+margin-top:40px;
+
+margin-bottom:15px;
+
+font-size:26px;
+
+color:#79a8ff;
+
+border-bottom:
+1px solid rgba(255,255,255,.15);
+
+padding-bottom:8px;
+
+}
+
+
+
+p{
+
+margin-bottom:18px;
+
+}
+
+
+
+ul{
+
+margin-left:25px;
+
+margin-bottom:20px;
+
+}
+
+
+
+li{
+
+margin-bottom:10px;
+
+}
+
+
+
+.notice{
+
+padding:20px;
+
+background:rgba(99,102,241,.15);
+
+border-left:3px solid #6366f1;
+
+border-radius:12px;
+
+margin:25px 0;
+
+}
+
+
+
+footer{
+
+margin-top:60px;
+
+text-align:center;
+
+color:#888;
+
+font-size:14px;
+
+}
+
+
+
+@media(max-width:768px){
+
+.container{
+
+animation:float 6s ease-in-out infinite;
+
+max-width:900px;
+
+h1{
+
+font-size:36px;
+
+}
+
+}
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+ <div class="logo-marquee">
+
+    <div class="track">
+
+        <img src="https://i.imghippo.com/files/pAm5784YCA.png">
+        <img src="https://i.imghippo.com/files/pAm5784YCA.png">
+        <img src="https://i.imghippo.com/files/pAm5784YCA.png">
+        <img src="https://i.imghippo.com/files/pAm5784YCA.png">
+
+        <!-- seamless loop -->
+        <img src="https://i.imghippo.com/files/pAm5784YCA.png">
+
+    </div>
+
+</div>
+
+
+<div class="container">
+
+
+<h1>Listen to Editorials Here</h1>
+
+
+<p class="updated">
+Last Podcast : Nothin New '33
+</p>
+
+
+
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Bmm-oLn1CeE?si=-OhCBqeqxMuZbu2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</p>
+
+
+
+<div class="notice">
+
+<strong>Sign 033</strong><br>
+
+<a href="nothingnew.html">Nothing New ' </a>
+
+</div>
+
+
+
+
+<h2>Listen Any Time</h2>
+
+
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jiAlb3XgXcc?si=9mEAHF1ceoziGERU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</p>
+
+
+
+
+
+
+<h2>Previous Podcast</h2>
+
+<p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/aIwrgV0gkMo?si=x8pNdqUVTo_sVsxW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</p>
+<p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/adrezx7aUrA?si=9_bChKuq31Od5jfM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</p>
+
+
+
+<br>
+
+ <a href="https://www.reddit.com/user/SignatureLetSSBlog/submitted/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button">
+            <img src="https://preview.redd.it/reddit-logo-redesign-im-a-beginner-please-give-feedback-v0-gcq0tibqk7ia1.png?width=640&crop=smart&auto=webp&s=86527fde8d3071955ad6de871f66abfcb671f879"width="200">
+        </a>
+
+     <a href="https://www.youtube.com/channel/UChCyOPytCjSbUg44O5Vztmg">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png"width="200">
+        <a href="https://www.fishbowlapp.com/fb/fishbowl-signaturessblog-wwqv">
+            <img src="https://www.marketing-immersion.com/wp-content/uploads/2021/10/fishbowl-logo-icon-fish-300x300.png"width="200">
+        </a>
+
+</p>
+
+
+
+<footer>
+
+© 2026 clublss.com | Signature & Letter SS blog 
+
+</footer>
+
+
+
+</div>
+
+
+</body>
+
+</html>
