@@ -54,7 +54,7 @@ header img{
 header img:hover{
     transform:scale(1.05);
 }
-        header img { height: 60px; margin-right: 15px; }
+        header img { height: 130px; margin-right: 15px; }
         header h1 { font-size: 24px; }
 
         nav{
@@ -137,14 +137,56 @@ nav a{
             transform: scale(1.2); border-color: #336699;
         }
 
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-            font-size: 12px;
-        }
+        footer{
+    background:teal;
+    color:black;
+    text-align:center;
+    padding:20px 20px;
+    margin-top:50px;
+    border-top:3px solid #c9a227;
+}
+
+
+footer img{
+    height:60px;
+    margin-bottom:15px;
+}
+
+
+footer h3{
+    font-family:Georgia, serif;
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+
+footer p{
+    color:#ddd;
+    margin:10px;
+}
+
+
+.footer-links{
+    margin:20px 0;
+}
+
+
+.footer-links a{
+    color:#c9a227;
+    text-decoration:none;
+    margin:0 10px;
+    font-size:14px;
+}
+
+
+.footer-links a:hover{
+    color:white;
+}
+
+
+copyright{
+    font-size:12px;
+}
     </style>
     <link rel="icon" href="https://i.imghippo.com/files/Ngr2023LA.png" type="image/png">
 </head>
@@ -172,7 +214,7 @@ nav a{
     </h2>
 </nav>
 <meta charset="UTF-8">
-<title>Fashion Memory Game</title>
+<title>Default Archieve</title>
 
 <style>
 
@@ -267,9 +309,11 @@ h1{
 
 <body>
 
-<h1>👗 Fashion Memory Match</h1>
+<h1>Signature & Letter SS blog(Archieve)</h1>
 
-<p>Find the matching fashion pairs!</p>
+<marquee behavior="scroll" direction="left">
+    <span style="color: green;">Inspired.Style.Signed </span>
+</marquee>
 
 <div class="game" id="game"></div>
 
@@ -286,27 +330,27 @@ h1{
 const fashionCards = [
 
 {
-image:"https://i.imghippo.com/files/so2005mY.png",
-question:"Which luxury brand uses this logo?",
-answer:"CHANEL"
+image:"https://i.imghippo.com/files/Oqmf7985mpk.png",
+question:"Which brand did Rei Kawakubo make?",
+answer:"Comme des Garçons"
 },
 
 {
-image:"https://i.imghippo.com/files/another-image.png",
-question:"Which designer created the famous red sole shoes?",
-answer:"CHRISTIAN LOUBOUTIN"
+image:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Kenzo_logo_%282022%E2%80%93present%29.svg/500px-Kenzo_logo_%282022%E2%80%93present%29.svg.png",
+question:"Which brand was acquired by LVMH?",
+answer:"Kenzo Paris"
 },
 
 {
-image:"https://i.imghippo.com/files/third-image.png",
-question:"Which fashion house is known for the double G logo?",
-answer:"GUCCI"
+image:"https://i.imghippo.com/files/eMm5293bI.png",
+question:"Which label is known for the astronaut head?",
+answer:"Billionare Boys Club"
 },
 
 {
-image:"https://i.imghippo.com/files/fourth-image.png",
-question:"Which brand is famous for the Birkin bag?",
-answer:"HERMÈS"
+image:"https://i.imghippo.com/files/RRUe7898tDk.png",
+question:"This label was shown in the russian tea room..",
+answer:"ALICE+OLIVIA"
 }
 
 ];
@@ -431,6 +475,21 @@ lock=false;
 
 
 </script>
+<footer>
+
+
+
+    <h3>Signature & Letter SS blog</h3>
+
+   
+
+    
+
+    <p class="copyright">
+        © 2026 Signature & Letter SS blog. All Rights Reserved.
+    </p>
+
+</footer>
 
 </body>
 </html>
