@@ -1,344 +1,669 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880287056176748"
-     crossorigin="anonymous"></script>
-<!-- MailerLite Universal -->
-<script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Signature & Letters Blog</title>
+  <meta name="description" content="Discover Nothing New, reviews, innovations, and more from Signature & Letter SS Blog.">
+
+  <link rel="icon"
+        href="https://i.imghippo.com/files/Ngr2023LA.png"
+        type="image/png">
+
+  <!-- Google AdSense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880287056176748"
+    crossorigin="anonymous"></script>
+
+  <!-- 3D Model Viewer -->
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+    async defer></script>
+
+  <!-- Trustpilot -->
+  <script
+    src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+    async></script>
+
+  <!-- MailerLite -->
+  <script>
+    (function(w,d,e,u,f,l,n){
+      w[f]=w[f]||function(){
+        (w[f].q=w[f].q||[]).push(arguments);
+      };
+      l=d.createElement(e);
+      l.async=1;
+      l.src=u;
+      n=d.getElementsByTagName(e)[0];
+      n.parentNode.insertBefore(l,n);
+    })(window,document,'script',
+      'https://assets.mailerlite.com/js/universal.js','ml');
+
     ml('account', '2461404');
-</script>
-<!-- End MailerLite Universal -->
-    <title>Signature & Letter SS Blog-Hollywood</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background-color: #e0e0e0; color: #000; }
+  </script>
 
-        header {
-            background-color: #DB5212;
-            color: white;
-            padding: 35px 20px;
-            display: flex;
-            align-items: center;
-        }
-        header img { height: 60px; margin-right: 15px; }
-        header h1 { font-size: 24px; }
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        nav {
-            background-color: orange;
-            padding: 10px 20px;
-        }
-        nav a {
-            color: black; text-decoration: none; margin-right: 15px; font-weight: bold;
-        }
-        nav a:hover { text-decoration: underline; }
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
 
-        main {
-            display: flex;
-            padding: 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-         .button {
-    display: inline-block;
-    background-color: yellow;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: gray;
+      color: #111;
+      line-height: 1.6;
+      overflow-wrap: break-word;
+    }
 
-.button:hover {
-    background-color: #333;
-    transform: scale(1.05);
-}
+    img {
+      max-width: 100%;
+      height: auto;
+    }
 
-        /* Left Column */
-        .left-column { width: 70%; padding-right: 20px; }
+    a {
+      color: #003366;
+    }
 
-        .post {
-            background-color: #fff;
-            padding: 30px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-        }
-        .post h2 { font-size: 18px; color: #003366; margin-bottom: 5px; }
-        .post .genre {
-            font-size: 14px;
-            color: #336699;
-            margin-bottom: 10px;
-        }
-        .post .genre a { text-decoration: none; color: #336699; }
-        .post .genre a:hover { text-decoration: underline; }
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid #ffbf47;
+      outline-offset: 3px;
+    }
 
-        /* Emoji container */
-        .emoji-container span {
-            font-size: 24px;
-            cursor: pointer;
-            margin-right: 10px;
-            user-select: none;
-            transition: transform 0.2s;
-        }
-        .emoji-container span:hover { transform: scale(1.2); }
-        .emoji-count { font-size: 14px; margin-left: 3px; vertical-align: super; }
+    /* HEADER */
+    .site-header {
+      background: gold;
+      color: #fff;
+      padding: 22px 5%;
+    }
 
-        /* Right Column */
-        .right-column { width: 30%; }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
 
-        .sidebar-box {
-            background-color: white;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            font-size: 12px;
-        }
-        .sidebar-box h3 {
-            font-size: 14px;
-            margin-bottom: 8px;
-            color: #003366;
-            text-align: center;
-        }
-        .shop-thumbnails { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; }
-        .shop-thumbnails a img {
-            width: 48px; height: auto; border: 1px solid #ccc;
-            transition: transform 0.2s;
-        }
-        .shop-thumbnails a img:hover {
-            transform: scale(1.2); border-color: #336699;
-        }
+    .header-logo {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
 
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-            font-size: 12px;
-        }
-    </style>
-    <link rel="icon" href="https://i.imghippo.com/files/Ngr2023LA.png" type="image/png">
-</head>
-<body>
+    .header-title {
+      min-width: 0;
+    }
 
-<header>
-    <img src="https://i.imghippo.com/files/pAm5784YCA.png" alt="Blog Logo">
-    <h1>Signature & Letter SS</h1>
-    <p>| Hollywood </p>
-     <marquee behavior="scroll" direction="left">
-    <span style="color: black;">Want to stay trendy? Join V.I.R.A.L ⭐ <a href="https://www.patreon.com/SignatureLetterSSblog/posts/v-i-r-l-program-163849819">Patreon</a> </span>
-</marquee>
-	<p></p>
-</header>
+    .header-title h1 {
+      font-size: clamp(22px, 3vw, 34px);
+      line-height: 1.2;
+    }
 
-<nav>
-    <a href="clublss.com/index.html">Home
-</nav>
+    .header-title p {
+      font-size: 14px;
+      margin-top: 5px;
+    }
 
+    /* ANNOUNCEMENT */
+    .announcement {
+      background: #fff;
+      color: #111;
+      padding: 11px 16px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+      font-size: 14px;
+    }
 
-<nav>
+    .announcement a {
+      font-weight: bold;
+      color: #0066cc;
+    }
 
+    /* NAVIGATION */
+    .site-nav {
+      background: #fff;
+      border-bottom: 1px solid #ccc;
+    }
 
-</nav>
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 5%;
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
 
-<main>
-    <!-- Popup -->
+    .site-nav a {
+      display: inline-block;
+      padding: 15px 0;
+      text-decoration: none;
+      font-weight: bold;
+      color: #003366;
+    }
 
-    
-    <!-- Left Column -->
-     <div class="left-column"></div>
+    .site-nav a:hover {
+      text-decoration: underline;
+    }
 
-        
-    </div>
-    
-    
-    
-    
-   
-    <div class="post" id="Hollywood" data-id="hollywood1">
-<a href="https://www.kqzyfj.com/click-101756007-15075557" target="_top">Brought to you by
-<img src="https://www.awltovhc.com/image-101756007-15075557" width="532" height="288" alt="" border="0"/></a>
-  <h2>Hollywood</h2>
-  <p> Hollywood is in essential its own community with many motives.</p>
-  <div class="buttons">
-    <button class="button"><a href="Hollywood-blog-news-daily.html">Take me to Hollywood blog</a></button>
-</div>
+    /* PAGE LAYOUT */
+    .page-container {
+      width: min(1200px, 100%);
+      margin: 30px auto;
+      padding: 0 20px;
+    }
 
-</div>
+    .content-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 25px;
+      align-items: start;
+    }
 
+    .main-column,
+    .sidebar {
+      min-width: 0;
+    }
 
-</footer>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-       
-        
+    /* POSTS */
+    .post {
+      background: #fff;
+      padding: clamp(18px, 3vw, 36px);
+      margin-bottom: 24px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    }
 
-            
-        
+    .post h2 {
+      font-size: clamp(22px, 2.5vw, 28px);
+      line-height: 1.3;
+      color: #003366;
+      margin: 18px 0 10px;
+    }
 
-       
-        
-       
-       
-       
-    </div>
-   
-   
+    .post p {
+      margin-bottom: 16px;
+    }
 
-           
-</script>
+    .post-banner {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
 
-       
-               
-               
-                      
+    .post-button {
+      display: inline-block;
+      max-width: 100%;
+      padding: 12px 18px;
+      margin: 8px 0 20px;
+      background: red;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      text-align: center;
+      transition: background 0.2s ease;
+    }
 
-<style>
-.site-footer{
-    background: linear-gradient(
+    .post-button:hover {
+      background: #05551e;
+    }
+
+    /* RSS FEED */
+    .rss-section {
+      margin-top: 18px;
+      width: 100%;
+      min-width: 0;
+    }
+
+    .rss-section h3 {
+      color: #003366;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    rssapp-list {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    /* SIDEBAR */
+    .sidebar-box {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .sidebar-box h3 {
+      font-size: 18px;
+      color: #003366;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .sidebar-box p {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    /* 3D MODEL */
+    .model-container {
+      width: 100%;
+      text-align: center;
+    }
+
+    .floatModel {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      height: 350px;
+      margin: 0 auto;
+      background: #f7f7f7;
+      border-radius: 8px;
+    }
+
+    /* SOCIAL LINKS */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .social-links a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 48px;
+      min-height: 48px;
+      border-radius: 8px;
+    }
+
+    .social-links img {
+      display: block;
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      transition: transform 0.2s ease;
+    }
+
+    .social-links a:hover img {
+      transform: scale(1.1);
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: linear-gradient(
         180deg,
         #003366 0%,
         #002244 100%
-    );
+      );
+      width: 100%;
+      margin-top: 35px;
+      padding: 28px 20px;
+      text-align: center;
+      color: #fff;
+      border-top: 4px solid #336699;
+    }
 
-    width:100%;
-    padding:30px 20px;
-    margin-top:40px;
-    text-align:center;
-    border-top:4px solid #336699;
-}
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-.footer-content{
-    max-width:1000px;
-    margin:auto;
-}
+    .footer-text {
+      font-size: 13px;
+      letter-spacing: 0.3px;
+    }
 
-.footer-logo{
-    display:block;
-    width:100%;
-    max-width:420px;
-    height:auto;
-    margin:0 auto 20px auto;
+    .site-footer a {
+      color: #fff;
+    }
 
-    border-radius:12px;
+    /* TABLETS */
+    @media (max-width: 900px) {
+      .content-grid {
+        grid-template-columns: minmax(0, 1fr) 230px;
+        gap: 18px;
+      }
 
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.45);
+      .page-container {
+        padding: 0 15px;
+      }
 
-    transition:transform .3s ease;
-}
+      .floatModel {
+        height: 300px;
+      }
+    }
 
-.footer-logo:hover{
-    transform:scale(1.03);
-}
+    /* PHONES */
+    @media (max-width: 680px) {
+      .site-header {
+        padding: 18px 15px;
+      }
 
-.footer-text{
-    color:white;
-    font-size:12px;
-    margin-top:15px;
-    letter-spacing:1px;
-}
-</style>
-           
-           
-           
-            </div>
-           
-           
-           
-        </div>
-       
-       
-       
-       
-       
-       
-        <div class="post" id="Hollywood" data-id="hollywood1">
-             
+      .header-inner {
+        gap: 12px;
+      }
+
+      .header-logo {
+        width: 54px;
+        height: 54px;
+      }
+
+      .header-title h1 {
+        font-size: clamp(19px, 5vw, 25px);
+      }
+
+      .header-title p {
+        font-size: 12px;
+      }
+
+      .announcement {
+        font-size: 13px;
+        padding: 12px 14px;
+      }
+
+      .nav-inner {
+        padding: 0 18px;
+        min-height: 48px;
+      }
+
+      .site-nav a {
+        padding: 13px 0;
+      }
+
+      .page-container {
+        margin: 18px auto;
+        padding: 0 12px;
+      }
+
+      .content-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+      }
+
+      .post {
+        padding: 18px;
+        margin-bottom: 18px;
+        border-radius: 6px;
+      }
+
+      .post h2 {
+        font-size: 23px;
+        margin-top: 15px;
+      }
+
+      .post p {
+        font-size: 15px;
+      }
+
+      .post-button {
+        display: block;
+        width: 100%;
+        padding: 14px 12px;
+      }
+
+      .sidebar-box {
+        padding: 18px;
+      }
+
+      .floatModel {
+        max-width: 100%;
+        height: 300px;
+      }
+
+      .social-links {
+        gap: 18px;
+      }
+
+      .social-links img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .site-footer {
+        margin-top: 24px;
+        padding: 24px 15px;
+      }
+    }
+
+    /* SMALL PHONES */
+    @media (max-width: 360px) {
+      .header-logo {
+        width: 44px;
+        height: 44px;
+      }
+
+      .header-title h1 {
+        font-size: 18px;
+      }
+
+      .post {
+        padding: 14px;
+      }
+
+      .floatModel {
+        height: 250px;
+      }
+    }
+
+    /* RESPECT ACCESSIBILITY SETTINGS */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+    <script type='text/javascript'>
+(function(d) {
+	var params = { bvpushsubid: 2106842, cb: (new Date()).getTime() };
+	var qs = Object.keys(params).reduce(function(a, k){ a.push(k + '=' + encodeURIComponent(params[k])); return a},[]).join(String.fromCharCode(38));
+	var s = d.createElement('script'); s.type='text/javascript';s.async=true;
+	var p = 'https:' == document.location.protocol ? 'https' : 'http';
+	s.src = p + "://cdn.hyperpromote.com/bidvertiser/tags/activejs/bdpush.js?" + qs;
+	d.getElementsByTagName('body').item(0).appendChild(s);
+})(document);
+</script>
+
 
  
-               
-        </div>
 
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <img src=
+        
+       "https://i.imghippo.com/files/pAm5784YCA.png" width="100">
+        
+      
 
-        </div>
-
-
-        </div>
-
+      <div class="header-title">
+        <h1>Signature &amp; Letters</h1>
+        <p>Discover something new.</p>
+      </div>
     </div>
+  </header>
 
-  
+  <!-- ANNOUNCEMENT -->
+  <div class="announcement">
+    Want to stay trendy? Join V.I.R.A.L. ⭐
+    <a
+      href="https://www.patreon.com/SignatureLetterSSblog/posts/v-i-r-l-program-163849819"
+      target="_blank"
+      rel="noopener noreferrer"
+    >Visit our Patreon</a>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-container">
+    <div class="content-grid">
+
+      <!-- LEFT / MAIN COLUMN -->
+      <section class="main-column" aria-label="Blog posts">
+
+        <article class="post" id="nothing-new">
+
+          <!-- Affiliate banner -->
+         <a href="https://www.anrdoezrs.net/click-101756007-15535739" target="_top">
+<img src="https://www.tqlkg.com/image-101756007-15535739" width="192" height="45" alt="Hurtigruten Expeditions Logo" border="0"/></a>
+
+
+ <a href="https://www.jdoqocy.com/click-101756007-11926423" target="_top">
+<img src="https://www.ftjcfx.com/image-101756007-11926423" width="268" height="60" alt="Generic (468x60)" border="0"/></a>
+ 
    
-            </div>
-        </div>
+    
+
+<script src="https://www.highrevenueformat.com/48e486525019a06dcfb8be1d64799074/invoke.js"></script>
+
+   <h2>SoCal & Hollywood</h2>
+  <p>Normal Highlights about eventful scenarios.</p>
+          <a
+            class="post-button"
+            href="clothing-release-news-monthly.html"
+          >
+            Explore Hollywood by Signature
+          </a>
+
+          <!-- RSS FEED -->
+          <section class="rss-section" aria-label="Latest updates">
+            <h3>Latest Updates</h3>
+
+            <rssapp-list id="jOzbApBx5jQV4sAb"></rssapp-list>
+
+            <script
+              src="https://widget.rss.app/v1/list.js"
+              async
+            ></script>
+          </section>
+
+        </article>
+
+      </section>
+
+      <!-- RIGHT / SIDEBAR -->
+      <aside class="sidebar" aria-label="Explore more">
+
+        <!-- 3D MODEL -->
+        <section class="sidebar-box">
+          <h3>Signature Showcase</h3>
+
+          <div class="model-container">
+            <model-viewer
+              class="floatModel"
+              src="lettersignature.glb"
+              alt="Interactive 3D letter signature"
+              auto-rotate
+              rotation-per-second="1deg"
+              camera-orbit="0deg 75deg 2.5m"
+              shadow-intensity="0"
+              exposure="1"
+              loading="lazy"
+              camera-controls
+            ></model-viewer>
+          </div>
+
+          <p style="text-align:center; margin-top:12px;">
+            Explore our 3D signature design.
+          </p>
+        </section>
+
+        <!-- SOCIAL MEDIA -->
+        <section class="sidebar-box">
+          <h3>Connect With Us</h3>
+
+          <p>
+            Follow Signature &amp; Letter SS across our social
+            platforms for more updates and content.
+          </p>
+
+          <div class="social-links">
+
+            <a
+              href="https://www.youtube.com/channel/UChCyOPytCjSbUg44O5Vztmg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png"
+                alt="YouTube"
+                loading="lazy"
+              >
+            </a>
+
+            <a
+              href="https://www.fishbowlapp.com/fb/fishbowl-signaturessblog-wwqv"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Fishbowl"
+            >
+              <img
+                src="https://www.marketing-immersion.com/wp-content/uploads/2021/10/fishbowl-logo-icon-fish-300x300.png"
+                alt="Fishbowl"
+                loading="lazy"
+              >
+            </a>
+
+          </div>
+        </section>
+
+      </aside>
+
     </div>
-</main>
+  </main>
 
-<footer>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880287056176748"
-     crossorigin="anonymous"></script>
-<!-- ad2 -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-9880287056176748"
-     data-ad-slot="8751772265"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-
-    &copy; 2026 Signature & Letter SS | All Rights Reserved
-</footer>
-	<!-- Begin BidVertiser code -->
-<SCRIPT data-cfasync="false" SRC="//bdv.bidvertiser.com/BidVertiser.dbm?pid=943283&bid=2106842" TYPE="text/javascript"></SCRIPT>
-<!-- End BidVertiser code -->
-
-<script>
-function closePopup() {
-  document.getElementById("thankYouPopup").style.display = "none";
-}
-</script>
-
-<script>
-    // Emoji count persistence
-    document.querySelectorAll('.post').forEach(post => {
-        const postId = post.dataset.id;
-        const emojiSpans = post.querySelectorAll('.emoji-container span');
-
-        emojiSpans.forEach(span => {
-            const emoji = span.dataset.emoji;
-            const savedCount = localStorage.getItem(postId + '-' + emoji);
-            if(savedCount) span.querySelector('.emoji-count').textContent = savedCount;
-
-            span.addEventListener('click', () => {
-                let count = parseInt(span.querySelector('.emoji-count').textContent) || 0;
-                count++;
-                span.querySelector('.emoji-count').textContent = count;
-                localStorage.setItem(postId + '-' + emoji, count);
-            });
-        });
-    });
-</script>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-text">
+        &copy; 2026 Signature &amp; Letter SS |
+        All Rights Reserved
+      </p>
+    </div>
+  </footer>
 
 </body>
 </html>
+
