@@ -25,19 +25,19 @@ ml('account', '2362560');
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Signature Blog Marketplace</title>
+<title>Signature & Letters Blog Marketplace</title>
 
 <style>
     body {
         font-family: Arial, Helvetica, sans-serif;
         background: #d7d7d7;
         margin: 0;
-        color: #111;
+        color: black;
     }
 
     header {
-        background: black;
-        color: white;
+        background: teal;
+        color: black;
         padding: 10px;
         font-size: 20px;
         font-weight: bold;
@@ -74,34 +74,78 @@ ml('account', '2362560');
 
     main {
         width: 95%;
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+        align-items: stretch;
     }
 
     .listing {
-        background: white;
+        box-sizing: border-box;
+        min-width: 0;
+        background: teal;
         border: 1px solid #999;
-        margin-bottom: 10px;
+        margin: 0;
         display: flex;
-        padding: 10px;
-        gap: 15px;
+        flex-direction: column;
+        padding: 12px;
+        gap: 10px;
+        height: 100%;
+    }
+
+    .listing > a:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .listing img {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
+        display: block;
+        width: 100%;
+        max-width: 220px;
+        height: 180px;
+        object-fit: contain;
         border: 1px solid #ccc;
         background: white;
+        margin: 0 auto;
     }
 
     .details {
         flex: 1;
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 560px) {
+        main {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .listing {
+            padding: 8px;
+        }
+
+        .listing img {
+            height: 130px;
+        }
+
+        .title {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 360px) {
+        main {
+            grid-template-columns: 1fr;
+        }
     }
 
     .title {
         font-size: 16px;
-        color: #0033cc;
+        color: yellow;
         font-weight: bold;
         margin-bottom: 5px;
         text-decoration: underline;
@@ -109,7 +153,7 @@ ml('account', '2362560');
 
     .description {
         font-size: 13px;
-        color: #333;
+        color: black;
         margin-bottom: 8px;
     }
 
@@ -137,7 +181,7 @@ ml('account', '2362560');
         margin-top: 10px;
         display: inline-block;
         font-size: 13px;
-        color: #0033cc;
+        color: yellow;
         text-decoration: underline;
         cursor: pointer;
     }
@@ -156,11 +200,12 @@ ml('account', '2362560');
 <body>
 
 <header>
-    <div>Signature & Letter SS Blog</div>
+    <div>Signature & Letters Blog Goodies</div>
+    <p></p>
     <a class="home-btn" href="https://clublss.com/">Home</a>
 </header>
 <header>
-      <a href="https://link.amazon/A0bxSVKgDEnjoy Membership Perks !</a>
+      <a href="https://link.amazon/A0bxSVKgD">Enjoy Membership Perks !</a>
     <img src="https://m.media-amazon.com/images/I/61yV4NjoB0L.png" width="100"
    <a href="https://www.amazon.com/joinyoungadult/"></a>
     
@@ -173,7 +218,22 @@ ml('account', '2362560');
 <main>
 
     <!-- ITEM 1 -->
+     <div class="listing">
+
+       <a href="https://www.anrdoezrs.net/click-101756007-14571050?url=https%3A%2F%2Fwww.graphicaudio.net%2Fvampire-hunter-d-volume-2-raiser-of-gales.html&cjsku=VAMPIREHUNTERD02">
+        <img src="https://www.awltovhc.com/image-101756007-14571050?imgurl=https%3A%2F%2Fwww.graphicaudio.net%2Fmedia%2Fcatalog%2Fproduct%2F9%2F7%2F9781685085339.jpg">
+         </a>
+<div class="details">
+        <div class="title">Vampire Hunter D 2: Raiser of Gales| Graphic Audio</div>
+<div class="description">
+    </div>
+ <div class="employee"><strong>Employee:</strong> Josh A.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.dpbolvw.net/click-101756007-14571050?url=https%3A%2F%2Fwww.graphicaudio.net%2Fvampire-hunter-d-volume-2-raiser-of-gales.html&cjsku=VAMPIREHUNTERD02">View Item</a>
+        </div>
+    </div>
  <div class="listing">
+
        <a href="https://amzn.to/4gxHBIB">
         <img src="https://m.media-amazon.com/images/I/81VnMVAjCrL._AC_SL1500_.jpg">
          </a>
