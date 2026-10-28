@@ -59,7 +59,7 @@ ml('account', '2362560');
         }
 
         header img{
-            height:60px;
+            height:260px;
             margin-right:15px;
         }
 
@@ -116,14 +116,19 @@ ml('account', '2362560');
             box-shadow:0 2px 6px rgba(0,0,0,0.08);
         }
 
-        .post-banner{
-            background:#003366;
-            color:white;
-            padding:12px;
-            border-radius:5px;
-            margin-bottom:15px;
-            font-size:20px;
-        }
+      
+    .post-banner {
+    background: #003366;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 20px;
+
+    position: relative;
+    z-index: 1;
+}
+    
 
         .post h2{
             color:#003366;
@@ -134,14 +139,23 @@ ml('account', '2362560');
             font-size:15px;
         }
 
-        .post img{
-            width:100%;
-            max-width:700px;
-            height:auto;
-            border-radius:6px;
-            margin:15px 0;
-            display:block;
-        }
+       
+.post .post-feature-image {
+    width: 85%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+
+    position: relative;
+    z-index: 2;
+
+    margin: -12px auto 20px;
+
+    border: 4px solid white;
+    border-radius: 6px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
 
         .genre{
             margin-bottom:12px;
@@ -237,6 +251,40 @@ ml('account', '2362560');
                 display:inline-block;
                 margin:5px;
             }
+            
+.main-nav {
+    background: #336699;
+    position: relative;
+    padding: 55px 20px 12px;
+    text-align: center;
+    overflow: visible;
+}
+
+.main-nav .holding-hands {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: auto;
+    margin: 0;
+    z-index: 3;
+    border: none;
+    box-shadow: none;
+}
+
+.main-nav .nav-banner {
+    display: block;
+    position: relative;
+    z-index: 2;
+    width: 400%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    border: none;
+    box-shadow: none;
+}
+
 
         }
 
@@ -250,29 +298,26 @@ ml('account', '2362560');
 
     <header>
 
-        <img src="https://i.imghippo.com/files/pAm5784YCA.png" alt="Blog Logo">
+      
 
-        <h1>Signature & Letter SS Community</h1>
+    
+     <img
+        class="nav-banner"
+        src="https://i.imghippo.com/files/VqnA4740BSY.png" 
+        alt="Signature and Letter SS navigation banner">
+
+
+
+       <i> <p> "Sig"© avatar is a trademark of Signature & Letters Blog</p></i>
 
     </header>
 
     <!-- NAVIGATION -->
 
-    <nav>
-
-        <a href="index.html">Home</a>
-
-        <a href="nothingnew.html">Nothin New</a>
-
-        <a href="fashion.html">Fashion Flashy</a>
-
-        <a href="Hollywood.html">Hollywood</a>
-
-        <a href="storesignatureblog.html">Goods & Catalog</a>
-
-        <a href="Certificates.html">Recognitions</a>
-
-    </nav>
+    <!-- NAVIGATION -->
+<nav class="main-nav">
+     
+</nav>
 
     <!-- MAIN -->
 
@@ -284,49 +329,48 @@ ml('account', '2362560');
 
             <!-- POST -->
 
-            <div class="post" id="fashion-flashy" data-id="fashion1">
 
-                <div class="post-banner">
-                    Building Networks
-                </div>
+<div class="post" id="fashion-flashy" data-id="fashion1">
 
-                <h2>Dedication to Professional Networking</h2>
-                
+    <div class="post-banner">
+        Building Networks
+    </div>
 
-                <img
-                    src="https://i.imghippo.com/files/QYXw6309IuY.png"
-                    alt="Networking"
-                >
+    <img
+        class="post-feature-image"
+        src="https://i.imghippo.com/files/QYXw6309IuY.png"
+        alt="Networking"
+    >
 
-                <p>
+    <h2>Dedication to Professional Networking</h2>
 
-                    Networking is not just about talking. Networking is the first
-                    step toward creating mutual value and long-term opportunities.
+    <p>
+        Networking is not just about talking.
+        Networking is the first step toward creating
+        mutual value and long-term opportunities.
+    </p>
 
-                    Signature & Letter SS community is especially competitive
-                    because the value of writing is leveraged so audiences can
-                    remember issues, topics, and impactful headlines.
+</div>
 
-                    Our blog continues to grow because our team focuses on
-                    discovering unique details about people, markets, trends,
-                    and positive impressions through creative writing tools
-                    and storytelling.
+              <div class="post" id="fashion-flashy" data-id="fashion1">
 
-                </p>
+    <div class="post-banner">
+        AI Building Our Blog Infrastructure
+    </div>
 
-            </div>
-                <div class="post" id="fashion-flashy" data-id="fashion1">
-                    <div class="post-banner">
-                        AI Building Our Blog Infrastructure
-                        </div>
-                        <h2>Professional Sharing of Information</h2>
-                        <img 
-                            src="https://i.imghippo.com/files/lCQk7428PfI.png"
-                            alt="networking"
-                            >
-                            <p> There are two types of AI infrastructure , Standalone AI and Integrated AI .In todays fast place workpace , professionals leveraging AI can differentiate themselves by scaling and building faster. Whether its using data and predictive analysis to anticipate trends, those equipped with AI are set for a firmer future.Standalone AI tools empower professionals to accomplish more with fewer resources. By understanding their potential applications and mastering effective prompt techniques, you can maximize the benefits these technologies offer.Identify the key areas where AI can have the greatest impact on your work, such as automating repetitive tasks or enhancing productivity in collaborative projects.</p>
-                        
-                    </div>
+    <img
+        class="post-feature-image"
+        src="https://i.imghippo.com/files/QYXw6309IuY.png"
+        alt="Networking"
+    >
+
+    <h2>Professional Sharing of Information</h2>
+
+    <p>
+        There are two types of AI infrastructure , Standalone AI and Integrated AI .In todays fast place workpace , professionals leveraging AI can differentiate themselves by scaling and building faster. Whether its using data and predictive analysis to anticipate trends, those equipped with AI are set for a firmer future.Standalone AI tools empower professionals to accomplish more with fewer resources. By understanding their potential applications and mastering effective prompt techniques, you can maximize the benefits these technologies offer.Identify the key areas where AI can have the greatest impact on your work, such as automating repetitive tasks or enhancing productivity in collaborative projects.
+    </p>
+
+</div>
                 </div>
 
 
@@ -338,38 +382,20 @@ ml('account', '2362560');
     <div class="right-column">
         <div class="sidebar-box">
             <h3>Partners of Signature & Letter ss blog </h3>
-          
-               <a href="https://www.anrdoezrs.net/click-101756007-11766395" target="_top">
-<img src="https://www.tqlkg.com/image-101756007-11766395" width="120" height="60" alt="" border="0"/></a>
-<a href="https://www.dpbolvw.net/click-101756007-11797179" target="_top">
-<img src="https://www.tqlkg.com/image-101756007-11797179" width="200" height="250" alt="" border="0"/></a>
-<a href="https://www.tkqlhce.com/click-101756007-10649694" target="_top">
-<img src="https://www.lduhtrp.net/image-101756007-10649694" width="88" height="31" alt="" border="0"/></a>
-<a href="https://www.jdoqocy.com/click-101756007-11917161" target="_top">
-<img src="https://www.lduhtrp.net/image-101756007-11921710" width="120" height="60" alt="" border="0"/></a>
-<a href="https://www.jdoqocy.com/click-101756007-14427012" target="_top">
-<img src="https://www.ftjcfx.com/image-101756007-14427012" width="234" height="60" alt="234x60 The #1 Press Release" border="0"/></a>
-<a href="https://www.jdoqocy.com/click-101756007-17146866" target="_top">
-<img src="https://www.lduhtrp.net/image-101756007-17144840" width="200" height="300" alt="" border="0"/></a>
-<a href="https://www.tkqlhce.com/click-101756007-16942205" target="_top">
-<img src="https://www.awltovhc.com/image-101756007-16942198" width="245" height="97" alt="" border="0"/></a>
-<a href="https://www.tkqlhce.com/click-101756007-17168757" target="_top">
-<img src="https://www.tqlkg.com/image-101756007-17168754" width="340" height="340" alt="Groundluxe luxury gray grounding sheet" border="0"/></a>
-<a href="https://www.tkqlhce.com/click-101756007-17177438" target="_top">
-<img src="https://www.ftjcfx.com/image-101756007-17177438" width="88" height="31" alt="KSP Performance" border="0"/></a>
-<a href="https://www.anrdoezrs.net/click-101756007-17016718" target="_top">
-<img src="https://www.lduhtrp.net/image-101756007-17310933" width="88" height="31" alt="Lighting New York | Save up to 60% Off with code: JULY | Shop Now" border="0"/></a>
-<a href="https://www.tkqlhce.com/click-101756007-17205347" target="_top">
-<img src="https://www.lduhtrp.net/image-101756007-13992095" width="300" height="250" alt="" border="0"/></a>
-<a href="https://www.tkqlhce.com/click-101756007-13795051" target="_top">
-<img src="https://www.awltovhc.com/image-101756007-13795051" width="50" height="50" alt="" border="0"/></a>
-<a href="https://www.dpbolvw.net/click-101756007-13426123" target="_top">
-<img src="https://www.lduhtrp.net/image-101756007-13426123" width="120" height="60" alt="" border="0"/></a>
-
-<a href="https://www.jdoqocy.com/click-101756007-10445968" target="_top">
-<img src="https://www.awltovhc.com/image-101756007-10443510" width="234" height="60" alt="" border="0"/></a>
-<a href="https://www.tkqlhce.com/click-101756007-17166097" target="_top">
-<img src="https://www.tqlkg.com/image-101756007-15846482" width="320" height="361" alt="Verizon Wireless Logo 300x300" border="0"/></a>
+          <a href="https://www.anrdoezrs.net/click-101756007-15846484" target="_top">
+<img src="https://www.lduhtrp.net/image-101756007-17021961" width="182" height="96" alt="" border="0"/></a>
+<a href="https://www.kqzyfj.com/click-101756007-17198210" target="_top">
+<img src="https://www.tqlkg.com/image-101756007-17198210" width="302" height="100" alt="" border="0"/></a>
+<a href="https://www.dpbolvw.net/click-101756007-17257836" target="_top">
+<img src="https://www.tqlkg.com/image-101756007-15075559" width="232" height="200" alt="" border="0"/></a>
+<a href="https://www.jdoqocy.com/click-101756007-11912889" target="_top">
+<img src="https://www.lduhtrp.net/image-101756007-11912889" width="125" height="125" alt="" border="0"/></a>
+<a href="https://www.dpbolvw.net/click-101756007-13437385" target="_top">
+<img src="https://www.ftjcfx.com/image-101756007-13437385" width="90" height="50" alt="" border="0"/></a>
+<a href="https://www.dpbolvw.net/click-101756007-10901114" target="_top">
+<img src="https://www.ftjcfx.com/image-101756007-10901114" width="192" height="45" alt="MSC Logo" border="0"/></a>
+<a href="https://www.dpbolvw.net/click-101756007-15449502" target="_top">
+<img src="https://www.tqlkg.com/image-101756007-15449502" width="108" height="100" alt="" border="0"/></a>
 
         </div>
     </div>
