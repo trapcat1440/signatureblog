@@ -48,10 +48,61 @@
         nav a:hover { text-decoration: underline; }
 
         main {
-            display: flex;
-            padding: 20px;
-            max-width: 1000px;
-            margin: auto;
+    display: flex;
+    gap: 25px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    align-items: flex-start;
+}
+
+.left-column {
+    width: 70%;
+}
+
+.right-column {
+    width: 30%;
+    position: sticky;
+    top: 20px;
+}
+
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+    }
+
+    .right-column {
+        position: static;
+    }
+.lss-trending {
+    background: white;
+    color: #003366;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid gold;
+}
+
+.trending-item {
+    display: block;
+    background: #003366;
+    color: white;
+    padding: 15px;
+    margin-top: 12px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.trending-item:hover {
+    background: orange;
+    color: black;
+}
         }
 
         .left-column { width: 100%; padding-right: 100px; }
@@ -242,10 +293,46 @@
             <div class="emoji-container">
                 
             </div>
+   
         </div>
 
     </div>
-    
+    <aside class="right-column">
+
+    <div class="sidebar-box lss-trending">
+
+        <h3 style="color:#003366;">
+             TRENDING ON SignatureBlog
+        </h3>
+
+        <p style="text-align:center; margin-bottom:15px;">
+            Stories worth talking about.
+        </p>
+
+        <a class="trending-item" href="https://clublss.com/directory3/nothingnew-signature-new-facts.html">
+            #01 · Northing New
+            <br>
+            Places to post vacation pictures
+            <p>7.2k Views</p>
+        </a>
+
+        <a class="trending-item" href="https://clublss.com/directory2/clothing-release-news-monthly.html">
+            #02 · Styles Within Fashion
+            <br>
+            Ranking the most lucrative winter items this month 
+            <p>10.2k Views</p>
+        </a>
+
+        <a class="trending-item" href="https://clublss.com/directory1/Hollywood-blog-news-daily.html">
+            #03 · NOTHING NEW
+            <br>
+            This is how to spend free time nowadays 
+            <p>21.2k views</p>
+        </a>
+
+    </div>
+
+</aside>
 
                </div>
         
