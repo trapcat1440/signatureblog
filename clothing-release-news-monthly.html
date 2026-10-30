@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-adsense-account" content="ca-pub-9880287056176748">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9880287056176748"
      crossorigin="anonymous"></script>
@@ -113,6 +114,192 @@
             margin-top: 40px;
             font-size: 12px;
         }
+        /* UNIVERSAL RESPONSIVE SETTINGS */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* DESKTOP LAYOUT */
+
+main {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.blog-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+    gap: 25px;
+    align-items: start;
+}
+
+.left-column,
+.right-column {
+    min-width: 0;
+    width: 100%;
+}
+
+/* POST BUBBLES */
+
+.post {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* TRENDING SIDEBAR */
+
+.right-column {
+    position: sticky;
+    top: 15px;
+}
+
+/* TABLETS */
+
+@media screen and (max-width: 900px) {
+
+    .blog-layout {
+        grid-template-columns: minmax(0, 1.6fr) minmax(220px, 1fr);
+        gap: 15px;
+    }
+
+    .post {
+        padding: 15px;
+    }
+
+    .post h2 {
+        font-size: 20px;
+    }
+
+}
+
+/* MOBILE PHONES */
+
+@media screen and (max-width: 650px) {
+
+    main {
+        padding: 12px;
+    }
+
+    .blog-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+    }
+
+    .right-column {
+        position: static;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    header img {
+        max-width: 120px;
+        height: auto;
+    }
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    .post {
+        border-radius: 25px;
+        padding: 12px;
+        margin-bottom: 20px;
+    }
+
+    .post img {
+        width: 100%;
+        height: auto;
+        border-radius: 18px;
+    }
+
+    .lss-trending {
+        width: 100%;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    footer img {
+        max-width: 100%;
+        height: auto;
+    }
+
+}
+
+/* VERY SMALL PHONES */
+
+@media screen and (max-width: 380px) {
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    .post h2 {
+        font-size: 18px;
+    }
+
+    .post {
+        padding: 9px;
+    }
+
+    .emoji-container span {
+        font-size: 20px;
+        margin: 0 4px;
+    }
+
+}
+
+/* RESPONSIVE ADVERTISEMENTS */
+
+footer img,
+img[src*="image-"] {
+    max-width: 100%;
+    height: auto;
+}
     </style>
     <link rel="icon" href="https://i.imghippo.com/files/Ngr2023LA.png" type="image/png">
 </head>
