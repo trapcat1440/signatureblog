@@ -192,6 +192,137 @@ ml('account', '2362560');
         padding: 20px;
         color: #333;
     }
+
+    /* Christmas makeover */
+    :root {
+        --christmas-green: #0b5137;
+        --christmas-deep: #073b2a;
+        --christmas-red: #a51f32;
+        --christmas-gold: #f4d58d;
+        --winter-cream: #fffaf0;
+    }
+
+    body {
+        background: linear-gradient(135deg, #e8f4f1 0%, #fffaf0 48%, #e4edf7 100%);
+        color: #18352b;
+    }
+
+    header {
+        background: linear-gradient(110deg, var(--christmas-deep), var(--christmas-green));
+        color: #fffaf0;
+        border-bottom: 3px solid var(--christmas-gold);
+        box-shadow: 0 3px 12px rgba(0, 35, 22, .18);
+    }
+
+    header a {
+        color: #ffe7ad;
+    }
+
+    .home-btn {
+        color: #fff;
+    }
+
+    .moving-text {
+        background: linear-gradient(90deg, #8e1729, #b52b3b, #8e1729);
+        color: #fffaf0;
+        border-bottom: 2px solid var(--christmas-gold);
+    }
+
+    .listing {
+        background: linear-gradient(155deg, #126044, #08452f);
+        border: 1px solid #d8bd78;
+        border-radius: 12px;
+        box-shadow: 0 5px 14px rgba(15, 55, 39, .16);
+        color: #fffaf0;
+        transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .listing:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 9px 20px rgba(15, 55, 39, .22);
+    }
+
+    .listing img {
+        border: 2px solid #e8d49b;
+        border-radius: 8px;
+    }
+
+    .title {
+        color: #ffe29a;
+    }
+
+    .description,
+    .employee,
+    .employee strong {
+        color: #fffaf0;
+    }
+
+    .meta {
+        color: #d8e8df;
+    }
+
+    .rating {
+        color: #ffd36b;
+    }
+
+    .buy {
+        color: #ffe29a;
+        font-weight: bold;
+    }
+
+    footer {
+        background: #073b2a;
+        color: #fffaf0;
+        border-top: 3px solid var(--christmas-gold);
+        margin-top: 24px;
+    }
+
+    /* Snow is decorative only, so it never blocks links or buttons. */
+    #christmas-snow {
+        position: fixed;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 9999;
+        aria-hidden: true;
+    }
+
+    .snowflake {
+        position: absolute;
+        top: -12vh;
+        left: var(--snow-left);
+        color: #fff;
+        opacity: var(--snow-opacity);
+        font-size: var(--snow-size);
+        line-height: 1;
+        text-shadow: 0 0 5px rgba(80, 130, 160, .45);
+        user-select: none;
+        will-change: transform;
+        animation: snowfall var(--snow-duration) linear var(--snow-delay) infinite;
+    }
+
+    @keyframes snowfall {
+        0% {
+            transform: translate3d(0, -12vh, 0) rotate(0deg);
+        }
+        100% {
+            transform: translate3d(var(--snow-drift), 115vh, 0) rotate(360deg);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .snowflake {
+            animation: none;
+            display: none;
+        }
+        .listing {
+            transition: none;
+        }
+        .listing:hover {
+            transform: none;
+        }
+    }
+
 </style>
 <link rel="icon" href="https://i.imghippo.com/files/Ngr2023LA.png" type="image/png">
 
@@ -199,8 +330,11 @@ ml('account', '2362560');
 
 <body>
 
+<div id="christmas-snow" aria-hidden="true"></div>
+
+
 <header>
-    <div>Signature & Letters Blog Goodies</div>
+    <div>Signature & Letters Blog MarketPlace</div>
     <p></p>
     <a class="home-btn" href="https://clublss.com/">Home</a>
 </header>
@@ -212,12 +346,136 @@ ml('account', '2362560');
 </header>
 
 <div class="moving-text">
-    <span>🔥 Welcome to our blog marketplace • Save 60% on every item • Ship fast   • Deals are here save 30%  🔥</span>
+    <span>🔥 Welcome to our blog marketplace • Save 60% on every item • Ship fast   • Christmas Specials are here save any amount  🔥</span>
 </div>
 
 <main>
 
     <!-- ITEM 1 -->
+    
+    
+                  <div class="listing">
+
+       <a href="https://www.jdoqocy.com/click-101756007-16990770?url=https%3A%2F%2Fwww.verizon.com%2Fsmartphones%2Fmotorola-razr-2026%2F%3Fsku%3Dsku6048181%26edgeTerm%3D36&cjsku=MOTXT2657V1">
+        <img src="https://www.tqlkg.com/image-101756007-16990770?imgurl=https%3A%2F%2Fss7.vzw.com%2Fis%2Fimage%2FVerizonWireless%2Fmotorola-razr-2026-pantone-hematite-motxt2657v1">
+         </a>
+<div class="details">
+        <div class="title">
+Motorola razr 128GB in Pantone Hematite</div>
+<div class="description">
+    </div>
+ <div class="employee"><strong>Employee:</strong> Micheal G.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.tqlkg.com/image-101756007-16990770?imgurl=https%3A%2F%2Fss7.vzw.com%2Fis%2Fimage%2FVerizonWireless%2Fmotorola-razr-2026-pantone-hematite-motxt2657v1">View Item</a>
+        </div>
+    </div>
+    
+    
+    
+    
+                        <div class="listing">
+
+       <a href="https://www.tkqlhce.com/click-101756007-16990772?url=https%3A%2F%2Fwww.verizon.com%2Fproducts%2Fturtle-beach-stealth-600-wireless-gen-3-gaming-headset-for-ps-xbox-series-x%7Cs-switch-pc%2F%3Fsku%3Dsku6018638&cjsku=TBS-3102-15">
+        <img src="https://www.lduhtrp.net/image-101756007-16990772?imgurl=https%3A%2F%2Fss7.vzw.com%2Fis%2Fimage%2FVerizonWireless%2Ftbs-3102-15-iset%3Fwid%3D930%26hei%3D930%26fmt%3Dwebp">
+         </a>
+<div class="details">
+        <div class="title">
+Turtle Beach Stealth 600 Wireless Gen 3 Gaming Headset for PS/Xbox Series X|S/Switch/PC - White </div>
+<div class="description">
+    </div>
+ <div class="employee"><strong>Employee:</strong> Troy F.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.tkqlhce.com/click-101756007-16990772?url=https%3A%2F%2Fwww.verizon.com%2Fproducts%2Fturtle-beach-stealth-600-wireless-gen-3-gaming-headset-for-ps-xbox-series-x%7Cs-switch-pc%2F%3Fsku%3Dsku6018638&cjsku=TBS-3102-15">View Item</a>
+        </div>
+    </div>
+    
+    
+    
+                    <div class="listing">
+
+       <a href="https://link.amazon/B0cvTnkPc">
+        <img src="https://m.media-amazon.com/images/I/718Z7Lgl3JL._AC_SL1500_.jpg">
+         </a>
+<div class="details">
+        <div class="title">
+Polaroid Now 3rd Generation I-Type Instant Film Camera</div>
+<div class="description">
+    </div>
+ <div class="employee"><strong>Employee:</strong> Destiny A.(Blogger)<p>Affliate Guarantee</p></div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://link.amazon/B0cvTnkPc">View Item</a>
+        </div>
+    </div>
+    
+    
+                <div class="listing">
+
+       <a href="https://link.amazon/B05NW8a8C">
+        <img src="https://m.media-amazon.com/images/I/515FE+S4yLL._AC_SL1500_.jpg">
+         </a>
+<div class="details">
+        <div class="title">Beats Solo 4 - Wireless On-Ear Bluetooth Headphones</div>
+<div class="description">
+    </div>
+ <div class="employee"><strong>Employee:</strong>David P.(Blogger)<p>Affliate Guarantee</p></div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://link.amazon/B05NW8a8C">View Item</a>
+        </div>
+    </div>
+    
+    
+    
+    
+            <div class="listing">
+
+       <a href="https://www.anrdoezrs.net/click-101756007-16941446?url=https%3A%2F%2Fwww.fragranceshop.com%2Fproduct%2Ftom-ford-velvet-orchid-for-women%2F%3Fattribute_pa_size%3Deau-de-parfum-spray-1-0-oz%26wmc-currency%3DUSD&cjsku=FST103ga">
+        <img src="https://www.fragranceshop.com/wp-content/uploads/2025/04/fst103.jpg">
+         </a>
+<div class="details">
+        <div class="title">Tom Ford Velvet Orchid for Women by Tom Ford</div>
+<div class="description">
+    </div>
+ <div class="employee"><strong>Employee:</strong>Jazmond I.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.anrdoezrs.net/click-101756007-16941446?url=https%3A%2F%2Fwww.fragranceshop.com%2Fproduct%2Ftom-ford-velvet-orchid-for-women%2F%3Fattribute_pa_size%3Deau-de-parfum-spray-1-0-oz%26wmc-currency%3DUSD&cjsku=FST103ga">View Item</a>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+        <div class="listing">
+
+       <a href="https://www.kqzyfj.com/click-101756007-16941446?url=https%3A%2F%2Fwww.fragranceshop.com%2Fproduct%2Fjimmy-choo-fever-for-women%2F%3Fattribute_pa_size%3Deau-de-parfum-spray-3-3-oz%26wmc-currency%3DUSD&cjsku=FS89911ga">
+        <img src="https://www.fragranceshop.com/wp-content/uploads/2024/06/fs89911.jpg">
+         </a>
+<div class="details">
+        <div class="title">Jimmy Choo Fever Perfume for Women by Jimmy Choo</div>
+<div class="description">
+    </div>
+ <div class="employee"><strong>Employee:</strong> Jessica M.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.kqzyfj.com/click-101756007-16941446?url=https%3A%2F%2Fwww.fragranceshop.com%2Fproduct%2Fjimmy-choo-fever-for-women%2F%3Fattribute_pa_size%3Deau-de-parfum-spray-3-3-oz%26wmc-currency%3DUSD&cjsku=FS89911ga">View Item</a>
+        </div>
+    </div>
+    
+    
+    
+    <div class="listing">
+
+       <a href="https://www.dpbolvw.net/click-101756007-16941446?url=https%3A%2F%2Fwww.fragranceshop.com%2Fproduct%2Fkim-kardashian-gold-for-women%2F%3Fattribute_pa_size%3Dtype-perfume-oil-1-3-oz-roll-on%26wmc-currency%3DUSD&cjsku=FL389ga">
+        <img src="https://www.fragranceshop.com/wp-content/uploads/2024/06/perfume_oil-289_1.jpg">
+         </a>
+<div class="details">
+        <div class="title">Kim Kardashian Gold Perfume for Women by Kim Kardashian</div>
+<div class="description">
+    </div>
+ <div class="employee"><strong>Employee:</strong> Tiffany A.(Blogger)</div>
+                <div class="rating">★★★★☆ (positive feedback)</div>
+            <a class="buy" href="https://www.dpbolvw.net/click-101756007-16941446?url=https%3A%2F%2Fwww.fragranceshop.com%2Fproduct%2Fkim-kardashian-gold-for-women%2F%3Fattribute_pa_size%3Dtype-perfume-oil-1-3-oz-roll-on%26wmc-currency%3DUSD&cjsku=FL389ga">View Item</a>
+        </div>
+    </div>
      <div class="listing">
 
        <a href="https://www.anrdoezrs.net/click-101756007-14571050?url=https%3A%2F%2Fwww.graphicaudio.net%2Fvampire-hunter-d-volume-2-raiser-of-gales.html&cjsku=VAMPIREHUNTERD02">
@@ -1303,6 +1561,7 @@ ml('account', '2362560');
 
     <!-- ITEM 4 -->
     <div class="listing">
+        
         <a href="https://amzn.to/4fx2VxN" target="_blank">
             <img src="https://m.media-amazon.com/images/I/913d37i5+yL._AC_SL1500_.jpg" alt="">
         </a>
@@ -1356,6 +1615,32 @@ ml('account', '2362560');
 <!-- End TrustBox widget -->
     © 2026 Signature & Letter SS Blog Market
 </footer>
+
+
+<script>
+(function () {
+    const snowLayer = document.getElementById("christmas-snow");
+    if (!snowLayer || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const flakeCount = 54;
+    const flakes = ["❄", "❅", "❆", "·"];
+
+    for (let i = 0; i < flakeCount; i++) {
+        const flake = document.createElement("span");
+        flake.className = "snowflake";
+        flake.textContent = flakes[Math.floor(Math.random() * flakes.length)];
+
+        flake.style.setProperty("--snow-left", (Math.random() * 100) + "vw");
+        flake.style.setProperty("--snow-size", (10 + Math.random() * 17) + "px");
+        flake.style.setProperty("--snow-opacity", (0.35 + Math.random() * 0.6).toFixed(2));
+        flake.style.setProperty("--snow-duration", (9 + Math.random() * 13) + "s");
+        flake.style.setProperty("--snow-delay", (-Math.random() * 22) + "s");
+        flake.style.setProperty("--snow-drift", ((Math.random() - 0.5) * 22) + "vw");
+
+        snowLayer.appendChild(flake);
+    }
+})();
+</script>
 
 </body>
 </html>
