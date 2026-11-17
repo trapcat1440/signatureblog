@@ -42,7 +42,7 @@ header p {
 
 /* NAVIGATION */
 nav {
-    background-color: blue;
+    background-color: orange;
     padding: 12px 20px;
 }
 
@@ -219,6 +219,51 @@ footer {
 footer a {
     color: yellow;
 }
+/* SCROLLING MARQUEE */
+.marquee {
+    background: #0066cc;
+    color: white;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 12px 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.marquee-content {
+    display: flex;
+    width: max-content;
+    animation: scroll-marquee 15s linear infinite;
+    will-change: transform;
+}
+
+.marquee-content span {
+    display: block;
+    flex-shrink: 0;
+    padding-right: 60px;
+}
+
+.marquee a {
+    color: #ffeb3b;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+@keyframes scroll-marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee:hover .marquee-content {
+    animation-play-state: paused;
+}
 
 /* MOBILE */
 @media(max-width: 700px) {
@@ -243,15 +288,49 @@ footer a {
     .hero h2 {
         font-size: 23px;
     }
-    .marquee {
+/* SCROLLING MARQUEE */
+.marquee {
     background: #0066cc;
     color: #ffffff;
+    width: 100%;
     overflow: hidden;
     white-space: nowrap;
     padding: 12px 0;
     font-family: Arial, sans-serif;
     font-size: 16px;
     font-weight: bold;
+}
+
+.marquee-content {
+    display: flex;
+    width: max-content;
+    animation: scroll-marquee 18s linear infinite;
+    will-change: transform;
+}
+
+.marquee-content span {
+    flex-shrink: 0;
+    padding-right: 60px;
+}
+
+.marquee a {
+    color: #ffeb3b;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+@keyframes scroll-marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee:hover .marquee-content {
+    animation-play-state: paused;
 }
 
 .marquee-content {
