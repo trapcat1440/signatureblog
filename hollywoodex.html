@@ -172,8 +172,8 @@
     </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="https://mdxpress-lyart.vercel.app/">Advanced Blog</a>
+    <a href="signaturelettermedia.xyz">Home</a>
+    
     <a href="https://pin.it/4Gg729mBW"> Our Pinterest</a>
     <a href="https://www.youtube.com/channel/UChCyOPytCjSbUg44O5Vztmg">Podcast</a>
         
@@ -537,7 +537,7 @@ function playPuzzle(){
  const taskItems=document.getElementById('slss-task-items'), menu=document.getElementById('slss-start-menu');
  let z=20, winCount=0, notes=localStorage.getItem('slss98-notes')||'', guest=JSON.parse(localStorage.getItem('slss98-guestbook')||'[]');
  const apps={
- computer:['My Computer',`<h3>My Computer</h3><p>Welcome to Signature & Letter SS.</p><div class="slss-app-grid">
+ computer:['My Computer',`<h3>My Computer</h3><p>Welcome to Signature & Letters.</p><div class="slss-app-grid">
  <div class="slss-app-tile" data-open="shopping"><b>🛍️</b>Shopping</div><div class="slss-app-tile" data-open="restaurants"><b>🍴</b>Foodie Life in LA</div><div class="slss-app-tile" data-open="games"><b>🎮</b>Games</div><div class="slss-app-tile" data-open="gallery"><b>🖼️</b>Pictures</div><div class="slss-app-tile" data-open="internet"><b>🌐</b>Internet</div><div class="slss-app-tile" data-open="whatsnew"><b>📰</b>What's New</div></div>`],
  notepad:['Notepad',`<h3>Notepad</h3><p>Write a note. It is saved in this browser on this device.</p><textarea id="slss-notes" style="width:100%;height:65%;min-height:180px">${escapeHtml(notes)}</textarea><p class="slss-small-note" id="slss-note-status">Saved locally as you type.</p>`],
  calculator:['Calculator',`<h3>Calculator</h3><input id="slss-calc-display" value="0" readonly style="width:100%;text-align:right;font-size:22px"><div class="slss-app-grid" style="grid-template-columns:repeat(4,1fr)">${['7','8','9','÷','4','5','6','×','1','2','3','−','0','.','C','+','=','⌫'].map(x=>'<button data-calc="'+x+'">'+x+'</button>').join('')}</div><p class="slss-small-note">Basic arithmetic calculator.</p>`],
@@ -548,7 +548,7 @@ function playPuzzle(){
  restaurants:['Restaurant Finder',`<h3>Foodie Life in LA</h3><input id="slss-rest-search" placeholder="Filter restaurants..." style="width:100%"><div id="slss-rest-content"></div>`],
  internet:['Internet Explorer',`<h3>Internet Explorer</h3><p>Quick links from your website:</p><p><a href="signaturelettermedia.xyz">Home</a></p><p><a target="_blank" rel="noopener" href="signaturelettermedia.xyz/directory1">Advanced Blog</a></p><p><a target="_blank" rel="noopener" href="https://pin.it/4Gg729mBW">Pinterest</a></p><p><a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UChCyOPytCjSbUg44O5Vztmg">Podcast</a></p>`],
  guestbook:['Guestbook',`<h3>Guestbook</h3><p>Leave a message on this device's local guestbook.</p><input id="slss-guest-name" placeholder="Your name" style="width:100%"><textarea id="slss-guest-msg" placeholder="Your message" style="width:100%;height:75px"></textarea><button id="slss-guest-add">Sign Guestbook</button><div id="slss-guest-list"></div><p class="slss-small-note">Messages are stored only in this browser, not shared with other visitors.</p>`],
- whatsnew:['What’s New',`<h3>What's New</h3><p>Welcome to the Windows 98 / AOL-inspired desktop edition of Signature & Letter SS.</p><ul><li>Classic desktop and Start menu</li><li>Interactive app windows</li><li>Website content shortcuts</li><li>Responsive mobile layout</li></ul>`],
+ whatsnew:['What’s New',`<h3>What's New</h3><p>Welcome to the Sig 98.</p><ul><li>Classic desktop and Start menu</li><li>Interactive app windows</li><li>Website content shortcuts</li><li>Responsive mobile layout</li></ul>`],
  control:['Control Panel',`<h3>Display Properties</h3><p>Choose your desktop wallpaper:</p><button data-wall="teal">Classic Teal</button><button data-wall="blue">AOL Blue</button><button data-wall="purple">Retro Purple</button><p><label><input type="checkbox" id="slss-large-icons"> Larger desktop icons</label></p><p>Sound effects: Off</p>`],
  recycle:['Recycle Bin',`<h3>Recycle Bin</h3><p>The Recycle Bin is empty.</p><p class="slss-small-note">A little retro nostalgia. Nothing on your website is deleted from here.</p>`],
  tic:['Tic-Tac-Toe',`<h3>Tic-Tac-Toe</h3><p id="slss-tic-status">Your turn: X</p><div id="slss-tic-board" class="slss-app-grid" style="grid-template-columns:repeat(3,70px);justify-content:center"></div><button id="slss-tic-reset">New Game</button>`],
