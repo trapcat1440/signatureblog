@@ -6,7 +6,7 @@
         <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <!-- TrustBox script -->
 <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-    <!-- MailerLite Universal -->
+     <!-- MailerLite Universal -->
 <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
     .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
@@ -17,602 +17,150 @@
 <!-- End MailerLite Universal -->
     <title>Signature & Letter SS Blog-Hollywood</title>
     <style>
-       
-/* ==========================================
-   SIGNATURE & LETTER SS - AOL RETRO THEME
-   Keep existing page layout and content
-========================================== */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #dce9f9;
-    color: #222;
-}
-
-/* HEADER */
-
-header {
-    background: linear-gradient(to bottom, #0055cc, #003399);
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    border-bottom: 4px solid #ffcc00;
-}
-
-header img {
-    max-height: 60px;
-    width: auto;
-    margin-right: 12px;
-}
-
-header h1 {
-    font-size: 24px;
-}
-
-/* NAVIGATION */
-
-nav {
-    background: #003399;
-    padding: 12px 20px;
-    border-bottom: 3px solid #00aeef;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 18px;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: #ffcc00;
-    text-decoration: underline;
-}
-
-/* MAIN LAYOUT - KEEP YOUR COLUMNS */
-
-main {
-    display: flex;
-    padding: 20px;
-    max-width: 1400px;
-    margin: auto;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-.left-column {
-    width: 70%;
-    padding-right: 10px;
-}
-
-.right-column {
-    width: 30%;
-}
-
-/* RETRO CONTENT PANELS */
-
-.post,
-.sidebar-box {
-    background: #ffffff;
-    border: 2px solid #6699cc;
-    border-radius: 4px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 3px 3px 0 #b5cce8;
-}
-
-/* PANEL HEADINGS */
-
-.post h2,
-.sidebar-box h2,
-.sidebar-box h3 {
-    background: #003399;
-    color: white;
-    padding: 8px 10px;
-    margin: -15px -15px 12px;
-    font-size: 16px;
-    border-bottom: 3px solid #ffcc00;
-}
-
-.post h2 {
-    color: white;
-}
-
-/* LINKS */
-
-a {
-    color: #0055cc;
-}
-
-a:hover {
-    color: #ff6600;
-}
-
-/* BLOG GENRES */
-
-.post .genre {
-    font-size: 14px;
-    color: #0066cc;
-    margin-bottom: 10px;
-}
-
-.post .genre a {
-    color: #0055cc;
-    text-decoration: underline;
-}
-
-/* RETRO BUTTONS */
-
-.btn {
-    background: linear-gradient(to bottom, #3399ff, #0055cc);
-    color: white;
-    border: 2px solid #003399;
-    border-radius: 5px;
-    padding: 12px 24px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 2px 2px 0 #999;
-}
-
-.btn:hover {
-    background: linear-gradient(to bottom, #ffdd33, #ffcc00);
-    color: #003399;
-}
-
-/* PUZZLE */
-
-.puzzle {
-    background: #ffffff;
-    border: 4px solid #003399;
-    border-radius: 8px;
-    box-shadow: 5px 5px 0 #9bb8dc;
-}
-
-/* EMOJI REACTIONS */
-
-.emoji-container span {
-    font-size: 24px;
-    cursor: pointer;
-    margin-right: 10px;
-    transition: transform 0.2s;
-}
-
-.emoji-container span:hover {
-    transform: scale(1.25);
-}
-
-.emoji-count {
-    font-size: 14px;
-    color: #003399;
-    font-weight: bold;
-}
-
-/* SHOP IMAGES */
-
-.shop-thumbnails {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
-}
-
-.shop-thumbnails a img {
-    border: 2px solid #99bbdd;
-    border-radius: 3px;
-    transition: transform 0.2s;
-}
-
-.shop-thumbnails a img:hover {
-    transform: scale(1.08);
-    border-color: #ffcc00;
-}
-
-/* RESTAURANT LIST */
-
-.sidebar-box ul {
-    padding-left: 20px;
-}
-
-.sidebar-box li {
-    margin-bottom: 12px;
-    line-height: 1.5;
-}
-
-.sidebar-box li strong {
-    color: #003399;
-}
-
-/* FOOTER */
-
-footer {
-    background: #003399;
-    color: white;
-    text-align: center;
-    padding: 18px;
-    margin-top: 30px;
-    border-top: 4px solid #ffcc00;
-    font-size: 13px;
-}
-
-
-/* ==================================
-   AOL RETRO RESTAURANT CARDS
-================================== */
-
-
-/* ================================
-   AOL RESTAURANT CARDS
-   PC FIRST + MOBILE RESPONSIVE
-================================ */
-
-/* DESKTOP / PC */
-.food-guide {
-    background: #dce9f9;
-    border: 2px solid #6699cc;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 3px 3px 0 #b5cce8;
-}
-
-.food-guide-header {
-    background: linear-gradient(#0066cc, #003399);
-    color: white;
-    padding: 15px;
-    text-align: center;
-    border: 2px solid #003366;
-    margin-bottom: 15px;
-}
-
-.food-guide-header h2 {
-    color: #ffcc00;
-    font-size: 20px;
-    margin-bottom: 5px;
-}
-
-.food-guide-header p {
-    font-size: 13px;
-}
-
-.restaurant-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-}
-
-.restaurant-card {
-    background: #fff;
-    border: 2px solid #6699cc;
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 2px 2px 0 #b5cce8;
-    transition: transform .2s, border-color .2s;
-}
-
-.restaurant-card:hover {
-    transform: translateY(-3px);
-    border-color: #ffcc00;
-}
-
-.restaurant-title {
-    background: linear-gradient(to right, #003399, #0066cc);
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    padding: 10px;
-    border-bottom: 3px solid #ffcc00;
-}
-
-.restaurant-info {
-    padding: 12px;
-    text-align: center;
-}
-
-.restaurant-info p {
-    font-size: 13px;
-    color: #444;
-    margin-bottom: 10px;
-}
-
-.retro-button {
-    display: block;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 12px;
-    padding: 10px;
-    margin-top: 8px;
-    border-radius: 4px;
-    text-align: center;
-    border: 2px solid;
-    transition: .2s;
-}
-
-.retro-button.blue {
-    background: linear-gradient(#3399ff, #0055cc);
-    color: white;
-    border-color: #003399;
-}
-
-.retro-button.blue:hover {
-    background: #003399;
-}
-
-.retro-button.yellow {
-    background: linear-gradient(#ffe066, #ffcc00);
-    color: #003399;
-    border-color: #cc9900;
-}
-
-.retro-button.yellow:hover {
-    background: #ffdd33;
-}
-
-.food-guide-footer {
-    background: #003399;
-    color: #ffcc00;
-    text-align: center;
-    font-weight: bold;
-    font-size: 12px;
-    padding: 12px;
-    margin-top: 15px;
-}
-
-/* ================================
-   TABLET
-================================ */
-@media (max-width: 900px) {
-    main {
-        padding: 15px;
-    }
-
-    .left-column {
-        width: 65%;
-    }
-
-    .right-column {
-        width: 35%;
-    }
-
-    .restaurant-info {
-        padding: 10px;
-    }
-}
-
-/* ================================
-   MOBILE PHONE
-================================ */
-@media (max-width: 600px) {
-
-    body {
-        overflow-x: hidden;
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 10px;
-        gap: 15px;
-    }
-
-    .left-column,
-    .right-column {
-        width: 100%;
-        padding: 0;
-    }
-
-    .food-guide {
-        width: 100%;
-        padding: 8px;
-        box-shadow: none;
-    }
-
-    .food-guide-header {
-        padding: 12px 8px;
-    }
-
-    .food-guide-header h2 {
-        font-size: 18px;
-    }
-
-    .food-guide-header p {
-        font-size: 12px;
-    }
-
-    /* One restaurant per row */
-    .restaurant-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .restaurant-card {
-        width: 100%;
-        box-shadow: none;
-    }
-
-    .restaurant-card:hover {
-        transform: none;
-    }
-
-    .restaurant-title {
-        font-size: 15px;
-        padding: 12px;
-    }
-
-    .restaurant-info {
-        padding: 12px;
-    }
-
-    .restaurant-info p {
-        font-size: 14px;
-    }
-
-    /* Phone-friendly buttons */
-    .retro-button {
-        font-size: 14px;
-        padding: 13px;
-        margin-top: 10px;
-        min-height: 44px;
-    }
-
-    /* Keep navigation from overflowing */
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 12px;
-    }
-
-    nav a {
-        margin: 0;
-    }
-
-    /* Make puzzle fit screen */
-    .puzzle {
-        width: 100%;
-        max-width: 600px;
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 18px 10px;
-    }
-}
-
-
-/* Blue AOL title bar */
-
-.restaurant-title {
-    background: linear-gradient(to right, #003399, #0066cc);
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 14px;
-    padding: 10px;
-    border-bottom: 3px solid #ffcc00;
-}
-
-/* Card body */
-
-.restaurant-info {
-    padding: 12px;
-    text-align: center;
-}
-
-.restaurant-info p {
-    font-size: 12px;
-    color: #444444;
-    margin-bottom: 10px;
-}
-
-/* Retro buttons */
-
-.retro-button {
-    display: block;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 12px;
-    padding: 9px;
-    margin-top: 8px;
-    border-radius: 4px;
-    text-align: center;
-    border: 2px solid;
-    transition: 0.2s ease;
-}
-
-.retro-button.blue {
-    background: linear-gradient(#3399ff, #0055cc);
-    color: white;
-    border-color: #003399;
-}
-
-.retro-button.blue:hover {
-    background: #003399;
-}
-
-.retro-button.yellow {
-    background: linear-gradient(#ffe066, #ffcc00);
-    color: #003399;
-    border-color: #cc9900;
-}
-
-.retro-button.yellow:hover {
-    background: #ffdd33;
-    transform: scale(1.02);
-}
-
-/* Footer */
-
-.food-guide-footer {
-    background: #003399;
-    color: #ffcc00;
-    text-align: center;
-    font-weight: bold;
-    font-size: 12px;
-    padding: 12px;
-    margin-top: 15px;
-    border: 2px solid #6699cc;
-}
-
-/* Mobile */
-
-@media (max-width: 768px) {
-    .restaurant-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .food-guide-header h2 {
-        font-size: 18px;
-    }
-}
-
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-    main {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .left-column,
-    .right-column {
-        width: 100%;
-        padding: 0;
-    }
-
-    header {
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    nav a {
-        margin-right: 5px;
-    }
-
-    .puzzle {
-        width: 100%;
-        max-width: 600px;
-    }
-}
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background-color: #e0e0e0; color: #000; }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+        }
+        header img { height: 60px; margin-right: 15px; }
+        header h1 { font-size: 24px; }
+
+        nav {
+            background-color: navy;
+            padding: 10px 20px;
+        }
+        nav a {
+            color: white; text-decoration: none; margin-right: 15px; font-weight: bold;
+        }
+        nav a:hover { text-decoration: underline; }
+
+        main {
+            display: flex;
+            padding: 20px;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        /* Left Column */
+        .left-column { width: 70%; padding-right: 20px; }
+
+        .post {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        .post h2 { font-size: 18px; color: #003366; margin-bottom: 5px; }
+        .post .genre {
+            font-size: 14px;
+            color: #336699;
+            margin-bottom: 10px;
+        }
+        .post .genre a { text-decoration: none; color: #336699; }
+        .post .genre a:hover { text-decoration: underline; }
+
+        /* Emoji container */
+        .emoji-container span {
+            font-size: 24px;
+            cursor: pointer;
+            margin-right: 10px;
+            user-select: none;
+            transition: transform 0.2s;
+        }
+        .emoji-container span:hover { transform: scale(1.2); }
+        .emoji-count { font-size: 14px; margin-left: 3px; vertical-align: super; }
+
+        /* Right Column */
+        .right-column { width: 30%; }
+
+        .sidebar-box {
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+        }
+        .sidebar-box h3 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #003366;
+            text-align: center;
+        }
+        .shop-thumbnails { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; }
+        .shop-thumbnails a img {
+            width: 48px; height: auto; border: 1px solid #ccc;
+            transition: transform 0.2s;
+        }
+        .shop-thumbnails a img:hover {
+            transform: scale(1.2); border-color: #336699;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 12px;
+        }
     </style>
     <link rel="icon" href="https://i.imghippo.com/files/Ngr2023LA.png" type="image/png">
+<style>
+
+/* ===== Signature & Letter SS: Windows 98 + AOL desktop layer ===== */
+#slss-mode-toggle{position:fixed;right:16px;bottom:16px;z-index:99990;background:#003399;color:#fff;border:2px outset #d8d8d8;padding:11px 16px;font:bold 14px Tahoma,Arial;cursor:pointer;box-shadow:2px 2px 0 #111}
+#slss-desktop{display:none;position:fixed;inset:0;z-index:99980;background:#008080;color:#111;font:13px Tahoma,Arial,sans-serif;overflow:hidden}
+#slss-desktop.active{display:block}
+#slss-wallpaper{position:absolute;inset:0;background:linear-gradient(135deg,#087e91,#006b78 45%,#004c69);background-size:cover}
+.slss-desktop-icons{position:absolute;top:14px;left:12px;display:grid;grid-auto-flow:row;grid-template-columns:82px;gap:12px;z-index:1}
+.slss-icon{width:78px;min-height:76px;border:1px solid transparent;background:transparent;color:white;text-shadow:1px 1px #222;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:5px;padding:5px;cursor:pointer;font:12px Tahoma,Arial;text-align:center}
+.slss-icon:hover,.slss-icon:focus{background:#ffffff30;border:1px dotted #fff;outline:0}
+.slss-icon .glyph{font-size:30px;line-height:34px;text-shadow:1px 2px #333}
+#slss-taskbar{position:absolute;left:0;right:0;bottom:0;height:42px;background:#c0c0c0;border-top:2px solid #fff;box-shadow:0 -1px #808080;display:flex;align-items:center;gap:6px;padding:4px;z-index:5000}
+#slss-start{height:32px;padding:2px 10px;font:bold 14px Tahoma;background:#c0c0c0;border:2px outset #fff;cursor:pointer}
+#slss-task-items{display:flex;gap:4px;flex:1;min-width:0;overflow:auto}
+.slss-task-item{max-width:180px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:30px;padding:5px 10px;text-align:left;background:#c0c0c0;border:2px outset #fff;cursor:pointer}
+#slss-clock{font:12px Tahoma;background:#c0c0c0;border:1px inset #fff;padding:7px 9px;white-space:nowrap}
+#slss-start-menu{display:none;position:absolute;left:4px;bottom:42px;width:245px;background:#c0c0c0;border:2px outset #fff;z-index:6000;padding:6px;box-shadow:2px 2px #333}
+#slss-start-menu.open{display:block}
+.slss-start-banner{background:linear-gradient(#003399,#087ac4);color:white;font:bold 20px Tahoma;padding:12px 8px;margin-bottom:5px}
+.slss-start-entry{display:block;width:100%;padding:9px 8px;text-align:left;background:transparent;border:0;font:13px Tahoma;cursor:pointer}
+.slss-start-entry:hover{background:#003399;color:white}
+.slss-window{position:absolute;left:18%;top:12%;width:min(620px,76vw);height:min(470px,72vh);min-width:270px;min-height:190px;background:#c0c0c0;border:2px outset #eee;box-shadow:3px 4px 0 #222;display:flex;flex-direction:column;z-index:10}
+.slss-window.maximized{left:4px!important;top:4px!important;width:calc(100% - 8px)!important;height:calc(100% - 50px)!important}
+.slss-titlebar{height:30px;flex:0 0 30px;background:linear-gradient(90deg,#000080,#1084d0);color:white;display:flex;align-items:center;justify-content:space-between;padding:3px 4px 3px 8px;font:bold 13px Tahoma;cursor:move;touch-action:none}
+.slss-titlebar-buttons{display:flex;gap:3px}
+.slss-titlebar button{width:23px;height:21px;border:2px outset #fff;background:#c0c0c0;color:#111;font:bold 13px Arial;line-height:12px;cursor:pointer}
+.slss-window-body{padding:12px;overflow:auto;flex:1;background:#fff;border:2px inset #ddd}
+.slss-window-body h3{font:bold 16px Tahoma;color:#003399;margin:0 0 9px}
+.slss-window-body p{margin:7px 0;line-height:1.45}
+.slss-window-body button,.slss-window-body input,.slss-window-body textarea,.slss-window-body select{font:13px Tahoma;padding:5px;margin:3px}
+.slss-window-body button{border:2px outset #eee;background:#c0c0c0;cursor:pointer}
+.slss-window-body a{color:#003399}
+.slss-window-body .slss-app-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:9px}
+.slss-window-body .slss-app-tile{padding:12px 6px;border:1px solid #9aa;background:#eef5ff;text-align:center;cursor:pointer}
+.slss-window-body .slss-app-tile b{display:block;font-size:25px;margin-bottom:5px}
+#slss-paint-canvas{border:1px solid #555;max-width:100%;touch-action:none;display:block;background:#fff}
+.slss-small-note{font-size:11px;color:#555}
+@media(max-width:650px){
+ #slss-mode-toggle{right:8px;bottom:8px;padding:9px 11px}
+ .slss-desktop-icons{grid-template-columns:repeat(3,72px);grid-auto-flow:row;gap:5px;top:7px;left:5px}
+ .slss-icon{width:70px;min-height:64px;font-size:11px}
+ .slss-icon .glyph{font-size:25px;line-height:28px}
+ .slss-window{left:3vw!important;top:7vh!important;width:94vw!important;height:78vh!important;min-width:0;min-height:0}
+ .slss-window.maximized{height:calc(100% - 50px)!important}
+ #slss-taskbar{height:40px}
+ #slss-start{font-size:12px;padding:2px 6px}
+ .slss-task-item{max-width:105px;padding:5px}
+ #slss-clock{font-size:10px;padding:6px}
+}
+
+</style>
 </head>
 <body>
 
@@ -754,7 +302,7 @@ body{
     </button>
 
     <div id="answer" class="answer">
-        Get up to $500 off when getting home warranty <a href="https://www.tkqlhce.com/click-101756007-13073568">Choice</a>
+        Get up to $500 credit with <a href="https://www.kqzyfj.com/ti118ft1zt0GIHIOMNHHOGIJKKOIOJ"> Choice Home </a> warranty
     </div>
 
 </div>
@@ -768,21 +316,27 @@ body{
 
         <div class="sidebar-box">
 
-        <h2>Shop These</h2>   
-        
-        <a href="https://amzn.to/4g6HQKo">
-            <img src="https://m.media-amazon.com/images/I/511UXnv6IbL._AC_SL1500_.jpg"width="200">
+        <h2>Essential Gear</h2>
+        <a href="https://amzn.to/44sOXpT">
+            <img src="https://m.media-amazon.com/images/I/717UJZVs-4L._AC_SL1500_.jpg" width="150">
         </a>
-        
-        <a href="https://amzn.to/4g6I6ck">
-            <img src="https://m.media-amazon.com/images/I/71siVwknxaL._AC_SL1200_.jpg" width="200">
+        <a href="https://amzn.to/3T1optj">
+            <img src="https://m.media-amazon.com/images/I/71eQ8K4jWVL._AC_SL1500_.jpg" width="150">
         </a>
-        <a href="https://amzn.to/4ifA2XY">
-            <img src="https://m.media-amazon.com/images/I/81CDAVG+GHL._AC_SL1500_.jpg"width="200">
+        <a href="https://amzn.to/44sP5Wp">
+            <img src="https://m.media-amazon.com/images/I/712VnbngoEL._AC_SL1024_.jpg"width="150">
         </a>
-        <a href="https://amzn.to/4wwYsjr">
-            <img src="https://m.media-amazon.com/images/I/713a5tvbuEL._AC_SL1500_.jpg"width="200">
+        <a href="https://amzn.to/4br70jY">
+            <img src="https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7CA16ZWXV4qTL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_SX679_.png" width="150">
         </a>
+        <a href="https://www.kqzyfj.com/click-101756007-16941446?url=https%3A%2F%2Fwww.fragranceshop.com%2Fproduct%2Fgiorgio-armani-my-way-for-women%2F%3Fattribute_pa_size%3Deau-de-parfum-refillable-spray-1-7-oz%26wmc-currency%3DUSD&cjsku=FS91249ga">
+            <img src="https://www.fragranceshop.com/wp-content/uploads/2024/06/fs91249.jpg"width="200">
+        </a>
+            <a href="https://www.dpbolvw.net/click-101756007-16941446?url=https%3A%2F%2Fwww.fragranceshop.com%2Fproduct%2Fdiesel-only-the-brave-for-men%2F%3Fattribute_pa_size%3Deau-de-toilette-spray-4-2-oz%26wmc-currency%3DUSD&cjsku=FS23103ga">
+                <img src="https://www.fragranceshop.com/wp-content/uploads/2024/06/FS23103.jpg"width="200">
+            </a>          
+
+            
             
             
             
@@ -794,193 +348,86 @@ body{
     </div>
 
 </div>
- 
-<!-- AOL RETRO FOODIE LIFE IN LA -->
-<section class="food-guide">
+ <div class="sidebar-box">
+      <h2>Foodie Life in LA</h2>
+            <a href="https://www.anrdoezrs.net/click-101756007-13437387" target="_top">
+<img src="https://www.lduhtrp.net/image-101756007-13437387" width="90" height="50" alt="" border="0"/></a>
+<h3>Featured Restaurants</h3>
 
-    <div class="food-guide-header">
-        <h2>Foodie Life in LA</h2>
-        <p>You've got taste! Explore our favorite LA food spots.</p>
-    </div>
+<ul>
+    <li>
+        <strong>Bestia</strong><br>
+        <a href="https://www.yelp.com/biz/bestia-los-angeles" target="_blank">Yelp Reviews</a> |
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Bestia+Los+Angeles+CA" target="_blank">Get Directions</a>
+    </li>
 
-    <div class="restaurant-grid">
+    <li>
+        <strong>Howlin' Ray's</strong><br>
+        <a href="https://www.yelp.com/biz/howlin-rays-los-angeles" target="_blank">Yelp Reviews</a> |
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Howlin+Rays+Los+Angeles+CA" target="_blank">Get Directions</a>
+    </li>
 
-        <!-- BESTIA -->
-        <div class="restaurant-card">
-            <div class="restaurant-title"> BESTIA</div>
-            <div class="restaurant-info">
-                <p>Italian food & LA favorites</p>
-                <a href="https://www.yelp.com/biz/bestia-los-angeles"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button blue">⭐ Yelp Reviews</a>
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Bestia+Los+Angeles+CA"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button yellow">📍 Directions</a>
-            </div>
+    <li>
+        <strong>Guelaguetza</strong><br>
+        <a href="https://www.yelp.com/biz/guelaguetza-los-angeles" target="_blank">Yelp Reviews</a> |
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Guelaguetza+Los+Angeles+CA" target="_blank">Get Directions</a>
+    </li>
+
+    <li>
+        <strong>Majordomo</strong><br>
+        <a href="https://www.yelp.com/biz/majordomo-los-angeles" target="_blank">Yelp Reviews</a> |
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Majordomo+Los+Angeles+CA" target="_blank">Get Directions</a>
+    </li>
+
+    <li>
+        <strong>Damian</strong><br>
+        <a href="https://www.yelp.com/biz/damian-los-angeles" target="_blank">Yelp Reviews</a> |
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Damian+Los+Angeles+CA" target="_blank">Get Directions</a>
+    </li>
+
+    <li>
+        <strong>Republique</strong><br>
+        <a href="https://www.yelp.com/biz/republique-los-angeles" target="_blank">Yelp Reviews</a> |
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Republique+Los+Angeles+CA" target="_blank">Get Directions</a>
+    </li>
+
+    <li>
+        <strong>Night + Market WeHo</strong><br>
+        <a href="https://www.yelp.com/biz/night-market-weho-west-hollywood" target="_blank">Yelp Reviews</a> |
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Night+Market+WeHo+West+Hollywood+CA" target="_blank">Get Directions</a>
+    </li>
+
+    <li>
+        <strong>Yangban</strong><br>
+        <a href="https://www.yelp.com/biz/yangban-los-angeles" target="_blank">Yelp Reviews</a> |
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Yangban+Los+Angeles+CA" target="_blank">Get Directions</a>
+    </li>
+
+    <li>
+        <strong>Jitlada</strong><br>
+        <a href="https://www.yelp.com/biz/jitlada-los-angeles" target="_blank">Yelp Reviews</a> |
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Jitlada+Los+Angeles+CA" target="_blank">Get Directions</a>
+    </li>
+
+    <li>
+        <strong>Found Oyster</strong><br>
+        <a href="https://www.yelp.com/biz/found-oyster-los-angeles" target="_blank">Yelp Reviews</a> |
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Found+Oyster+Los+Angeles+CA" target="_blank">Get Directions</a>
+    </li>
+
+    <li>
+        <strong>Prince Street Pizza</strong><br>
+        <a href="https://www.yelp.com/biz/prince-street-pizza-los-angeles" target="_blank">Yelp Reviews</a> |
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Prince+Street+Pizza+Los+Angeles+CA" target="_blank">Get Directions</a>
+    </li>
+
+    <li>
+        <strong>Holbox</strong><br>
+        <a href="https://www.yelp.com/biz/holbox-los-angeles" target="_blank">Yelp Reviews</a> |
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Holbox+Los+Angeles+CA" target="_blank">Get Directions</a>
+    </li>
+</ul>
         </div>
-
-        <!-- HOWLIN RAYS -->
-        <div class="restaurant-card">
-            <div class="restaurant-title"> HOWLIN' RAY'S</div>
-            <div class="restaurant-info">
-                <p>Nashville hot chicken</p>
-                <a href="https://www.yelp.com/biz/howlin-rays-los-angeles"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button blue">⭐ Yelp Reviews</a>
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Howlin+Rays+Los+Angeles+CA"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button yellow">📍 Directions</a>
-            </div>
-        </div>
-
-        <!-- GUELAGUETZA -->
-        <div class="restaurant-card">
-            <div class="restaurant-title">GUELAGUETZA</div>
-            <div class="restaurant-info">
-                <p>Authentic Oaxacan flavors</p>
-                <a href="https://www.yelp.com/biz/guelaguetza-los-angeles"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button blue">⭐ Yelp Reviews</a>
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Guelaguetza+Los+Angeles+CA"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button yellow">📍 Directions</a>
-            </div>
-        </div>
-
-        <!-- MAJORDOMO -->
-        <div class="restaurant-card">
-            <div class="restaurant-title">MAJORDOMO</div>
-            <div class="restaurant-info">
-                <p>Creative Korean-inspired dining</p>
-                <a href="https://www.yelp.com/biz/majordomo-los-angeles"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button blue">⭐ Yelp Reviews</a>
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Majordomo+Los+Angeles+CA"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button yellow">📍 Directions</a>
-            </div>
-        </div>
-
-        <!-- DAMIAN -->
-        <div class="restaurant-card">
-            <div class="restaurant-title"> DAMIAN</div>
-            <div class="restaurant-info">
-                <p>Modern Mexican cuisine</p>
-                <a href="https://www.yelp.com/biz/damian-los-angeles"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button blue">⭐ Yelp Reviews</a>
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Damian+Los+Angeles+CA"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button yellow">📍 Directions</a>
-            </div>
-        </div>
-
-        <!-- REPUBLIQUE -->
-        <div class="restaurant-card">
-            <div class="restaurant-title">REPUBLIQUE</div>
-            <div class="restaurant-info">
-                <p>Bakery, brunch & French-inspired food</p>
-                <a href="https://www.yelp.com/biz/republique-los-angeles"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button blue">⭐ Yelp Reviews</a>
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Republique+Los+Angeles+CA"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button yellow">📍 Directions</a>
-            </div>
-        </div>
-
-        <!-- NIGHT MARKET -->
-        <div class="restaurant-card">
-            <div class="restaurant-title">️ NIGHT + MARKET WEHO</div>
-            <div class="restaurant-info">
-                <p>Thai street food & spicy flavors</p>
-                <a href="https://www.yelp.com/biz/night-market-weho-west-hollywood"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button blue">⭐ Yelp Reviews</a>
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Night+Market+WeHo+West+Hollywood+CA"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button yellow">📍 Directions</a>
-            </div>
-        </div>
-
-        <!-- YANGBAN -->
-        <div class="restaurant-card">
-            <div class="restaurant-title">YANGBAN</div>
-            <div class="restaurant-info">
-                <p>Korean-American cuisine</p>
-                <a href="https://www.yelp.com/biz/yangban-los-angeles"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button blue">⭐ Yelp Reviews</a>
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Yangban+Los+Angeles+CA"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button yellow">📍 Directions</a>
-            </div>
-        </div>
-
-        <!-- JITLADA -->
-        <div class="restaurant-card">
-            <div class="restaurant-title"> JITLADA</div>
-            <div class="restaurant-info">
-                <p>Authentic Thai cuisine</p>
-                <a href="https://www.yelp.com/biz/jitlada-los-angeles"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button blue">⭐ Yelp Reviews</a>
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Jitlada+Los+Angeles+CA"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button yellow">📍 Directions</a>
-            </div>
-        </div>
-
-        <!-- FOUND OYSTER -->
-        <div class="restaurant-card">
-            <div class="restaurant-title">FOUND OYSTER</div>
-            <div class="restaurant-info">
-                <p>Seafood & oyster bar</p>
-                <a href="https://www.yelp.com/biz/found-oyster-los-angeles"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button blue">⭐ Yelp Reviews</a>
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Found+Oyster+Los+Angeles+CA"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button yellow">📍 Directions</a>
-            </div>
-        </div>
-
-        <!-- PRINCE STREET PIZZA -->
-        <div class="restaurant-card">
-            <div class="restaurant-title"> PRINCE STREET PIZZA</div>
-            <div class="restaurant-info">
-                <p>New York-style pizza</p>
-                <a href="https://www.yelp.com/biz/prince-street-pizza-los-angeles"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button blue">⭐ Yelp Reviews</a>
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Prince+Street+Pizza+Los+Angeles+CA"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button yellow">📍 Directions</a>
-            </div>
-        </div>
-
-        <!-- HOLBOX -->
-        <div class="restaurant-card">
-            <div class="restaurant-title"> HOLBOX</div>
-            <div class="restaurant-info">
-                <p>Mexican seafood & coastal flavors</p>
-                <a href="https://www.yelp.com/biz/holbox-los-angeles"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button blue">⭐ Yelp Reviews</a>
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Holbox+Los+Angeles+CA"
-                   target="_blank" rel="noopener noreferrer"
-                   class="retro-button yellow">📍 Directions</a>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="food-guide-footer">
-        💙 Discover • Eat • Explore Los Angeles 💙
-    </div>
-
-</section>
-
         
         
 
@@ -1025,7 +472,7 @@ function playPuzzle(){
 <footer>
 
 
-    &copy; 2026 Signature & Letter SS | All Rights Reserved
+    &copy; 2026 Signature & Letters | All Rights Reserved
 </footer>
 
 <script>
@@ -1047,6 +494,144 @@ function playPuzzle(){
             });
         });
     });
+</script>
+
+
+<button id="slss-mode-toggle" type="button" aria-label="Switch to Windows desktop">🖥 Enter Sig98</button>
+<section id="slss-desktop" aria-label="Windows 98 desktop">
+ <div id="slss-wallpaper"></div>
+ <div class="slss-desktop-icons">
+  <button class="slss-icon" data-app="computer"><span class="glyph">🖥️</span>My Computer</button>
+  <button class="slss-icon" data-app="notepad"><span class="glyph">📝</span>Notepad</button>
+  <button class="slss-icon" data-app="calculator"><span class="glyph">🧮</span>Calculator</button>
+  <button class="slss-icon" data-app="paint"><span class="glyph">🎨</span>Paint</button>
+  <button class="slss-icon" data-app="games"><span class="glyph">🎮</span>Games</button>
+  <button class="slss-icon" data-app="gallery"><span class="glyph">🖼️</span>Photo Gallery</button>
+  <button class="slss-icon" data-app="shopping"><span class="glyph">🛍️</span>Shopping</button>
+  <button class="slss-icon" data-app="restaurants"><span class="glyph">🍴</span>Restaurant Finder</button>
+  <button class="slss-icon" data-app="internet"><span class="glyph">🌐</span>Internet</button>
+  <button class="slss-icon" data-app="guestbook"><span class="glyph">📖</span>Guestbook</button>
+  <button class="slss-icon" data-app="whatsnew"><span class="glyph">📰</span>What's New</button>
+  <button class="slss-icon" data-app="control"><span class="glyph">⚙️</span>Control Panel</button>
+  <button class="slss-icon" data-app="recycle"><span class="glyph">🗑️</span>Recycle Bin</button>
+ </div>
+ <div id="slss-start-menu">
+  <div class="slss-start-banner">Sig<b>98</b><br><small>Signature & LettersS</small></div>
+  <button class="slss-start-entry" data-launch="computer">🖥️ My Computer</button>
+  <button class="slss-start-entry" data-launch="notepad">📝 Notepad</button>
+  <button class="slss-start-entry" data-launch="calculator">🧮 Calculator</button>
+  <button class="slss-start-entry" data-launch="paint">🎨 Paint</button>
+  <button class="slss-start-entry" data-launch="games">🎮 Games</button>
+  <button class="slss-start-entry" data-launch="restaurants">🍴 Restaurant Finder</button>
+  <button class="slss-start-entry" data-launch="control">⚙️ Settings</button>
+  <hr><button class="slss-start-entry" id="slss-exit">↩ Return to Website Mode</button>
+ </div>
+ <div id="slss-taskbar"><button id="slss-start">🪟 Start</button><div id="slss-task-items"></div><div id="slss-clock">12:00 PM</div></div>
+</section>
+
+
+<script>
+(function(){
+ const desktop=document.getElementById('slss-desktop'), toggle=document.getElementById('slss-mode-toggle');
+ if(!desktop||!toggle)return;
+ const taskItems=document.getElementById('slss-task-items'), menu=document.getElementById('slss-start-menu');
+ let z=20, winCount=0, notes=localStorage.getItem('slss98-notes')||'', guest=JSON.parse(localStorage.getItem('slss98-guestbook')||'[]');
+ const apps={
+ computer:['My Computer',`<h3>My Computer</h3><p>Welcome to Signature & Letter SS.</p><div class="slss-app-grid">
+ <div class="slss-app-tile" data-open="shopping"><b>🛍️</b>Shopping</div><div class="slss-app-tile" data-open="restaurants"><b>🍴</b>Foodie Life in LA</div><div class="slss-app-tile" data-open="games"><b>🎮</b>Games</div><div class="slss-app-tile" data-open="gallery"><b>🖼️</b>Pictures</div><div class="slss-app-tile" data-open="internet"><b>🌐</b>Internet</div><div class="slss-app-tile" data-open="whatsnew"><b>📰</b>What's New</div></div>`],
+ notepad:['Notepad',`<h3>Notepad</h3><p>Write a note. It is saved in this browser on this device.</p><textarea id="slss-notes" style="width:100%;height:65%;min-height:180px">${escapeHtml(notes)}</textarea><p class="slss-small-note" id="slss-note-status">Saved locally as you type.</p>`],
+ calculator:['Calculator',`<h3>Calculator</h3><input id="slss-calc-display" value="0" readonly style="width:100%;text-align:right;font-size:22px"><div class="slss-app-grid" style="grid-template-columns:repeat(4,1fr)">${['7','8','9','÷','4','5','6','×','1','2','3','−','0','.','C','+','=','⌫'].map(x=>'<button data-calc="'+x+'">'+x+'</button>').join('')}</div><p class="slss-small-note">Basic arithmetic calculator.</p>`],
+ paint:['Paint',`<h3>Paint</h3><p>Draw with your pointer or finger. Save your picture as a PNG.</p><label>Brush <input id="slss-brush" type="range" min="1" max="24" value="5"></label><label>Color <input id="slss-color" type="color" value="#003399"></label><button id="slss-clear">Clear</button><button id="slss-save-paint">Save PNG</button><canvas id="slss-paint-canvas" width="560" height="300"></canvas>`],
+ games:['Games',`<h3>Games</h3><div class="slss-app-grid"><div class="slss-app-tile" data-open="tic"><b>⭕</b>Tic-Tac-Toe</div><div class="slss-app-tile" data-open="puzzle"><b>🧩</b>Hollywood Puzzle</div></div><div id="slss-game-area"><p>Choose a game above.</p></div>`],
+ gallery:['Photo Gallery',`<h3>Photo Gallery</h3><p>Images already on your website are shown below. Select one to view it larger.</p><div id="slss-gallery-grid" class="slss-app-grid"></div>`],
+ shopping:['Shopping',`<h3>Essential Gear & Shopping</h3><p>Your existing affiliate product links are kept on the original page. Open them here:</p><div id="slss-shop-content"></div>`],
+ restaurants:['Restaurant Finder',`<h3>Foodie Life in LA</h3><input id="slss-rest-search" placeholder="Filter restaurants..." style="width:100%"><div id="slss-rest-content"></div>`],
+ internet:['Internet Explorer',`<h3>Internet Explorer</h3><p>Quick links from your website:</p><p><a href="signaturelettermedia.xyz">Home</a></p><p><a target="_blank" rel="noopener" href="signaturelettermedia.xyz/directory1">Advanced Blog</a></p><p><a target="_blank" rel="noopener" href="https://pin.it/4Gg729mBW">Pinterest</a></p><p><a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UChCyOPytCjSbUg44O5Vztmg">Podcast</a></p>`],
+ guestbook:['Guestbook',`<h3>Guestbook</h3><p>Leave a message on this device's local guestbook.</p><input id="slss-guest-name" placeholder="Your name" style="width:100%"><textarea id="slss-guest-msg" placeholder="Your message" style="width:100%;height:75px"></textarea><button id="slss-guest-add">Sign Guestbook</button><div id="slss-guest-list"></div><p class="slss-small-note">Messages are stored only in this browser, not shared with other visitors.</p>`],
+ whatsnew:['What’s New',`<h3>What's New</h3><p>Welcome to the Windows 98 / AOL-inspired desktop edition of Signature & Letter SS.</p><ul><li>Classic desktop and Start menu</li><li>Interactive app windows</li><li>Website content shortcuts</li><li>Responsive mobile layout</li></ul>`],
+ control:['Control Panel',`<h3>Display Properties</h3><p>Choose your desktop wallpaper:</p><button data-wall="teal">Classic Teal</button><button data-wall="blue">AOL Blue</button><button data-wall="purple">Retro Purple</button><p><label><input type="checkbox" id="slss-large-icons"> Larger desktop icons</label></p><p>Sound effects: Off</p>`],
+ recycle:['Recycle Bin',`<h3>Recycle Bin</h3><p>The Recycle Bin is empty.</p><p class="slss-small-note">A little retro nostalgia. Nothing on your website is deleted from here.</p>`],
+ tic:['Tic-Tac-Toe',`<h3>Tic-Tac-Toe</h3><p id="slss-tic-status">Your turn: X</p><div id="slss-tic-board" class="slss-app-grid" style="grid-template-columns:repeat(3,70px);justify-content:center"></div><button id="slss-tic-reset">New Game</button>`],
+ puzzle:['Hollywood Puzzle',`<h3>Hollywood Puzzle</h3><p>This opens your original Hollywood puzzle on the website page.</p><button id="slss-open-original-puzzle">Open original puzzle</button>`]
+ };
+ function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+ function activate(){desktop.classList.add('active');toggle.textContent='🌐 Return to Website Mode';document.body.style.overflow='hidden';}
+ function deactivate(){desktop.classList.remove('active');toggle.textContent='🖥 Enter Desktop Mode';document.body.style.overflow='';menu.classList.remove('open');}
+ toggle.addEventListener('click',()=>desktop.classList.contains('active')?deactivate():activate());
+ document.getElementById('slss-exit').onclick=deactivate;
+ document.getElementById('slss-start').onclick=()=>menu.classList.toggle('open');
+ document.querySelectorAll('.slss-icon').forEach(b=>b.addEventListener('click',()=>openApp(b.dataset.app)));
+ menu.querySelectorAll('[data-launch]').forEach(b=>b.onclick=()=>{openApp(b.dataset.launch);menu.classList.remove('open')});
+ function openApp(id){
+  const app=apps[id];if(!app)return;
+  const old=document.querySelector('.slss-window[data-app="'+id+'"]');if(old){old.style.display='flex';old.style.zIndex=++z;return;}
+  const w=document.createElement('div');w.className='slss-window';w.dataset.app=id;w.style.zIndex=++z;
+  w.innerHTML='<div class="slss-titlebar"><span> '+app[0]+' — Signature & Letter SS</span><div class="slss-titlebar-buttons"><button data-min title="Minimize">_</button><button data-max title="Maximize">□</button><button data-close title="Close">×</button></div></div><div class="slss-window-body">'+app[1]+'</div>';
+  desktop.appendChild(w);
+  const title=w.querySelector('.slss-titlebar');
+  w.addEventListener('pointerdown',()=>w.style.zIndex=++z);
+  w.querySelector('[data-close]').onclick=()=>{w.remove();task.remove()};
+  w.querySelector('[data-min]').onclick=()=>{w.style.display='none'};
+  w.querySelector('[data-max]').onclick=()=>w.classList.toggle('maximized');
+  let drag=null;title.addEventListener('pointerdown',e=>{if(e.target.closest('button')||w.classList.contains('maximized'))return;drag={x:e.clientX-w.offsetLeft,y:e.clientY-w.offsetTop};title.setPointerCapture(e.pointerId)});
+  title.addEventListener('pointermove',e=>{if(!drag)return;w.style.left=Math.max(0,Math.min(innerWidth-w.offsetWidth,e.clientX-drag.x))+'px';w.style.top=Math.max(0,Math.min(innerHeight-55,e.clientY-drag.y))+'px'});
+  title.addEventListener('pointerup',()=>drag=null);title.addEventListener('pointercancel',()=>drag=null);
+  const task=document.createElement('button');task.className='slss-task-item';task.textContent=app[0];task.onclick=()=>{if(w.style.display==='none'){w.style.display='flex';w.style.zIndex=++z}else{w.style.display='none'}};taskItems.appendChild(task);
+  wireApp(id,w);
+ }
+ function wireApp(id,w){
+  const q=s=>w.querySelector(s);
+  if(id==='notepad'){q('#slss-notes').addEventListener('input',e=>{localStorage.setItem('slss98-notes',e.target.value);q('#slss-note-status').textContent='Saved locally.'})}
+  if(id==='calculator'){
+   let expr='';const d=q('#slss-calc-display');
+   w.querySelectorAll('[data-calc]').forEach(b=>b.onclick=()=>{let v=b.dataset.calc;if(v==='C'){expr='';d.value='0'}else if(v==='⌫'){expr=expr.slice(0,-1);d.value=expr||'0'}else if(v==='='){try{if(!/^[0-9+*/(). -]+$/.test(expr))throw 0;d.value=String(Function('"use strict";return ('+expr+')')());expr=d.value}catch(e){d.value='Error';expr=''}}else{expr+=({'÷':'/','×':'*','−':'-'}[v]||v);d.value=expr}});
+  }
+  if(id==='paint'){
+   const c=q('#slss-paint-canvas'),ctx=c.getContext('2d');let down=false,last=null;
+   function pos(e){const r=c.getBoundingClientRect();return{x:(e.clientX-r.left)*c.width/r.width,y:(e.clientY-r.top)*c.height/r.height}}
+   c.addEventListener('pointerdown',e=>{down=true;last=pos(e);c.setPointerCapture(e.pointerId)});
+   c.addEventListener('pointermove',e=>{if(!down)return;const p=pos(e);ctx.strokeStyle=q('#slss-color').value;ctx.lineWidth=+q('#slss-brush').value;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(last.x,last.y);ctx.lineTo(p.x,p.y);ctx.stroke();last=p});
+   c.addEventListener('pointerup',()=>down=false);c.addEventListener('pointercancel',()=>down=false);
+   q('#slss-clear').onclick=()=>ctx.clearRect(0,0,c.width,c.height);
+   q('#slss-save-paint').onclick=()=>{const a=document.createElement('a');a.download='signature-letter-painting.png';a.href=c.toDataURL('image/png');a.click()};
+  }
+  if(id==='gallery'){
+   const grid=q('#slss-gallery-grid');const imgs=[...document.querySelectorAll('body img')].filter(i=>i.src&&!i.closest('#slss-desktop')&&i.width!==0);
+   imgs.slice(0,40).forEach(img=>{const b=document.createElement('button');b.className='slss-app-tile';b.innerHTML='<img alt="" src="'+img.src+'" style="max-width:100%;height:72px;object-fit:contain"><br>View image';b.onclick=()=>{const pop=window.open('','_blank');if(pop){pop.document.write('<title>Photo</title><img src="'+img.src+'" style="max-width:95%;max-height:95vh;display:block;margin:auto">')}};grid.appendChild(b)});
+   if(!grid.children.length)grid.textContent='No page images found.';
+  }
+  if(id==='shopping'){
+   const target=q('#slss-shop-content'),source=document.querySelector('.right-column .sidebar-box');
+   if(source)target.appendChild(source.cloneNode(true));else target.textContent='Shopping links are available on the original website.';
+  }
+  if(id==='restaurants'){
+   const target=q('#slss-rest-content'),lists=[...document.querySelectorAll('.right-column ul')];
+   lists.forEach(ul=>target.appendChild(ul.cloneNode(true)));
+   if(!target.children.length)target.textContent='Restaurant links remain available on the original website.';
+   q('#slss-rest-search').addEventListener('input',e=>target.querySelectorAll('li').forEach(li=>li.style.display=li.textContent.toLowerCase().includes(e.target.value.toLowerCase())?'':'none'));
+  }
+  if(id==='guestbook'){
+   const draw=()=>{q('#slss-guest-list').innerHTML=guest.slice().reverse().map(x=>'<p><b>'+escapeHtml(x.name)+'</b>: '+escapeHtml(x.msg)+'</p>').join('')||'<p>No messages yet.</p>'};
+   q('#slss-guest-add').onclick=()=>{const name=q('#slss-guest-name').value.trim(),msg=q('#slss-guest-msg').value.trim();if(!msg)return;guest.push({name:name||'Guest',msg});guest=guest.slice(-30);localStorage.setItem('slss98-guestbook',JSON.stringify(guest));q('#slss-guest-msg').value='';draw()};draw();
+  }
+  if(id==='control'){
+   w.querySelectorAll('[data-wall]').forEach(b=>b.onclick=()=>{q('#slss-wallpaper').style.background=b.dataset.wall==='blue'?'linear-gradient(135deg,#003399,#00a6e8)':b.dataset.wall==='purple'?'linear-gradient(135deg,#39146d,#8c52bb)':'linear-gradient(135deg,#087e91,#004c69)'});
+   q('#slss-large-icons').onchange=e=>document.querySelector('.slss-desktop-icons').style.transform=e.target.checked?'scale(1.12)':'';
+  }
+  if(id==='games'){
+   q('[data-open="tic"]').onclick=()=>openApp('tic');q('[data-open="puzzle"]').onclick=()=>openApp('puzzle');
+  }
+  if(id==='tic')initTic(w);
+  if(id==='puzzle')q('#slss-open-original-puzzle').onclick=()=>{deactivate();document.getElementById('puzzle')?.scrollIntoView({behavior:'smooth',block:'center'})};
+ }
+ function initTic(w){
+  let board=Array(9).fill(''),turn='X',done=false;const grid=w.querySelector('#slss-tic-board'),status=w.querySelector('#slss-tic-status');
+  const wins=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+  function render(){grid.innerHTML='';board.forEach((v,i)=>{const b=document.createElement('button');b.style.cssText='height:65px;font-size:25px';b.textContent=v;b.onclick=()=>{if(done||v)return;board[i]=turn;const win=wins.some(a=>a.every(n=>board[n]===turn));if(win){done=true;status.textContent=turn+' wins!'}else if(board.every(Boolean)){done=true;status.textContent='Tie game'}else{turn=turn==='X'?'O':'X';status.textContent='Your turn: '+turn}render()};grid.appendChild(b)})}
+  w.querySelector('#slss-tic-reset').onclick=()=>{board=Array(9).fill('');turn='X';done=false;status.textContent='Your turn: X';render()};render();
+ }
+ setInterval(()=>{const d=new Date();document.getElementById('slss-clock').textContent=d.toLocaleTimeString([], {hour:'numeric',minute:'2-digit'})},1000);
+})();
 </script>
 
 </body>
